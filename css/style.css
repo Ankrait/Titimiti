@@ -366,22 +366,19 @@ h6 {
   position: absolute;
   left: 64px;
   top: 60px;
-  width: 74%;
+  width: 70%;
   z-index: -1;
   height: 80%;
   background: linear-gradient(359.28deg, rgba(216, 72, 255, 0.3) 6.14%, rgba(216, 72, 255, 0.048) 101.75%);
   filter: blur(7.5px);
   transform: matrix(1, 0, 0, -1, 0, 0);
 }
-.main .slaider__col-top, .main .slaider__col-down img {
+.main .slaider__col-top img, .main .slaider__col-down img {
   width: 100%;
 }
 .main .slaider__photos {
   display: flex;
   align-items: center;
-}
-.main .slaider__photos img {
-  width: 100%;
 }
 
 .swiper {
