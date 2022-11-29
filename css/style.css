@@ -83,7 +83,6 @@ body {
   -webkit-text-size-adjust: 100%;
   font-family: "Inter", sans-serif;
   color: #fcfcfc;
-  background-color: rgb(4, 7, 24);
 }
 
 input,
@@ -389,6 +388,7 @@ h6 {
 .swiper img {
   -o-object-fit: contain;
      object-fit: contain;
+  width: 100%;
   height: 300px;
 }
 
@@ -763,7 +763,7 @@ body.preload {
 }
 .rm__line {
   position: absolute;
-  width: 100%;
+  width: calc(100% - 256px);
   max-width: 690px;
   height: 1px;
   left: 0;
@@ -787,23 +787,30 @@ body.preload {
 
 .line-1 {
   max-width: 930px;
+  width: 100%;
   left: -200%;
 }
 
 .line-2 {
   max-width: 930px;
+  width: 100%;
   left: calc(-200% + 930px);
 }
 
 .line-3 {
-  max-width: 802px;
   right: 128px;
+  left: auto;
 }
 
-.line_4 {
+.line-4 {
+  left: auto;
   right: 128px;
-  top: 256px;
-}/*# sourceMappingURL=style.css.map */
-=======
-}/*# sourceMappingURL=style.css.map */
+  top: 253px;
+}
 
+.elipse-2 {
+  right: auto;
+  left: 0;
+  top: 253px;
+  transform: rotate(180deg);
+}/*# sourceMappingURL=style.css.map */
