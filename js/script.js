@@ -52,10 +52,7 @@ swiper = new Swiper('.swiper', {
 
 });
 
-
-arrow = document.querySelector('.arrow-content')
-topp = screen.height - 130
-arrow.style.top = topp + 'px';
+const arrow = document.querySelector('.arrow-content') 
 
 arrow.addEventListener('click', () => {
     $('html, body').animate({
