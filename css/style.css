@@ -83,6 +83,7 @@ body {
   -webkit-text-size-adjust: 100%;
   font-family: "Inter", sans-serif;
   color: #fcfcfc;
+  background-color: rgb(4, 7, 24);
 }
 
 input,
@@ -172,7 +173,7 @@ h6 {
   flex-direction: column;
   min-height: 100%;
   position: relative;
-  background: url("../../img/bg.png");
+  background: url("../img/bg.png");
   background-color: rgb(4, 7, 24);
 }
 
