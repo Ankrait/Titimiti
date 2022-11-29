@@ -26,7 +26,7 @@
    flex-direction: column;
    min-height: 100%;
    position: relative;
-   background: url("../../img/bg.png");
+   background: url("../img/bg.png");
    background-color: rgb(4, 7, 24);
 }
 
@@ -289,7 +289,7 @@
    display: flex;
    align-items: center;
    justify-content: space-around;
-   margin: 19% 0 0 0;
+   margin: 15% 0 0 0;
    position: relative;
 
    &__back {
@@ -546,10 +546,9 @@ body.preload {
 
 .popup404.open .popup404__content {
    transform: translate(0, 0);
-} 
+}
 
 //////////////////////////////////////
-
 .arrow-content {
    position: absolute;
    left: 50%;
@@ -594,6 +593,7 @@ body.preload {
       transform: translate(0, 60px) rotate(45deg);
    }
 }
+//////////////////////////////////////////////////////
 
 .footer {
    background: #040718;
@@ -682,3 +682,7 @@ body.preload {
       }
    }
 }
+
+@import "_roadmap"
+
+
