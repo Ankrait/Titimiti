@@ -60,5 +60,40 @@ arrow.style.top = topp + 'px';
 arrow.addEventListener('click', () => {
     $('html, body').animate({
         scrollTop: $('.about').offset().top - 120
-   }, 1000);
+    }, 1000);
 });
+
+
+// Popup visible 
+const liBtns = document.querySelectorAll('li');
+const welcBtn = document.querySelector('.welcome__btn');
+const titilandBtn = document.querySelector('.titiland__more');
+const zoomBtn = document.querySelector('.zoomloop__play-btn');
+const popup = document.querySelector('.popup404');
+const close_btn = document.querySelector('.popup404__close-btn');
+
+liBtns.forEach(item => {
+    item.addEventListener('click', openPopupFunc);
+});
+
+titilandBtn.addEventListener('click', openPopupFunc);
+welcBtn.addEventListener('click', openPopupFunc);
+zoomBtn.addEventListener('click', openPopupFunc);
+
+function openPopupFunc(e) {
+    popup.classList.add('open');
+    e.preventDefault();
+}
+
+//popup hidden
+popup.addEventListener('click', hidePopup);
+close_btn.addEventListener('click', (e) => {
+    popup.classList.remove('open');
+    e.preventDefault();
+});
+
+function hidePopup(e) {
+    if (!e.target.closest('.popup404__content'))
+        popup.classList.remove('open');
+    e.preventDefault();
+}
