@@ -1198,15 +1198,15 @@ select:-webkit-autofill:focus {
   text-transform: uppercase;
 }
 
-.moon {
+.rm__moon {
   position: absolute;
   top: 868px;
   left: -700px;
 }
-.moon img {
+.rm__moon img {
   position: absolute;
 }
-.moon img:nth-child(2) {
+.rm__moon img:nth-child(2) {
   filter: blur(150px);
   right: -1000px;
 }
