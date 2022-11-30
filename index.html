@@ -7,39 +7,40 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>TITIMITI</title>
    <link rel="stylesheet" href="css/style.css">
-   <script src="js/jquery.js"></script>
    <link rel="stylesheet" href="css/swiper.min.css">
 </head>
 
 <body class="">
-   <div class="preloader--hide" id="preloader">
+   <div class="wrapper">
+      <div class="preloader--hide" id="preloader">
 
-      <div class="preloader__img">
-         <img src="img/preload.jpg" alt="Прелоуд">
-         <!-- <img src="img/2.png" alt="Прелоуд">
+         <div class="preloader__img">
+            <img src="img/preload.jpg" alt="Прелоуд">
+            <!-- <img src="img/2.png" alt="Прелоуд">
          <img src="img/3.png" alt="Прелоуд">
          <img src="img/4.png" alt="Прелоуд"> -->
-      </div>
-      <span class="preloader__procents">
-         <span class="procents">0</span>%
-      </span>
-   </div>
-   <header class="header">
-      <div class="header__container">
-         <div class="header__menu menu">
-            <ul class="menu__list">
-               <li class="menu__item">tokenomics</li>
-               <li class="menu__item">Roadmap</li>
-               <li class="menu__item">WHitePaper</li>
-               <li class="menu__item menu__logo"><img src="img/Logo.svg" alt="Лого"></li>
-               <li class="menu__item">Titiland</li>
-               <li class="menu__item">ZOOM LOUPE</li>
-               <li class="menu__item">miticoin</li>
-            </ul>
          </div>
+         <span class="preloader__procents">
+            <span class="procents">0</span>%
+         </span>
       </div>
-   </header>
-   <div class="wrapper">
+
+      <header class="header">
+         <div class="header__container">
+            <div class="header__menu menu">
+               <ul class="menu__list">
+                  <li class="menu__item">tokenomics</li>
+                  <li class="menu__item">Roadmap</li>
+                  <li class="menu__item">WHitePaper</li>
+                  <li class="menu__item menu__logo"><img src="img/Logo.svg" alt="Лого"></li>
+                  <li class="menu__item">Titiland</li>
+                  <li class="menu__item">ZOOM LOUPE</li>
+                  <li class="menu__item">miticoin</li>
+               </ul>
+            </div>
+         </div>
+      </header>
+
       <main class="main">
          <div class="main__container">
             <div class="welcome">
@@ -50,6 +51,7 @@
                   <span></span>
                   <span></span>
                   <span></span>
+                  <div class="cursor-pointer"></div>
                </div>
                <img class="eart-bg" src="img/earth_bg.png" alt="">
                <div class="blur"></div>
@@ -75,9 +77,11 @@
                   </div>
                   <div class="about__line"></div>
                   <div class="about__info">
-                     TitiMiti – метасеть, объединяет De-fi, Game-fi и Social-fi столпы в единую экономическую систему
-                     будущего. Которая впервые в истории человечества превращает азарт и жадность в цифровое золото,
-                     работающее на благо всего сообщества.
+                     TitiMiti – метасеть, объединяет De-fi, Game-fi и Social-fi столпы в&nbsp;единую экономическую
+                     систему
+                     будущего. Которая впервые в&nbsp;истории человечества превращает азарт и&nbsp;жадность
+                     в&nbsp;цифровое золото,
+                     работающее на&nbsp;благо всего сообщества.
                   </div>
                </div>
                <div class="about__block">
@@ -86,10 +90,11 @@
                   </div>
                   <div class="about__line"></div>
                   <div class="about__info">
-                     Мы — группа проффесиональных трейдеров и программистов объединённых высшим разумом в "союз игровых
+                     Мы — группа проффесиональных трейдеров и&nbsp;программистов объединённых высшим разумом
+                     в&nbsp;союз игровых
                      сообществ".<br>
-                     Наша миссия — создание революционной геймефицированной социально экономической машины, идущий на
-                     смену современным государствам.
+                     Наша миссия — создание революционной геймефицированной социально экономической машины, идущий
+                     на&nbsp;смену современным государствам.
                   </div>
                </div>
             </div>
@@ -137,7 +142,8 @@
                      держателям право на доход с монетизации всего проекта. Кто завладеет NFT TitiLand, тот войдёт в
                      аристократию 21 века.
                   </div>
-                  <div class="titiland__more">
+                  <div class="titiland__more btn">
+                     <div class="grad"></div>
                      Подробнее
                   </div>
                </div>
@@ -147,7 +153,13 @@
             <div class="zoomloop">
                <div class="zoomloop__back"></div>
                <div class="zoomloop__back"></div>
+               <img class="zoomloop__lines" src="img/phone-bg/lines.svg" alt="">
+               <img class="zoomloop__blur-1" src="img/phone-bg/blur-1.svg" alt="">
+               <img class="zoomloop__blur-2" src="img/phone-bg/blur-2.svg" alt="">
+               <img class="case-img2" src="img/phone-bg/case2.png" alt="">
+
                <div class="zoomloop__content">
+                  <img class="case-img" src="img/phone-bg/case.png" alt="">
                   <div class="zoomloop__opentxt">
                      Открой новый мир
                   </div>
@@ -155,12 +167,15 @@
                      ZOOM LOUPE
                   </div>
                   <div class="zoomloop__text">
-                     AR вселенная – увлекательная игра и инструмент с помощью которого ты будешь находить и собирать
-                     разбросанные вокруг тебя настоящие деньги, а так же иные ценности!<br>
-                     Место приключений, квестов, общения с другими игроками, заработка. Место - где живут причудливые
-                     существа с искусственным интеллектом, новая форма разумной жизни.
+                     AR вселенная – увлекательная игра и&nbsp;инструмент с&nbsp;помощью которого ты будешь находить и
+                     собирать
+                     разбросанные вокруг тебя настоящие деньги, а&nbsp;так же иные ценности!<br>
+                     Место приключений, квестов, общения с&nbsp;другими игроками, заработка. Место - где живут
+                     причудливые
+                     существа с&nbsp;искусственным интеллектом, новая форма разумной жизни.
                   </div>
-                  <div class="zoomloop__play-btn">
+                  <div class="zoomloop__play-btn btn">
+                     <div class="grad"></div>
                      Начать играть
                   </div>
                   <!-- <img src="img/case.png" alt="Сундук"> -->
@@ -169,6 +184,8 @@
                   <div class="phone-base">
                      <img src="img/phone_down.svg" alt="Подставка телефона">
                      <img src="img/Iphone.svg" alt="Телефон">
+                     <img class="phone-bg-img _1" src="img/phone-bg/phone-bg.svg" alt="">
+                     <img class="phone-bg-img _2" src="img/phone-bg/phone-bg.svg" alt="">
                   </div>
                </div>
             </div>
@@ -178,20 +195,20 @@
                   <div class="miticoin__main">
                      <video src="video/coin.mp4" loop autoplay muted preload="auto"></video>
                      <img src="img/col-down.png" alt="">
+
+                     <img class="blur" src="img/mitcoin_blur.png" alt="">
+                     <img class="blur" src="img/mitcoin_center_blur.png" alt="">
                   </div>
-                  <img class="blur" src="img/mitcoin_blur.png" alt="">
-                  <img class="blur" src="img/mitcoin_center_blur.png" alt="">
                </div>
                <div class="miticoin__content">
                   <div class="miticoin__name">
                      Miticoin
                   </div>
                   <div class="miticoin__text">
-                     Расчётный инструмент метасети TitiMiti. Уникальная криптовалюта с механизмом
+                     Расчётный инструмент метасети TitiMiti. Уникальная криптовалюта с&nbsp;механизмом
                      стабильно-постоянного
                      роста курса. Экономика проекта гарантирует, что цена MitiCoin никогда не будет ниже его
-                     бесконечно
-                     растущей капитализации.
+                     бесконечно растущей капитализации.
                   </div>
                </div>
             </div>
@@ -203,7 +220,7 @@
                   <div class="rm__line line-2">
                   </div>
                   <div class="rm__line line-3">
-
+                     <div class="text-rm">ROADMAP</div>
                      <div class="rm_point point-1 p-big">
                         <div class="p-text">
                            <p class="p-title">Декабрь <span> 2021</span></p>
@@ -429,8 +446,141 @@
                   <div class="rm__arr">
                   </div>
                </div>
+               <div class="moon">
+                  <img class="rm__moon" src="img/Moon.png" alt="">
+                  <img class="rm__moon" src="img/moon-bg.svg" alt="">
+               </div>
             </div>
 
+            <div class="team">
+               <div class="team__master">
+                  <div class="team__title">
+                     <h2>НАША КОМАНДА</h2>
+                  </div>
+                  <div class="team__liders">
+                     <div class="team__item">
+                        <div class="team__item--photo">
+                           <img src="img/team/leader-1.png" alt="">
+                        </div>
+                        <div class="team__item--name">
+                           V
+                        </div>
+                     </div>
+                     <div class="team__item">
+                        <div class="team__item--photo">
+                           <img src="img/team/leader-2.png" alt="">
+                        </div>
+                        <div class="team__item--name">
+                           K
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="team__personal">
+                  <div class="team__item">
+                     <div class="team__item--photo">
+                        <img src="img/team/team-1.png" alt="">
+                     </div>
+                     <div class="team__item--name">
+                        ARTEM М
+                     </div>
+                     <div class="team__item--pos">
+                        co-Founder
+                     </div>
+                     <div class="team__item--info">
+                        Picsart - Deputy Director of the social department
+                     </div>
+                  </div>
+                  <div class="team__item">
+                     <div class="team__item--photo">
+                        <img src="img/team/team-2.png" alt="">
+                     </div>
+                     <div class="team__item--name">
+                        EUGEN F
+                     </div>
+                     <div class="team__item--pos">
+                        co-Founder
+                     </div>
+                     <div class="team__item--info">
+                        Battle for Giostone, Buddy AI, Subnautica
+                     </div>
+                  </div>
+                  <div class="team__item">
+                     <div class="team__item--photo">
+                        <img src="img/team/team-3.png" alt="">
+                     </div>
+                     <div class="team__item--name">
+                        ALINA S
+                     </div>
+                     <div class="team__item--pos">
+                        co-Founder
+                     </div>
+                     <div class="team__item--info">
+                        MAPSMI - server lead, Crypto antifraud - engineer
+                     </div>
+                  </div>
+                  <div class="team__item">
+                     <div class="team__item--photo">
+                        <img src="img/team/team-4.png" alt="">
+                     </div>
+                     <div class="team__item--name">
+                        PAVEL K S
+                     </div>
+                     <div class="team__item--pos">
+                        Producer
+                     </div>
+                     <div class="team__item--info">
+                        House of Kiiba, House of Kiiba, Gamma4, Game producer - Apollo 13 VR
+                     </div>
+                  </div>
+                  <div class="team__item">
+                     <div class="team__item--photo">
+                        <img src="img/team/team-5.png" alt="">
+                     </div>
+                     <div class="team__item--name">
+                        GRIGORY V
+                     </div>
+                     <div class="team__item--pos">
+                        Blockchain Dev. and Tokenomics
+                     </div>
+                     <div class="team__item--info">
+                        Bar fight - blockchain NFT game <br>Stumble Upon Rumble - blockchain NFT game
+                     </div>
+                  </div>
+                  <div class="team__item">
+                     <div class="team__item--photo">
+                        <img src="img/team/team-6.png" alt="">
+                     </div>
+                     <div class="team__item--name">
+                        ALINA S
+                     </div>
+                     <div class="team__item--pos">
+                        quality assuarance
+                     </div>
+                     <div class="team__item--info">
+                        Prison Reason - mobile game
+                        Solitaer "Heven" - puzzle game
+                     </div>
+                  </div>
+
+               </div>
+            </div>
+
+            <div class="email">
+               <div class="email__blur"></div>
+               <img class="email__blur-moon" src="img/email-blur-moon.svg" alt="">
+               <img class="email__blur-elipse" src="img/email-blur.svg" alt="">
+               <p>Введи свою электронную почту </p>
+               <h2 class="email__name">Получай новости первым</h2>
+               <form class="form" action="#">
+                  <label for="email" class="form__label"></label>
+                  <input type="text" name="email" id="email" class="form__input" placeholder="Электронная почта">
+                  <div class="form__btn btn">
+                     <div class="grad"></div>
+                     Отправить
+                  </div>
+               </form>
+            </div>
          </div>
       </main>
 
@@ -463,21 +613,46 @@
          </div>
       </footer>
 
-      <div class="popup404">
-         <div class="popup404__body">
-            <div class="popup404__content">
-               <img src="img/UFO404.svg" alt="">
+      <div class="popup popup404">
+         <div class="popup__body">
+            <div class="popup__content">
+               <div class="popup__UFO">
+                  <img class="UFO" src="img/UFO-1.svg" alt="">
+                  <img class="blur" src="img/UFO-2.svg" alt="">
+               </div>
                <h1 class="__name">404</h1>
                <p>Страница еще в разработке</p>
-               <div class="popup404__close-btn">
+               <div class="popup__close-btn btn">
+                  <div class="grad"></div>
                   Закрыть
                </div>
             </div>
          </div>
-      </div>//Проявляется при загрузке страницы
+      </div>
+      <!-- Проявляется при загрузке страницы -->
+
+      <div class="popup email-accept">
+         <div class="popup__body">
+            <div class="popup__content">
+               <img class="" src="img/accept.svg" alt="">
+               <p>Вы успешно подписались<br>на рассылку</p>
+               <div class="popup__close-btn btn">
+                  <div class="grad"></div>
+                  Закрыть
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="cookie">
+         <img src="img/cookie.png" alt="">
+         <p class="cookie__text">Этот сайт использует cookies, хоть мы и не пекарня.</p>
+         <div class="cookie__btn">Хорошо</div>
+      </div>
 
    </div>
 </body>
+<script src="js/jquery.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>
 

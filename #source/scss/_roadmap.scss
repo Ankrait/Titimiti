@@ -1,10 +1,12 @@
 .roadmap {
-    margin: 15% 0 0 0;
+    margin: 20% 0 0 0;
     height: 1500px; // Убрать
     display: flex;
     justify-content: end;
+    position: relative;
 }
 .rm {
+    margin: 0 0 0 200px;
     max-width: 930px;
     width: 100%;
     height: 100%;
@@ -178,6 +180,25 @@
     font-size: 14px;
     line-height: 18px;
     margin-top: 4px;
+}
+
+.text-rm {
+    position: absolute;
+    display: inline;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 73px;
+    text-transform: uppercase;
+
+    left: -440px;
+    top: -100px;
+}
+
+@media (max-width: 1400px) {
+    .text-rm {
+        left: -240px;
+        top: -300px;
+    }
 }
 
 .point-2 {
@@ -376,7 +397,7 @@
     right: -10px;
     & .p-text {
         width: 120px;
-        transform: translate(-48px, 38px);
+        transform: translate(-47px, 28px);
     }
 }
 
@@ -415,4 +436,18 @@
 
     text-align: center;
     text-transform: uppercase;
+}
+
+.moon {
+    position: absolute;
+    top: 868px;
+    left: -700px;
+
+    & img {
+        position: absolute;
+        &:nth-child(2) {
+            filter: blur(150px);
+            right: -1000px;
+        }
+    }
 }

@@ -9,7 +9,6 @@ videosCount = $('video').length; // количество видео
 let i = 0;
 
 allCount = imagesCount + videosCount;
-
 percent = 100 / allCount; //количество % на одну картинку
 
 // document.addEventListener('DOMContentLoaded', () => {
@@ -31,7 +30,7 @@ percent = 100 / allCount; //количество % на одну картинк�
 // });
 
 
-
+// Свайпер
 swiper = new Swiper('.swiper', {
     navigation: {
         nextEl: '.titiland__arr-right',
@@ -52,22 +51,22 @@ swiper = new Swiper('.swiper', {
 
 });
 
-const arrow = document.querySelector('.arrow-content') 
-
+// Стрелка на первом экране
+const arrow = document.querySelector('.arrow-content')
 arrow.addEventListener('click', () => {
     $('html, body').animate({
-        scrollTop: $('.about').offset().top - 120
+        scrollTop: $('.about').offset().top - 100
     }, 1000);
 });
 
 
-// Popup visible 
+// Popup 404 visible 
 const liBtns = document.querySelectorAll('li');
+const logo = document.querySelector('.menu__logo')
 const welcBtn = document.querySelector('.welcome__btn');
 const titilandBtn = document.querySelector('.titiland__more');
 const zoomBtn = document.querySelector('.zoomloop__play-btn');
-const popup = document.querySelector('.popup404');
-const close_btn = document.querySelector('.popup404__close-btn');
+const popup404 = document.querySelector('.popup404');
 
 liBtns.forEach(item => {
     item.addEventListener('click', openPopupFunc);
@@ -78,19 +77,83 @@ welcBtn.addEventListener('click', openPopupFunc);
 zoomBtn.addEventListener('click', openPopupFunc);
 
 function openPopupFunc(e) {
-    popup.classList.add('open');
+    popup404.classList.add('open');
+    body.classList.add('overflow--hide')
     e.preventDefault();
 }
 
-//popup hidden
-popup.addEventListener('click', hidePopup);
-close_btn.addEventListener('click', (e) => {
-    popup.classList.remove('open');
+//popup404 hidden
+const close_btns = document.querySelectorAll('.popup__close-btn');
+
+popup404.addEventListener('click', hidePopup404);
+
+close_btns.forEach(item => {
+    item.addEventListener('click', (e) => {
+        popup404.classList.remove('open');
+        body.classList.remove('overflow--hide')
+        e.preventDefault();
+    });
+});
+
+
+function hidePopup404(e) {
+    if (!e.target.closest('.popup__content')) {
+        popup404.classList.remove('open');
+        body.classList.remove('overflow--hide')
+    }
+    e.preventDefault();
+}
+//popup_email hidden
+const popup_email = document.querySelector('.email-accept')
+popup_email.addEventListener('click', hidePopupEmail);
+
+close_btns.forEach(item => {
+    item.addEventListener('click', (e) => {
+        popup_email.classList.remove('open');
+        body.classList.remove('overflow--hide')
+        e.preventDefault();
+    });
+});
+
+
+function hidePopupEmail(e) {
+    if (!e.target.closest('.popup__content')) {
+        popup_email.classList.remove('open');
+        body.classList.remove('overflow--hide')
+    }
+    e.preventDefault();
+}
+
+
+
+// отправление почты
+const form = document.querySelector('.form');
+const form_btn = document.querySelector('.form__btn');
+
+form_btn.addEventListener('click', (e) => {
+    email_popup.classList.add("open");
     e.preventDefault();
 });
 
-function hidePopup(e) {
-    if (!e.target.closest('.popup404__content'))
-        popup.classList.remove('open');
-    e.preventDefault();
-}
+
+// Тык по логу = скролл на верх сайта
+logo.removeEventListener('click', openPopupFunc);
+logo.addEventListener('click', () => {
+    $('html, body').animate({
+        scrollTop: $('body').offset().top
+    }, 1000);
+});
+
+
+// Убрать куки
+const cookie = document.querySelector('.cookie');
+const cookie_btn = document.querySelector('.cookie__btn');
+const email_popup = document.querySelector('.email-accept');
+
+cookie_btn.addEventListener('click', (e) => {
+    cookie.classList.add("cookie--hide");
+});
+
+
+
+// Паралакс луны
