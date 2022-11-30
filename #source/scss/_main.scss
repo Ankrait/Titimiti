@@ -168,19 +168,26 @@
       align-items: center;
    }
 
+   &__arr-right,
    &__arr-left {
       cursor: pointer;
-      img {
-         transform: rotate(180deg);
-         width: 100%;
+
+      width: 40px;
+      height: 40px;
+      border-top: 6px solid #a939ff;
+      border-right: 6px solid #a939ff;
+      border-radius: 5px 0 5px 0;
+
+      transform: rotate(-135deg);
+      transition: border 0.6s ease 0s;
+      
+      &:hover {
+         border-color: #f373eb;
       }
    }
 
    &__arr-right {
-      cursor: pointer;
-      img {
-         width: 100%;
-      }
+      transform: rotate(45deg);
    }
 
    &__content {
@@ -251,7 +258,7 @@
    }
 
    &__text {
-      margin: 29px 0 0 0;
+      margin: 19px 0 0 0;
 
       font-weight: 400;
       font-size: 18px;
@@ -362,10 +369,11 @@
 }
 
 .miticoin {
-   margin: 15% 0 0 0;
+   margin: 18% 0 0 0;
    display: flex;
    align-items: center;
    justify-content: space-around;
+   position: relative;
 
    &__video {
       flex: 0 1 50%;
@@ -410,6 +418,12 @@
       font-size: 20px;
       line-height: 130%;
    }
+
+   &__lines {
+      position: absolute;
+      top: 19px;
+      left: 371px;
+   }
 }
 
 .team {
@@ -446,13 +460,21 @@
    &__item {
       display: flex;
       flex-direction: column;
-      flex: 0 0 220px;
+      flex: 0 1 220px;
+      overflow: hidden;
    }
 
    &__item--photo {
+      border-radius: 10px;
+      overflow: hidden;
+      transition: box-shadow 0.5s ease 0s;
       & img {
          width: 100%;
          object-fit: cover;
+         transition: transform 0.5s ease 0s;
+         &:hover {
+            transform: scale(1.1);
+         }
       }
    }
 
@@ -462,6 +484,7 @@
       line-height: 19px;
       margin-top: 16px;
       color: #ffffff;
+      text-transform: uppercase;
    }
 
    &__personal {
@@ -482,6 +505,7 @@
       line-height: 130%;
       margin-top: 4px;
       color: #939393;
+      text-transform: uppercase;
    }
 
    &__item--info {

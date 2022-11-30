@@ -1,9 +1,13 @@
 .roadmap {
-    margin: 20% 0 0 0;
+    margin: 23% 0 0 0;
     height: 1500px; // Убрать
     display: flex;
     justify-content: end;
     position: relative;
+
+    & p {
+        margin-top: 0;
+    }
 }
 .rm {
     margin: 0 0 0 200px;
@@ -230,7 +234,7 @@
 
 .point-7 {
     left: auto;
-    right: 17%;
+    right: 24.5%;
 
     & .p-text {
         transform: translate(-45%, 150%);
@@ -275,14 +279,14 @@
 }
 
 .point-13 {
-    left: 21%;
+    left: 27.5%;
     & .p-text {
         transform: translate(-45%, 150%);
     }
 }
 
 .point-14 {
-    left: 42%;
+    left: 55%;
 }
 
 .point-15 {
@@ -297,8 +301,8 @@
 
 .point-16 {
     left: auto;
-    right: 9px;
-    top: 50px;
+    right: -4px;
+    top: 72px;
 }
 
 .point-17 {
@@ -317,12 +321,12 @@
 
 .point-19 {
     left: auto;
-    right: 25%;
+    right: 33%;
 }
 
 .point-20 {
     left: auto;
-    right: 55%;
+    right: 66%;
 
     & .p-text {
         transform: translate(0%, 22px);
@@ -359,7 +363,7 @@
 }
 
 .point-24 {
-    right: 25%;
+    right: 50%;
     & .p-text {
         transform: translate(-44%, 75%);
     }
@@ -447,7 +451,7 @@
         position: absolute;
         &:nth-child(2) {
             filter: blur(150px);
-            right: -1000px;
+            right: -920px;
         }
     }
 }

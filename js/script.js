@@ -61,20 +61,12 @@ arrow.addEventListener('click', () => {
 
 
 // Popup 404 visible 
-const liBtns = document.querySelectorAll('li');
-const logo = document.querySelector('.menu__logo')
-const welcBtn = document.querySelector('.welcome__btn');
-const titilandBtn = document.querySelector('.titiland__more');
-const zoomBtn = document.querySelector('.zoomloop__play-btn');
+const er404_blocks = document.querySelectorAll('.er_404');
 const popup404 = document.querySelector('.popup404');
 
-liBtns.forEach(item => {
+er404_blocks.forEach(item => {
     item.addEventListener('click', openPopupFunc);
 });
-
-titilandBtn.addEventListener('click', openPopupFunc);
-welcBtn.addEventListener('click', openPopupFunc);
-zoomBtn.addEventListener('click', openPopupFunc);
 
 function openPopupFunc(e) {
     popup404.classList.add('open');
@@ -95,7 +87,6 @@ close_btns.forEach(item => {
     });
 });
 
-
 function hidePopup404(e) {
     if (!e.target.closest('.popup__content')) {
         popup404.classList.remove('open');
@@ -103,6 +94,7 @@ function hidePopup404(e) {
     }
     e.preventDefault();
 }
+
 //popup_email hidden
 const popup_email = document.querySelector('.email-accept')
 popup_email.addEventListener('click', hidePopupEmail);
@@ -114,7 +106,6 @@ close_btns.forEach(item => {
         e.preventDefault();
     });
 });
-
 
 function hidePopupEmail(e) {
     if (!e.target.closest('.popup__content')) {
@@ -136,15 +127,6 @@ form_btn.addEventListener('click', (e) => {
 });
 
 
-// Тык по логу = скролл на верх сайта
-logo.removeEventListener('click', openPopupFunc);
-logo.addEventListener('click', () => {
-    $('html, body').animate({
-        scrollTop: $('body').offset().top
-    }, 1000);
-});
-
-
 // Убрать куки
 const cookie = document.querySelector('.cookie');
 const cookie_btn = document.querySelector('.cookie__btn');
@@ -156,15 +138,72 @@ cookie_btn.addEventListener('click', (e) => {
 
 
 
-// Паралакс луны
+// Паралакс луны и коллайдера
 const moon = document.querySelector('.moon')
 const moon_bg = document.querySelector('.moon-bg')
+const collider_images = document.querySelectorAll('.swiper img')
+const lines = document.querySelectorAll('.lines')
+
+console.log(collider_images);
 
 document.addEventListener('mousemove', moonParalaks)
 
-function moonParalks(e) {
-    let offsetX = (e.clientX / window.innerWidth * 10) - 5;
-    let offsetY = (e.clientY / window.innerHeight * 10) - 5;
+function moonParalaks(e) {
+    let offsetX = (e.clientX / window.innerWidth * 12) - 6;
+    let offsetY = (e.clientY / window.innerHeight * 12) - 6;
 
-    console.log(moon.);
+    moon.setAttribute("style", "transform: translate(" + offsetX + "px, " + offsetY + "px);");
+    moon_bg.setAttribute("style", "transform: translate(" + -offsetX + "px, " + -offsetY + "px);");
+
+    collider_images.forEach((item) => {
+        item.setAttribute("style", "transform: translate(" + offsetX + "px, " + offsetY + "px);");
+    });
+
+    lines.forEach((item) => {
+        item.setAttribute("style", "transform: translate(" + offsetX + "px, " + offsetY + "px);");
+    });
 }
+
+
+// Тык по логу = скролл на верх сайта
+const logo = document.querySelector('.menu__logo')
+logo.addEventListener('click', () => {
+    $('html, body').animate({
+        scrollTop: $('body').offset().top
+    }, 1000);
+});
+
+// Тык по меню скролл
+const menu_tocenomic = document.querySelector('.scroll_tocenomic');
+const menu_whitepaper = document.querySelector('.scroll_whitepaper');
+const menu_roadmap = document.querySelector('.scroll_roadmap');
+const menu_titiland = document.querySelector('.scroll_titiland');
+const menu_zoomloop = document.querySelector('.scroll_zoomloop');
+const menu_miticoin = document.querySelector('.scroll_miticoin');
+
+menu_roadmap.addEventListener('click', (e) => {
+    $('html, body').animate({
+        scrollTop: $('.roadmap').offset().top - 220
+    }, {
+        duration: 1000,
+        easing: "swing"
+    });
+});
+
+menu_titiland.addEventListener('click', (e) => {
+    $('html, body').animate({
+        scrollTop: $('.titiland').offset().top - 100
+    }, 1000);
+});
+
+menu_zoomloop.addEventListener('click', (e) => {
+    $('html, body').animate({
+        scrollTop: $('.zoomloop').offset().top - 160
+    }, 1000);
+});
+
+menu_miticoin.addEventListener('click', (e) => {
+    $('html, body').animate({
+        scrollTop: $('.miticoin').offset().top - 150
+    }, 1000);
+});
