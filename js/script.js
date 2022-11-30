@@ -165,6 +165,4 @@ document.addEventListener('mousemove', moonParalaks)
 function moonParalks(e) {
     let offsetX = (e.clientX / window.innerWidth * 10) - 5;
     let offsetY = (e.clientY / window.innerHeight * 10) - 5;
-
-    console.log(moon.);
 }
