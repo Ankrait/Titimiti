@@ -1,0 +1,19 @@
+@media screen and (max-width: 1023.89px) {
+    .welcome {
+       &__wel {
+          margin: 26vh 0 0 0;
+          font-size: 12px;
+       }
+       &__title {
+          font-size: 100px;
+          line-height: 121px;
+       }
+       &__text {
+          font-size: 14px;
+       }
+ 
+       & .arrow-content {
+          display: none;
+       }
+    }
+ }

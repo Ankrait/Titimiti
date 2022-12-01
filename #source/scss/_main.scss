@@ -179,15 +179,20 @@
       border-radius: 5px 0 5px 0;
 
       transform: rotate(-135deg);
-      transition: border 0.6s ease 0s;
-      
+      transition: border 0.6s ease 0s, transform 0.6s ease 0s;
+
       &:hover {
          border-color: #f373eb;
+         transform: scale(1.1) rotate(-135deg);
       }
    }
 
    &__arr-right {
       transform: rotate(45deg);
+      &:hover {
+         border-color: #f373eb;
+         transform: scale(1.1) rotate(45deg);
+      }
    }
 
    &__content {
@@ -231,7 +236,7 @@
    position: relative;
 
    &__content {
-      margin: 0 0 0 60px;
+      margin: 60px 0 60px 60px;
 
       flex: 0 1 562px;
       display: flex;
@@ -245,6 +250,13 @@
          right: -142px;
          z-index: -1;
          width: 69%;
+      }
+
+      & .blur {
+         position: absolute;
+         width: 40%;
+         filter: blur(150px);
+         top: 76px;
       }
    }
 
@@ -278,12 +290,18 @@
          max-width: 427px;
          margin: 0 auto;
 
-         & img:first-child {
+         & .img_down {
             position: absolute;
             bottom: -8%;
             left: 0;
             z-index: -12;
             width: 100%;
+         }
+         & img:first-child {
+            z-index: -12;
+            width: 100%;
+            transform: translate(0, -100%) scale(0);
+            transition: transform 0.7s ease 0s;
          }
 
          & img:nth-child(2) {
@@ -297,7 +315,8 @@
       position: absolute;
       z-index: -13;
       width: 100%;
-      transform: rotate(150deg);
+      transform: translate(45%, 30%) rotate(150deg) scale(0);
+      transition: transform 0.8s ease 0s;
 
       &._1 {
          max-width: 340px;
@@ -306,7 +325,7 @@
       }
 
       &._2 {
-         transform: rotate(45deg);
+         transform: translate(-90%, 62%) rotate(45deg) scale(0);
          max-width: 170px;
          right: -59px;
          top: -213px;
@@ -315,12 +334,12 @@
 
    &__back {
       position: absolute;
-      top: 5%;
+      top: 3%;
       left: 0;
       z-index: -11;
 
       width: 100%;
-      height: 90%;
+      height: 94%;
 
       background: linear-gradient(96.36deg, #0021cc -10.12%, #04125e 128.75%), #000000;
       opacity: 0.6;
@@ -360,11 +379,20 @@
       filter: blur(200px);
    }
 
+   &__blur-3 {
+      position: absolute;
+      width: 35%;
+      bottom: -66px;
+      left: 56px;
+      z-index: -13;
+      filter: blur(200px);
+   }
+
    .case-img2 {
       position: absolute;
-      width: 14%;
+      width: 17%;
       bottom: -100px;
-      right: -80px;
+      right: -112px;
    }
 }
 
@@ -410,6 +438,17 @@
 
    &__content {
       flex: 0 1 608px;
+      position: relative;
+   }
+
+   &__content--blur {
+      position: absolute;
+      background: linear-gradient(180.04deg, rgba(223, 47, 226, 0.3) 25.55%, rgba(181, 52, 160, 0) 94.15%);
+      height: 100%;
+      width: 50%;
+      border-radius: 50%;
+      top: 10px;
+      filter: blur(200px);
    }
 
    &__text {

@@ -160,7 +160,7 @@ function moonParalaks(e) {
     });
 
     lines.forEach((item) => {
-        item.setAttribute("style", "transform: translate(" + offsetX + "px, " + offsetY + "px);");
+        item.setAttribute("style", "transform: translate(" + offsetX * 3 + "px, " + offsetY * 3 + "px);");
     });
 }
 
@@ -198,12 +198,43 @@ menu_titiland.addEventListener('click', (e) => {
 
 menu_zoomloop.addEventListener('click', (e) => {
     $('html, body').animate({
-        scrollTop: $('.zoomloop').offset().top - 160
+        scrollTop: $('.zoomloop').offset().top - 180
     }, 1000);
 });
 
 menu_miticoin.addEventListener('click', (e) => {
     $('html, body').animate({
-        scrollTop: $('.miticoin').offset().top - 150
+        scrollTop: $('.miticoin').offset().top - 170
     }, 1000);
 });
+
+
+
+// Выезжание при скролле к зум лупу
+const anim_items = document.querySelectorAll('.anim');
+
+if (anim_items.length > 0) {
+    window.addEventListener('scroll', animOnScroll);
+
+    async function animOnScroll() {
+        anim_items.forEach((item) => {
+            let scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+            let anim_item_height = item.offsetHeight;
+            let anim_item_offsetY = item.getBoundingClientRect().top + scrollY;
+            let anim_start = 4;
+            console.log(anim_item_height, anim_item_offsetY);
+
+            let anim_item_point = window.innerHeight - anim_item_height / anim_start;
+            if (anim_item_height > window.innerHeight) {
+                let anim_item_point = anim_item_height - window.innerHeight / anim_start;
+            }
+
+            if ((scrollY > anim_item_offsetY - anim_item_point) && (scrollY < (anim_item_offsetY + anim_item_height))) {
+                item.classList.add('_active');
+            }
+        });
+
+    }
+    animOnScroll();
+}
