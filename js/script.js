@@ -181,6 +181,8 @@ const menu_titiland = document.querySelector('.scroll_titiland');
 const menu_zoomloop = document.querySelector('.scroll_zoomloop');
 const menu_miticoin = document.querySelector('.scroll_miticoin');
 
+const menu = document.querySelector('.menu');
+
 menu_roadmap.addEventListener('click', (e) => {
     $('html, body').animate({
         scrollTop: $('.roadmap').offset().top - 220
@@ -188,24 +190,28 @@ menu_roadmap.addEventListener('click', (e) => {
         duration: 1000,
         easing: "swing"
     });
+    menu.classList.remove('opened');
 });
 
 menu_titiland.addEventListener('click', (e) => {
     $('html, body').animate({
         scrollTop: $('.titiland').offset().top - 100
     }, 1000);
+    menu.classList.remove('opened');
 });
 
 menu_zoomloop.addEventListener('click', (e) => {
     $('html, body').animate({
         scrollTop: $('.zoomloop').offset().top - 180
     }, 1000);
+    menu.classList.remove('opened');
 });
 
 menu_miticoin.addEventListener('click', (e) => {
     $('html, body').animate({
         scrollTop: $('.miticoin').offset().top - 170
     }, 1000);
+    menu.classList.remove('opened');
 });
 
 
@@ -238,3 +244,27 @@ if (anim_items.length > 0) {
     }
     animOnScroll();
 }
+
+
+
+// Бургер
+const toggle = document.querySelector('.burger');
+
+toggle.addEventListener('click', function (e) {
+    this.classList.toggle('opened');
+    menu.classList.toggle('opened');
+});
+
+
+
+
+// Перетаскивание блока 
+window.addEventListener('resize', btnRemove);
+function btnRemove() {
+    if(window.screen.width < 767.89)
+        $(".titiland__more").appendTo(".titiland");
+    else
+        $(".titiland__more").appendTo(".titiland__content");
+
+}
+btnRemove()

@@ -577,3 +577,12 @@
         left: 22%;
     }
 }
+
+
+@media screen and (max-width: 1215px) {
+    .rm {
+        &__moon {
+            left: -750px;
+        }
+    }
+}
