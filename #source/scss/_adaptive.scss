@@ -204,12 +204,23 @@
          line-height: 130%;
       }
       &__item--info {
-         font-size: 8px;
+         font-size: 10px;
          line-height: 130%;
       }
    }
+
    .email {
       margin: 500px 0 0 0;
+      padding: 40px;
+
+      & p {
+         font-size: 18px;
+         margin: 0;
+      }
+
+      &__name {
+         font-size: 40px;
+      }
    }
 }
 
@@ -238,12 +249,12 @@
 
    .menu {
       position: absolute;
-      width: 50%;
+      height: 70vh;
+      width: 100%;
       top: 0;
       right: 0;
       background: #040718;
-      height: 100vh;
-      transform: translateX(200%);
+      transform: translateY(-200%);
       opacity: 0;
       transition: all 0.4s ease;
 
@@ -268,9 +279,14 @@
       }
    }
 
-   .menu.opened {
-      transform: translate(0);
-      opacity: 1;
+   .header.opened {
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(15px);
+      & .menu {
+         transform: translate(0);
+         opacity: 1;
+      }
    }
 
    .titiland {
@@ -310,6 +326,42 @@
       }
    }
 
+   .email {
+      & h2 {
+         max-width: 230px;
+      }
+   }
+
+   .team {
+      &__personal {
+         max-width: 95%;
+         margin: 26px 0 0 0;
+      }
+      &__item {
+         flex: 0 1 200px;
+      }
+      &__liders {
+         flex: 0;
+      }
+      & h2 {
+         width: auto;
+      }
+      &__title {
+         flex: 0;
+      }
+   }
+
+   .cookie {
+      width: 80vw;
+      padding: 20px 10px;
+      left: 50%;
+      transform: translateX(-50%);
+   }
+
+   .cookie--hide {
+      transform: translate(-50%, 140%);
+   }
+
    @media (max-width: 660px) {
       .welcome video {
          width: 250%;
@@ -321,6 +373,89 @@
          &__content {
             margin: 60px 20px;
          }
+      }
+      .email {
+         padding: 50px 20px;
+         & .form {
+            flex-direction: column;
+
+            & input {
+               width: 100%;
+            }
+         }
+         p {
+            font-size: 14px;
+         }
+
+         & .btn {
+            width: 100%;
+            padding: 12.5px 0;
+            display: flex;
+            justify-content: center;
+            .grad {
+               display: none;
+            }
+            background: linear-gradient(277.37deg, #2d0073 -24.21%, #c843ff 131.33%);
+            margin: 12px;
+         }
+      }
+      .cookie {
+         flex-direction: column;
+         text-align: center;
+         &__btn {
+            margin: 10px 0 0 0;
+            padding: 6px 32px;
+         }
+      }
+   }
+
+   .popup {
+      &__content {
+         width: 70vw;
+         height: 70vw;
+      }
+      &__content {
+         & h1 {
+            font-size: 25vw;
+            margin-top: 10%;
+         }
+
+         & p {
+            font-size: 3vw;
+         }
+
+         & .btn {
+            padding: 3% 12%;
+            font-size: 3vw;
+            margin-top: 8%;
+         }
+      }
+      &__UFO {
+         position: absolute;
+         top: -16%;
+         left: -15%;
+         width: 70%;
+         height: 20vw;
+         & img {
+            position: absolute;
+            width: 80%;
+            left: 30%;
+            top: 12%;
+         }
+         & .blur {
+            transform: translateX(-40%);
+            width: 40%;
+            top: 55%;
+            left: 78%;
+         }
+         // display: none;
+      }
+   }
+
+   .email-accept {
+      & img {
+         margin: 8vw 0 4vw 0;
+         width: 30vw;
       }
    }
 
@@ -382,17 +517,6 @@
       }
    }
 
-   @media (max-width: 270px) {
-      .header h2 {
-         display: none;
-      }
-      .welcome__title {
-         font-size: 50px;
-      }
-      .welcome__text {
-      }
-   }
-
    .zoomloop {
       &__play-btn {
          width: 100%;
@@ -406,6 +530,28 @@
       }
       & .case-img {
          display: none;
+      }
+   }
+
+   @media (max-width: 270px) {
+      .header h2 {
+         display: none;
+      }
+      .welcome__title {
+         font-size: 50px;
+      }
+      .welcome__text {
+      }
+      .email {
+         padding: 40px 10px;
+         &__name {
+            font-size: 30px;
+         }
+      }
+      .menu {
+         &__item {
+            font-size: 15px;
+         }
       }
    }
 }

@@ -127,6 +127,9 @@ h6 {
 p {
    margin-top: 10px;
 }
+img, video {
+   pointer-events: none;
+}
 /*--------------------*/
 
 [class*="__container"] {

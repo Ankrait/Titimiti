@@ -8,19 +8,23 @@
    <title>TITIMITI</title>
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/swiper.min.css">
+
+   <script src="js/jquery.js"></script>
+   <script src="js/preload.js"></script>
 </head>
 
-<body class="">
+<body class="overflow--hide">
+   <div class="preloader" id="preloader">
+      <img src="img/pre.png" alt="">
+      <svg class="progress-ring" width="488" height="488">
+         <circle class="progress-ring__circle" stroke="white" stroke-width="3" fill="transparent" r="241" cx="244"
+            cy="244" />
+      </svg>
+      <span class="preloader__procents">
+         <span class="procents">0</span>%
+      </span>
+   </div>
    <div class="wrapper">
-      <div class="preloader--hide" id="preloader">
-
-         <div class="preloader__img">
-         </div>
-         <span class="preloader__procents">
-            <span class="procents">0</span>%
-         </span>
-      </div>
-
       <header class="header">
          <div class="header__container">
             <div class="header__menu menu">
@@ -49,7 +53,7 @@
       <main class="main">
          <div class="main__container">
             <div class="welcome">
-               <video loop autoplay muted preload="auto">
+               <video loop autoplay muted preload="auto" controlsList="nodownload">
                   <source src="video/world.mp4" type="video/mp4">
                </video>
                <div class="arrow-content">
@@ -69,7 +73,7 @@
                <div class="welcome__text">
                   Нет каждому по солнцу. <br>Но денег хватит на всех.
                </div>
-               <div class="welcome__btn er404_blocks">
+               <div class="welcome__btn er_404">
                   <img src="img/discord.svg" alt="Дискорд">
                   <div>Вступить в cообщество</div>
                </div>
@@ -233,261 +237,495 @@
 
             <div class="roadmap anim">
                <div class="rm">
-                  <div class="rm__line line-1">
+                  <div class="rm__desktop">
+                     <div class="rm__line line-1">
+                     </div>
+                     <div class="rm__line line-2">
+                     </div>
+                     <div class="rm__line line-3">
+
+                        <div class="rm__etap-1">
+                           <img src="img/rm/etap-1.svg" alt="">
+                           <p>1 этап</p>
+                        </div>
+
+                        <div class="text-rm">ROADMAP</div>
+                        <div class="rm_point point-1 p-big anim-show">
+                           <div class="p-text">
+                              <p class="p-title">Декабрь <span> 2021</span></p>
+                              <p class="p-info">Формирование идеи</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-2 anim-show">
+                           <div class="p-text">
+                              <p class="p-info">Формирование высокопрофессиональной команды</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-3 anim-show">
+                           <div class="p-text">
+                              <p class="p-info">Первые концепты и выбор художественного направления</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-4 anim-show">
+                           <div class="p-text">
+                              <p class="p-info">Техническая документация</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-5 p-big anim-show">
+                           <div class="p-text">
+                              <p class="p-title">ФЕВРАЛЬ <span> 2021</span></p>
+                              <p class="p-info">Прототипирование</p>
+                           </div>
+                        </div>
+
+                     </div>
+                     <div class="rm__elipse elipse-1">
+                     </div>
+                     <div class="rm__line line-4">
+
+                        <div class="rm__etap-2">
+                           <img src="img/rm/etap-2.svg" alt="">
+                           <p>2 этап</p>
+                        </div>
+
+                        <div class="rm__etap-3">
+                           <img src="img/rm/etap-3.svg" alt="">
+                           <p>3 этап</p>
+                        </div>
+
+                        <div class="rm_point point-6 p-big anim-show">
+                           <div class="p-text">
+                              <p class="p-title">MAЙ <span> 2022</span></p>
+                              <p class="p-info">Дизайн документ</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-7 anim-show">
+                           <div class="p-text">
+                              <p class="p-info">Токеномика </p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-8 p-big anim-show">
+                           <div class="p-text">
+                              <p class="p-title">Август <span> 2022</span></p>
+                              <p class="p-info">Whitepaper</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-9 p-big anim-show">
+                           <div class="p-text">
+                              <p class="p-title">СЕНТЯБРЬ <span> 2022</span></p>
+                              <p class="p-info">Запуск сайта Titimiti и Zoom Loupe</p>
+                           </div>
+                        </div>
+
+                     </div>
+                     <div class="rm__elipse elipse-2">
+
+                        <div class="rm_point point-10 anim-show">
+                           <div class="p-text">
+                              <p class="p-info">Запуск социальных сетей</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-11 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Zoom Loupe Открытый бета-тест</p>
+                           </div>
+                        </div>
+
+                     </div>
+                     <div class="rm__line line-5">
+
+                        <div class="rm__etap-4">
+                           <img src="img/rm/etap-4.svg" alt="">
+                           <p>4 этап</p>
+                        </div>
+
+                        <div class="rm_point point-12 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Первый взгляд на NFT </p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-13 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Miticoin release</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-14 p-big p-inactive">
+                           <div class="p-text">
+                              <p class="p-title">Декабрь <span> 2022</span></p>
+                              <p class="p-info">Аудит смартконтрактов</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-15 p-big p-inactive">
+                           <div class="p-text">
+                              <p class="p-title">Январь <span> 2023</span></p>
+                              <p class="p-info">Запуск сайта Titiland </p>
+                           </div>
+                        </div>
+
+                     </div>
+                     <div class="rm__elipse elipse-3">
+
+                        <div class="rm_point point-16 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Продажи NFTW</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-17 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Zoom Loupe Beta release</p>
+                           </div>
+                        </div>
+
+                     </div>
+                     <div class="rm__line line-6">
+
+                        <div class="rm__etap-5">
+                           <img src="img/rm/etap-5.svg" alt="">
+                           <p>5 этап</p>
+                        </div>
+
+                        <div class="rm_point point-18 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">NFTA drops</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-19 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Запуск маркетплейса</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-20 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Формирование Landlords</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-21 p-big p-inactive">
+                           <div class="p-text">
+                              <p class="p-title">Май <span> 2023</span></p>
+                              <p class="p-info">Продажи NFTO</p>
+                           </div>
+                        </div>
+
+                     </div>
+                     <div class="rm__elipse elipse-4">
+
+                        <div class="rm_point point-22 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Запуск майнинга</p>
+                           </div>
+                        </div>
+
+                     </div>
+                     <div class="rm__line line-7">
+
+                        <div class="rm_point point-23 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Запуск стейкинга </p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-24 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Создание инфраструктуры земель Titiland</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-25 p-big p-inactive">
+                           <div class="p-text">
+                              <p class="p-title">АВГУСТ <span> 2023</span></p>
+                              <p class="p-info">Формирование Союзов, Стран и Орденов</p>
+                           </div>
+                        </div>
+
+                     </div>
+                     <div class="rm__elipse elipse-5">
+
+                        <div class="rm_point point-26 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Первое децентрализованное голосование </p>
+                           </div>
+                        </div>
+
+                     </div>
+                     <div class="rm__line line-8">
+
+                        <div class="rm_point point-27 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Внедрение NFT паспорт системы</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-28 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Социальная сеть Titimiti</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-29 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Titimiti multichain </p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-30 p-inactive">
+                           <div class="p-text">
+                              <p class="p-title">2027</p>
+                              <p class="p-info">Google takeover</p>
+                           </div>
+                        </div>
+
+                        <p class="text-moon">На луну!</p>
+
+                     </div>
+                     <div class="rm__arr">
+                     </div>
                   </div>
-                  <div class="rm__line line-2">
-                  </div>
-                  <div class="rm__line line-3">
+                  <div class="rm__mobile">
+                     <div class="rm__line line-3">
 
-                     <div class="rm__etap-1">
-                        <img src="img/rm/etap-1.svg" alt="">
-                        <p>1 этап</p>
+                        <div class="text-rm">ROADMAP</div>
+                        <div class="rm_point point-1 p-big anim-show">
+                           <div class="p-text">
+                              <p class="p-title">Декабрь <span> 2021</span></p>
+                              <p class="p-info">Формирование идеи</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-2 anim-show">
+                           <div class="p-text">
+                              <p class="p-info">Формирование высокопрофессиональной команды</p>
+                           </div>
+                        </div>
+
                      </div>
+                     <div class="rm__elipse elipse-1">
+                     </div>
+                     <div class="rm__line line-4">
 
-                     <div class="text-rm">ROADMAP</div>
-                     <div class="rm_point point-1 p-big anim-show">
-                        <div class="p-text">
-                           <p class="p-title">Декабрь <span> 2021</span></p>
-                           <p class="p-info">Формирование идеи</p>
+                        <div class="rm_point point-3 anim-show">
+                           <div class="p-text">
+                              <p class="p-info">Первые концепты и выбор художественного направления</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-4 anim-show">
+                           <div class="p-text">
+                              <p class="p-info">Техническая документация</p>
+                           </div>
+                        </div>
+
+                     </div>
+                     <div class="rm__elipse elipse-2">
+                     </div>
+                     <div class="rm__line line-5">
+
+                        <div class="rm_point point-5 p-big anim-show">
+                           <div class="p-text">
+                              <p class="p-title">ФЕВРАЛЬ <span> 2021</span></p>
+                              <p class="p-info">Прототипирование</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-6 p-big anim-show">
+                           <div class="p-text">
+                              <p class="p-title">MAЙ <span> 2022</span></p>
+                              <p class="p-info">Дизайн документ</p>
+                           </div>
+                        </div>
+
+                     </div>
+                     <div class="rm__elipse elipse-3"></div>
+                     <div class="rm__line line-6">
+
+                        <div class="rm_point point-7 anim-show">
+                           <div class="p-text">
+                              <p class="p-info">Токеномика </p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-8 p-big anim-show">
+                           <div class="p-text">
+                              <p class="p-title">Август <span> 2022</span></p>
+                              <p class="p-info">Whitepaper</p>
+                           </div>
+                        </div>
+
+                     </div>
+                     <div class="rm__elipse elipse-4"></div>
+                     <div class="rm__line line-7">
+                        <div class="rm_point point-9 p-big anim-show">
+                           <div class="p-text">
+                              <p class="p-title">СЕНТЯБРЬ <span> 2022</span></p>
+                              <p class="p-info">Запуск сайта Titimiti и Zoom Loupe</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-10 anim-show">
+                           <div class="p-text">
+                              <p class="p-info">Запуск социальных сетей</p>
+                           </div>
                         </div>
                      </div>
-
-                     <div class="rm_point point-2 anim-show">
-                        <div class="p-text">
-                           <p class="p-info">Формирование высокопрофессиональной команды</p>
+                     <div class="rm__elipse elipse-5"></div>
+                     <div class="rm__line line-8">
+                        <div class="rm_point point-11 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Zoom Loupe Открытый бета-тест</p>
+                           </div>
+                        </div>
+                        <div class="rm_point point-12 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Первый взгляд на NFT </p>
+                           </div>
+                        </div>
+                        <div class="rm_point point-13 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Miticoin release</p>
+                           </div>
                         </div>
                      </div>
+                     <div class="rm__elipse elipse-6"></div>
+                     <div class="rm__line line-9">
 
-                     <div class="rm_point point-3 anim-show">
-                        <div class="p-text">
-                           <p class="p-info">Первые концепты и выбор художественного направления</p>
+                        <div class="rm_point point-14 p-big p-inactive">
+                           <div class="p-text">
+                              <p class="p-title">Декабрь <span> 2022</span></p>
+                              <p class="p-info">Аудит смартконтрактов</p>
+                           </div>
+                        </div>
+                        <div class="rm_point point-15 p-big p-inactive">
+                           <div class="p-text">
+                              <p class="p-title">Январь <span> 2023</span></p>
+                              <p class="p-info">Запуск сайта Titiland </p>
+                           </div>
+                        </div>
+
+                     </div>
+                     <div class="rm__elipse elipse-7"></div>
+                     <div class="rm__line line-10">
+                        <div class="rm_point point-16 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Продажи NFTW</p>
+                           </div>
+                        </div>
+                        <div class="rm_point point-17 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Zoom Loupe Beta release</p>
+                           </div>
+                        </div>
+                        <div class="rm_point point-18 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">NFTA drops</p>
+                           </div>
                         </div>
                      </div>
+                     <div class="rm__elipse elipse-8"></div>
+                     <div class="rm__line line-11">
+                        <div class="rm_point point-19 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Запуск маркетплейса</p>
+                           </div>
+                        </div>
 
-                     <div class="rm_point point-4 anim-show">
-                        <div class="p-text">
-                           <p class="p-info">Техническая документация</p>
+                        <div class="rm_point point-20 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Формирование Landlords</p>
+                           </div>
                         </div>
                      </div>
+                     <div class="rm__elipse elipse-9"></div>
+                     <div class="rm__line line-12">
+                        <div class="rm_point point-21 p-big p-inactive">
+                           <div class="p-text">
+                              <p class="p-title">Май <span> 2023</span></p>
+                              <p class="p-info">Продажи NFTO</p>
+                           </div>
+                        </div>
+                        <div class="rm_point point-22 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Запуск майнинга</p>
+                           </div>
+                        </div>
 
-                     <div class="rm_point point-5 p-big anim-show">
-                        <div class="p-text">
-                           <p class="p-title">ФЕВРАЛЬ <span> 2021</span></p>
-                           <p class="p-info">Прототипирование</p>
+                     </div>
+                     <div class="rm__elipse elipse-10"></div>
+                     <div class="rm__line line-13">
+                        <div class="rm_point point-23 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Запуск стейкинга </p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-24 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Создание инфраструктуры земель Titiland</p>
+                           </div>
+                        </div>
+
+                     </div>
+                     <div class="rm__elipse elipse-11"></div>
+                     <div class="rm__line line-14">
+                        <div class="rm_point point-25 p-big p-inactive">
+                           <div class="p-text">
+                              <p class="p-title">АВГУСТ <span> 2023</span></p>
+                              <p class="p-info">Формирование Союзов, Стран и Орденов</p>
+                           </div>
+                        </div>
+                        <div class="rm_point point-26 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Первое децентрализованное голосование </p>
+                           </div>
+                        </div>
+
+
+                     </div>
+                     <div class="rm__elipse elipse-12"></div>
+                     <div class="rm__line line-15">
+                        <div class="rm_point point-27 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Внедрение NFT паспорт системы</p>
+                           </div>
+                        </div>
+
+                        <div class="rm_point point-28 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Социальная сеть Titimiti</p>
+                           </div>
+                        </div>
+                        <div class="rm_point point-29 p-inactive">
+                           <div class="p-text">
+                              <p class="p-info">Titimiti multichain </p>
+                           </div>
+                        </div>
+
+
+                     </div>
+                     <div class="rm__elipse elipse-13"></div>
+                     <div class="rm__line line-16">
+                        <div class="rm_point point-30 p-inactive">
+                           <div class="p-text">
+                              <p class="p-title">2027</p>
+                              <p class="p-info">Google takeover</p>
+                           </div>
                         </div>
                      </div>
-
-                  </div>
-                  <div class="rm__elipse elipse-1">
-                  </div>
-                  <div class="rm__line line-4">
-
-                     <div class="rm__etap-2">
-                        <img src="img/rm/etap-2.svg" alt="">
-                        <p>2 этап</p>
+                     <div class="rm__arr">
                      </div>
-
-                     <div class="rm__etap-3">
-                        <img src="img/rm/etap-3.svg" alt="">
-                        <p>3 этап</p>
-                     </div>
-
-                     <div class="rm_point point-6 p-big anim-show">
-                        <div class="p-text">
-                           <p class="p-title">MAЙ <span> 2022</span></p>
-                           <p class="p-info">Дизайн документ</p>
-                        </div>
-                     </div>
-
-                     <div class="rm_point point-7 anim-show">
-                        <div class="p-text">
-                           <p class="p-info">Токеномика </p>
-                        </div>
-                     </div>
-
-                     <div class="rm_point point-8 p-big anim-show">
-                        <div class="p-text">
-                           <p class="p-title">Август <span> 2022</span></p>
-                           <p class="p-info">Whitepaper</p>
-                        </div>
-                     </div>
-
-                     <div class="rm_point point-9 p-big anim-show">
-                        <div class="p-text">
-                           <p class="p-title">СЕНТЯБРЬ <span> 2022</span></p>
-                           <p class="p-info">Запуск сайта Titimiti и Zoom Loupe</p>
-                        </div>
-                     </div>
-
-                  </div>
-                  <div class="rm__elipse elipse-2">
-
-                     <div class="rm_point point-10 anim-show">
-                        <div class="p-text">
-                           <p class="p-info">Запуск социальных сетей</p>
-                        </div>
-                     </div>
-
-                     <div class="rm_point point-11 p-inactive">
-                        <div class="p-text">
-                           <p class="p-info">Zoom Loupe Открытый бета-тест</p>
-                        </div>
-                     </div>
-
-                  </div>
-                  <div class="rm__line line-5">
-
-                     <div class="rm__etap-4">
-                        <img src="img/rm/etap-4.svg" alt="">
-                        <p>4 этап</p>
-                     </div>
-
-                     <div class="rm_point point-12 p-inactive">
-                        <div class="p-text">
-                           <p class="p-info">Первый взгляд на NFT </p>
-                        </div>
-                     </div>
-
-                     <div class="rm_point point-13 p-inactive">
-                        <div class="p-text">
-                           <p class="p-info">Miticoin release</p>
-                        </div>
-                     </div>
-
-                     <div class="rm_point point-14 p-big p-inactive">
-                        <div class="p-text">
-                           <p class="p-title">Декабрь <span> 2022</span></p>
-                           <p class="p-info">Аудит смартконтрактов</p>
-                        </div>
-                     </div>
-
-                     <div class="rm_point point-15 p-big p-inactive">
-                        <div class="p-text">
-                           <p class="p-title">Январь <span> 2023</span></p>
-                           <p class="p-info">Запуск сайта Titiland </p>
-                        </div>
-                     </div>
-
-                  </div>
-                  <div class="rm__elipse elipse-3">
-
-                     <div class="rm_point point-16 p-inactive">
-                        <div class="p-text">
-                           <p class="p-info">Продажи NFTW</p>
-                        </div>
-                     </div>
-
-                     <div class="rm_point point-17 p-inactive">
-                        <div class="p-text">
-                           <p class="p-info">Zoom Loupe Beta release</p>
-                        </div>
-                     </div>
-
-                  </div>
-                  <div class="rm__line line-6">
-
-                     <div class="rm__etap-5">
-                        <img src="img/rm/etap-5.svg" alt="">
-                        <p>5 этап</p>
-                     </div>
-
-                     <div class="rm_point point-18 p-inactive">
-                        <div class="p-text">
-                           <p class="p-info">NFTA drops</p>
-                        </div>
-                     </div>
-
-                     <div class="rm_point point-19 p-inactive">
-                        <div class="p-text">
-                           <p class="p-info">Запуск маркетплейса</p>
-                        </div>
-                     </div>
-
-                     <div class="rm_point point-20 p-inactive">
-                        <div class="p-text">
-                           <p class="p-info">Формирование Landlords</p>
-                        </div>
-                     </div>
-
-                     <div class="rm_point point-21 p-big p-inactive">
-                        <div class="p-text">
-                           <p class="p-title">Май <span> 2023</span></p>
-                           <p class="p-info">Продажи NFTO</p>
-                        </div>
-                     </div>
-
-                  </div>
-                  <div class="rm__elipse elipse-4">
-
-                     <div class="rm_point point-22 p-inactive">
-                        <div class="p-text">
-                           <p class="p-info">Запуск майнинга</p>
-                        </div>
-                     </div>
-
-                  </div>
-                  <div class="rm__line line-7">
-
-                     <div class="rm_point point-23 p-inactive">
-                        <div class="p-text">
-                           <p class="p-info">Запуск стейкинга </p>
-                        </div>
-                     </div>
-
-                     <div class="rm_point point-24 p-inactive">
-                        <div class="p-text">
-                           <p class="p-info">Создание инфраструктуры земель Titiland</p>
-                        </div>
-                     </div>
-
-                     <div class="rm_point point-25 p-big p-inactive">
-                        <div class="p-text">
-                           <p class="p-title">АВГУСТ <span> 2023</span></p>
-                           <p class="p-info">Формирование Союзов, Стран и Орденов</p>
-                        </div>
-                     </div>
-
-                  </div>
-                  <div class="rm__elipse elipse-5">
-
-                     <div class="rm_point point-26 p-inactive">
-                        <div class="p-text">
-                           <p class="p-info">Первое децентрализованное голосование </p>
-                        </div>
-                     </div>
-
-                  </div>
-                  <div class="rm__line line-8">
-
-                     <div class="rm_point point-27 p-inactive">
-                        <div class="p-text">
-                           <p class="p-info">Внедрение NFT паспорт системы</p>
-                        </div>
-                     </div>
-
-                     <div class="rm_point point-28 p-inactive">
-                        <div class="p-text">
-                           <p class="p-info">Социальная сеть Titimiti</p>
-                        </div>
-                     </div>
-
-                     <div class="rm_point point-29 p-inactive">
-                        <div class="p-text">
-                           <p class="p-info">Titimiti multichain </p>
-                        </div>
-                     </div>
-
-                     <div class="rm_point point-30 p-inactive">
-                        <div class="p-text">
-                           <p class="p-title">2027</p>
-                           <p class="p-info">Google takeover</p>
-                        </div>
-                     </div>
-
-                     <p class="text-moon">На луну!</p>
-
-                  </div>
-                  <div class="rm__arr">
                   </div>
                </div>
                <div class="rm__moon">
@@ -502,7 +740,7 @@
                      <h2>НАША КОМАНДА</h2>
                   </div>
                   <div class="team__liders">
-                     <div class="team__item">
+                     <div class="team__item _lid">
                         <div class="team__item--photo">
                            <img src="img/team/leader-1.png" alt="">
                         </div>
@@ -510,7 +748,7 @@
                            V
                         </div>
                      </div>
-                     <div class="team__item">
+                     <div class="team__item _lid">
                         <div class="team__item--photo">
                            <img src="img/team/leader-2.png" alt="">
                         </div>
@@ -699,7 +937,6 @@
 
    </div>
 </body>
-<script src="js/jquery.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>
 

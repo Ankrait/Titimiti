@@ -37,6 +37,8 @@
    width: 100%;
    z-index: 4;
 
+   transition: all 0.4s ease;
+
    background: linear-gradient(180deg, rgba(0, 10, 24, 0.2) 6.8%, rgba(0, 0, 0, 0) 78.8%);
    backdrop-filter: blur(4px);
 }
@@ -86,10 +88,14 @@
 ////////////////////////////////////
 
 .preloader {
+   position: fixed;
+   top: 0;
+   left: 0;
    width: 100%;
    height: 100%;
-   z-index: 3;
+   z-index: 50;
    overflow: hidden;
+   background: #040718;
 
    &__procents {
       position: absolute;
@@ -108,21 +114,22 @@
       text-shadow: 0px 0px 40px rgba(255, 41, 246, 0.4);
    }
 
-   &__img {
+   & svg,
+   & img {
       position: absolute;
-      left: 0;
-      top: 0;
-      margin: -10% 0 0 0;
-      width: 100%;
-      img {
-         position: absolute;
-         width: 100%;
-      }
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
    }
 }
 
 .preloader--hide {
    display: none;
+}
+
+circle {
+   stroke: #e64dff;
+   transition: all 0.2s ease;
 }
 
 body.overflow--hide {
@@ -138,10 +145,10 @@ body.overflow--hide {
    width: 100%;
    height: 100%;
    z-index: 10;
-   background-color: rgba(0, 0, 0, 0.8);
-   backdrop-filter: blur(15px);
    opacity: 0;
    visibility: hidden;
+   background-color: rgba(0, 0, 0, 0.8);
+   backdrop-filter: blur(15px);
    transition: all 1s ease 0s;
 
    &__body {
@@ -277,7 +284,7 @@ body.overflow--hide {
 
 .arrow-content {
    position: absolute;
-   left: 50%;
+   left: 50.3%;
    bottom: 60px;
    margin: 0 auto;
    width: 30px;
@@ -345,6 +352,10 @@ body.overflow--hide {
       text-transform: uppercase;
       margin: 0 0 0 12px;
    }
+}
+
+.blur__menu .opened {
+   opacity: 1;
 }
 
 .burger {
@@ -464,7 +475,7 @@ body.overflow--hide {
       font-weight: 400;
       font-size: 10px;
       line-height: 130%;
-      /* identical to box height, or 13px */
+      text-align: center;
 
       text-transform: uppercase;
 
@@ -580,7 +591,7 @@ body.overflow--hide {
 
 .cookie--hide {
    opacity: 0;
-   transform: translate(0, 100%);
+   transform: translate(0, 140%);
 }
 
 @import "_adaptive";

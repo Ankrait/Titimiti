@@ -1,34 +1,4 @@
-body = document.body
-procents = document.querySelector('.procents')
-preload = document.querySelector('.preloader')
-
-preloader = $('.preloader'); // селектор прелоадера    
-imagesCount = $('img').length; // количество изображений   
-videosCount = $('video').length; // количество видео  
-
-let i = 0;
-
-allCount = imagesCount + videosCount;
-percent = 100 / allCount; //количество % на одну картинку
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     const mediaFiles = document.querySelectorAll('img');
-
-//     Array.from(mediaFiles).forEach((file, index) => {
-//         file.onload = () => {
-//             i++;
-
-//             procents.innerHTML = ((i * 100) / mediaFiles.length).toFixed();
-
-//             if (i === 1) {
-//                 body.classList.remove('preload')
-//                 preload.classList.add('preloader--hide')
-//                 procents.innerHTML = 100
-//             }
-//         }
-//     })
-// });
-
+document.querySelectorAll('video').forEach(v => { v.setAttribute('pip', 'false'); })
 
 // Свайпер
 swiper = new Swiper('.swiper', {
@@ -144,8 +114,6 @@ const moon_bg = document.querySelector('.moon-bg')
 const collider_images = document.querySelectorAll('.swiper img')
 const lines = document.querySelectorAll('.lines')
 
-console.log(collider_images);
-
 document.addEventListener('mousemove', moonParalaks)
 
 function moonParalaks(e) {
@@ -182,6 +150,8 @@ const menu_zoomloop = document.querySelector('.scroll_zoomloop');
 const menu_miticoin = document.querySelector('.scroll_miticoin');
 
 const menu = document.querySelector('.menu');
+const toggle = document.querySelector('.burger');
+const header = document.querySelector('.header');
 
 menu_roadmap.addEventListener('click', (e) => {
     $('html, body').animate({
@@ -190,28 +160,28 @@ menu_roadmap.addEventListener('click', (e) => {
         duration: 1000,
         easing: "swing"
     });
-    menu.classList.remove('opened');
+    removeMenuOpened();
 });
 
 menu_titiland.addEventListener('click', (e) => {
     $('html, body').animate({
         scrollTop: $('.titiland').offset().top - 100
     }, 1000);
-    menu.classList.remove('opened');
+    removeMenuOpened();
 });
 
 menu_zoomloop.addEventListener('click', (e) => {
     $('html, body').animate({
         scrollTop: $('.zoomloop').offset().top - 180
     }, 1000);
-    menu.classList.remove('opened');
+    removeMenuOpened();
 });
 
 menu_miticoin.addEventListener('click', (e) => {
     $('html, body').animate({
         scrollTop: $('.miticoin').offset().top - 170
     }, 1000);
-    menu.classList.remove('opened');
+    removeMenuOpened();
 });
 
 
@@ -229,7 +199,6 @@ if (anim_items.length > 0) {
             let anim_item_height = item.offsetHeight;
             let anim_item_offsetY = item.getBoundingClientRect().top + scrollY;
             let anim_start = 4;
-            console.log(anim_item_height, anim_item_offsetY);
 
             let anim_item_point = window.innerHeight - anim_item_height / anim_start;
             if (anim_item_height > window.innerHeight) {
@@ -248,23 +217,42 @@ if (anim_items.length > 0) {
 
 
 // Бургер
-const toggle = document.querySelector('.burger');
-
 toggle.addEventListener('click', function (e) {
     this.classList.toggle('opened');
     menu.classList.toggle('opened');
+    header.classList.toggle('opened');
+    body.classList.toggle('overflow--hide');
 });
 
+function removeMenuOpened() {
+    toggle.classList.remove('opened');
+    menu.classList.remove('opened');
+    header.classList.remove('opened');
+    body.classList.remove('overflow--hide');
+}
 
 
 
-// Перетаскивание блока 
+// Перетаскивание блока кнопки
 window.addEventListener('resize', btnRemove);
 function btnRemove() {
-    if(window.screen.width < 767.89)
+    if (window.screen.width < 767.89)
         $(".titiland__more").appendTo(".titiland");
     else
         $(".titiland__more").appendTo(".titiland__content");
 
 }
 btnRemove()
+
+// Перетаскивание блока team
+window.addEventListener('resize', lidersRemove);
+function lidersRemove() {
+    if (window.screen.width < 767.89) {
+        $("._lid").prependTo(".team__personal");
+    }
+    else {
+        $("._lid").prependTo(".team__liders");
+    }
+
+}
+lidersRemove()

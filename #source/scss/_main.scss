@@ -527,7 +527,9 @@
          width: 100%;
          object-fit: cover;
          transition: transform 0.5s ease 0s;
-         &:hover {
+      }
+      &:hover {
+         img {
             transform: scale(1.1);
          }
       }
@@ -582,7 +584,6 @@
    & p {
       font-weight: 400;
       font-size: 30px;
-      line-height: 36px;
    }
 
    &__name {
