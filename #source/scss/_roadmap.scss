@@ -617,7 +617,8 @@
 @media screen and (max-width: 1023.89px) {
 
     .roadmap {
-        margin: 271px 0 0 0;
+        margin: 280px 0 0 0;
+        height: 900px;
     }
     .text-rm {
         font-size: 40px;
@@ -908,11 +909,18 @@
         right: 18%;
     }
     .point-8 {
-        left: 36%;
+        left: 46%;
+    }
+
+    .text-moon {
+        left: -20px;
     }
 }
 
 @media screen and (max-width: 520px) {
+    .text-moon {
+        left: -10px;
+    }
     .roadmap {
         height: 2000px;
     }
@@ -1263,4 +1271,24 @@
             transform: translate(-42%, 74%);
         }
     }
+}
+
+.rm__mobile {
+    & .text-rm {
+        position: relative;
+        & img {
+            position: absolute;
+            width: 40%;
+            right: -40px;
+            top: -35px;
+        }
+    }
+}
+
+
+.line-mobile {
+    position: absolute;
+    width: 120%;
+    top: -30px;
+    left: -30px;
 }

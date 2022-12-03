@@ -40,7 +40,7 @@ er404_blocks.forEach(item => {
 
 function openPopupFunc(e) {
     popup404.classList.add('open');
-    body.classList.add('overflow--hide')
+    document.body.classList.add('overflow--hide');
     e.preventDefault();
 }
 
@@ -52,7 +52,7 @@ popup404.addEventListener('click', hidePopup404);
 close_btns.forEach(item => {
     item.addEventListener('click', (e) => {
         popup404.classList.remove('open');
-        body.classList.remove('overflow--hide')
+        document.body.classList.remove('overflow--hide')
         e.preventDefault();
     });
 });
@@ -72,7 +72,7 @@ popup_email.addEventListener('click', hidePopupEmail);
 close_btns.forEach(item => {
     item.addEventListener('click', (e) => {
         popup_email.classList.remove('open');
-        body.classList.remove('overflow--hide')
+        document.body.classList.remove('overflow--hide')
         e.preventDefault();
     });
 });
@@ -80,7 +80,7 @@ close_btns.forEach(item => {
 function hidePopupEmail(e) {
     if (!e.target.closest('.popup__content')) {
         popup_email.classList.remove('open');
-        body.classList.remove('overflow--hide')
+        document.body.classList.remove('overflow--hide')
     }
     e.preventDefault();
 }
@@ -117,19 +117,21 @@ const lines = document.querySelectorAll('.lines')
 document.addEventListener('mousemove', moonParalaks)
 
 function moonParalaks(e) {
-    let offsetX = (e.clientX / window.innerWidth * 12) - 6;
-    let offsetY = (e.clientY / window.innerHeight * 12) - 6;
+    if (window.screen.width > 780) {
+        let offsetX = (e.clientX / window.innerWidth * 12) - 6;
+        let offsetY = (e.clientY / window.innerHeight * 12) - 6;
 
-    moon.setAttribute("style", "transform: translate(" + offsetX + "px, " + offsetY + "px);");
-    moon_bg.setAttribute("style", "transform: translate(" + -offsetX + "px, " + -offsetY + "px);");
+        moon.setAttribute("style", "transform: translate(" + offsetX + "px, " + offsetY + "px);");
+        moon_bg.setAttribute("style", "transform: translate(" + -offsetX + "px, " + -offsetY + "px);");
 
-    collider_images.forEach((item) => {
-        item.setAttribute("style", "transform: translate(" + offsetX + "px, " + offsetY + "px);");
-    });
+        collider_images.forEach((item) => {
+            item.setAttribute("style", "transform: translate(" + offsetX + "px, " + offsetY + "px);");
+        });
 
-    lines.forEach((item) => {
-        item.setAttribute("style", "transform: translate(" + offsetX * 3 + "px, " + offsetY * 3 + "px);");
-    });
+        lines.forEach((item) => {
+            item.setAttribute("style", "transform: translate(" + offsetX * 3 + "px, " + offsetY * 3 + "px);");
+        });
+    }
 }
 
 

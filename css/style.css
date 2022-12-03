@@ -1431,7 +1431,8 @@ select:-webkit-autofill:focus {
 }
 @media screen and (max-width: 1023.89px) {
   .roadmap {
-    margin: 271px 0 0 0;
+    margin: 280px 0 0 0;
+    height: 900px;
   }
   .text-rm {
     font-size: 40px;
@@ -1684,10 +1685,16 @@ select:-webkit-autofill:focus {
     right: 18%;
   }
   .point-8 {
-    left: 36%;
+    left: 46%;
+  }
+  .text-moon {
+    left: -20px;
   }
 }
 @media screen and (max-width: 520px) {
+  .text-moon {
+    left: -10px;
+  }
   .roadmap {
     height: 2000px;
   }
@@ -1976,6 +1983,23 @@ select:-webkit-autofill:focus {
     transform: translate(-42%, 74%);
   }
 }
+.rm__mobile .text-rm {
+  position: relative;
+}
+.rm__mobile .text-rm img {
+  position: absolute;
+  width: 40%;
+  right: -40px;
+  top: -35px;
+}
+
+.line-mobile {
+  position: absolute;
+  width: 120%;
+  top: -30px;
+  left: -30px;
+}
+
 .img_down._active img:first-child {
   transform: translate(0, 0) scale(1);
 }
@@ -2062,13 +2086,12 @@ body.overflow--hide {
   border: 1px solid #e64dff;
   background: #040718;
   border-radius: 50%;
-  opacity: 0.98;
   box-shadow: 0px 0px 40px rgba(255, 41, 246, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transition: all 0.5s ease 0s;
+  transition: opacity 0.5s ease 0s;
   opacity: 0;
 }
 .popup__content h1 {
@@ -2092,11 +2115,11 @@ body.overflow--hide {
   font-weight: 600;
 }
 .popup__UFO {
-  transition: all 1s ease 0s;
   width: 64.6%;
   position: absolute;
   top: -16%;
   left: 4%;
+  opacity: 1;
   transform: translate(-200%, -400%);
 }
 .popup__UFO .blur {
@@ -2115,6 +2138,7 @@ body.overflow--hide {
 
 .popup.open .popup__UFO {
   transform: translate(0, 0);
+  transition: transform 1s ease;
 }
 
 .popup.open .blur {
@@ -2186,7 +2210,7 @@ body.overflow--hide {
 
 .arrow-content {
   position: absolute;
-  left: 50.3%;
+  left: 50.2%;
   bottom: 60px;
   margin: 0 auto;
   width: 30px;
@@ -2325,6 +2349,9 @@ body.overflow--hide {
 .footer {
   margin: 15% 0 0 0;
   background: #040718;
+}
+.footer a {
+  color: #fcfcfc;
 }
 .footer__container {
   display: flex;
@@ -2567,10 +2594,11 @@ body.overflow--hide {
     top: 40px;
   }
   .swiper {
-    max-width: 140px;
+    max-width: 150px;
   }
   .swiper img {
     height: 160px;
+    width: 95%;
   }
   .btn {
     padding: 12.5px 50px;
@@ -2637,6 +2665,9 @@ body.overflow--hide {
   .miticoin__content {
     flex: 50% 0 1;
   }
+  .miticoin__text {
+    font-size: 14px;
+  }
   .team__title {
     font-size: 40px;
     line-height: 48px;
@@ -2693,6 +2724,11 @@ body.overflow--hide {
     z-index: 25;
     padding: 0 25px;
   }
+  .header__mob {
+    position: relative;
+    width: 100%;
+    height: 68px;
+  }
   .logo-phone {
     display: flex;
     z-index: 25;
@@ -2700,7 +2736,6 @@ body.overflow--hide {
   }
   .menu {
     position: absolute;
-    height: 70vh;
     width: 100%;
     top: 0;
     right: 0;
@@ -2734,6 +2769,10 @@ body.overflow--hide {
   .header.opened .menu {
     transform: translate(0);
     opacity: 1;
+  }
+  .zoomloop__back {
+    height: 104%;
+    top: -2%;
   }
   .titiland {
     flex-direction: column;
@@ -2805,6 +2844,10 @@ body.overflow--hide {
   .zoomloop__content {
     margin: 60px 20px;
   }
+  .zoomloop__back {
+    height: 96%;
+    top: 2%;
+  }
   .email {
     padding: 50px 20px;
   }
@@ -2844,7 +2887,7 @@ body.overflow--hide {
   }
   .popup__content h1 {
     font-size: 25vw;
-    margin-top: 10%;
+    margin-top: 16%;
   }
   .popup__content p {
     font-size: 3vw;
@@ -2881,8 +2924,9 @@ body.overflow--hide {
   }
 }
 @media screen and (max-width: 767.89px) and (max-width: 475px) {
-  .welcome__title {
-    font-size: 90px;
+  .popup__content h1 {
+    font-size: 25vw;
+    margin-top: 10%;
   }
 }
 @media screen and (max-width: 530px) {
@@ -2898,6 +2942,9 @@ body.overflow--hide {
   }
   .zoomloop__content {
     margin: 60px 20px;
+  }
+  .cookie__text {
+    max-width: 220px;
   }
 }
 @media screen and (max-width: 424.89px) {
@@ -2931,8 +2978,13 @@ body.overflow--hide {
   .zoomloop__play-btn .grad {
     display: none;
   }
-  .zoomloop .case-img {
-    display: none;
+}
+@media screen and (max-width: 424.89px) and (max-width: 350px) {
+  .zoomloop__content .case-img {
+    top: -33px;
+    max-width: 280px;
+    width: 80%;
+    right: -69px;
   }
 }
 @media screen and (max-width: 424.89px) and (max-width: 270px) {

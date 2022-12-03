@@ -100,9 +100,10 @@
       }
    }
    .swiper {
-      max-width: 140px;
+      max-width: 150px;
       & img {
          height: 160px;
+         width: 95%;
       }
    }
 
@@ -175,6 +176,9 @@
       &__content {
          flex: 50% 0 1;
       }
+      &__text {
+         font-size: 14px;
+      }
    }
 
    .team {
@@ -240,6 +244,11 @@
       z-index: 25;
       padding: 0 25px;
    }
+   .header__mob {
+      position: relative;
+      width: 100%;
+      height: 68px;
+   }
 
    .logo-phone {
       display: flex;
@@ -249,7 +258,6 @@
 
    .menu {
       position: absolute;
-      height: 70vh;
       width: 100%;
       top: 0;
       right: 0;
@@ -287,6 +295,11 @@
          transform: translate(0);
          opacity: 1;
       }
+   }
+
+   .zoomloop__back {
+      height: 104%;
+      top: -2%;
    }
 
    .titiland {
@@ -373,6 +386,10 @@
          &__content {
             margin: 60px 20px;
          }
+         &__back {
+            height: 96%;
+            top: 2%;
+         }
       }
       .email {
          padding: 50px 20px;
@@ -417,7 +434,7 @@
       &__content {
          & h1 {
             font-size: 25vw;
-            margin-top: 10%;
+            margin-top: 16%;
          }
 
          & p {
@@ -460,8 +477,13 @@
    }
 
    @media (max-width: 475px) {
-      .welcome__title {
-         font-size: 90px;
+      .popup {
+         &__content {
+            & h1 {
+               font-size: 25vw;
+               margin-top: 10%;
+            }
+         }
       }
    }
 }
@@ -484,6 +506,10 @@
       &__content {
          margin: 60px 20px;
       }
+   }
+
+   .cookie__text {
+      max-width: 220px;
    }
 }
 
@@ -528,11 +554,18 @@
          }
          background: linear-gradient(277.37deg, #2d0073 -24.21%, #c843ff 131.33%);
       }
-      & .case-img {
-         display: none;
-      }
    }
 
+   @media (max-width: 350px) {
+      .zoomloop__content {
+         & .case-img {
+            top: -33px;
+            max-width: 280px;
+            width: 80%;
+            right: -69px;
+         }
+      }
+   }
    @media (max-width: 270px) {
       .header h2 {
          display: none;
