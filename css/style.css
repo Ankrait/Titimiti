@@ -328,6 +328,13 @@ img, video {
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+.about__info._2 {
+  transform: translateX(50%);
+  opacity: 0;
 }
 .about__logo {
   margin: 10px 0 0 0;
@@ -339,6 +346,11 @@ img, video {
   justify-content: space-between;
   min-width: 0;
   margin: 15% 0 0 0;
+}
+.titiland__name {
+  transform: translateX(50%);
+  opacity: 0;
+  transition: all 0.8s ease;
 }
 .titiland__slaider {
   flex: 0 1 50%;
@@ -462,6 +474,9 @@ img, video {
 }
 .zoomloop__name {
   margin-top: 8px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.8s ease;
 }
 .zoomloop__text {
   margin: 19px 0 0 0;
@@ -580,6 +595,11 @@ img, video {
   justify-content: space-around;
   position: relative;
 }
+.miticoin__name {
+  transform: translateX(50%);
+  opacity: 1;
+  transition: all 0.8s ease;
+}
 .miticoin__video {
   flex: 0 1 50%;
   display: flex;
@@ -651,6 +671,9 @@ img, video {
 }
 .team__title h2 {
   max-width: 400px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.8s ease;
 }
 .team__liders {
   flex: 0 1 50%;
@@ -723,12 +746,36 @@ img, video {
 .email p {
   font-weight: 400;
   font-size: 30px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.8s ease;
 }
 .email__name {
   margin: 8px 0 0 0;
+  transform: translateX(50%);
+  opacity: 0;
+  transition: all 0.8s ease;
 }
-.email form {
+.email .form {
   margin: 30px 0 0 0;
+  display: flex;
+  align-items: start;
+}
+.email .form__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.email .form__item span {
+  opacity: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #bf1214;
+  margin-top: 5px;
+}
+.email .form__item span.error {
+  opacity: 1;
 }
 .email input {
   padding: 10px 32px 10px 20px;
@@ -740,17 +787,18 @@ img, video {
   font-weight: 400;
   font-size: 15px;
   color: #fcfcfc;
-  transition: all 0.4s ease 0s;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.8s ease;
 }
 .email input:focus {
   box-shadow: 0px 0px 10px #d848ff;
 }
-.email form {
-  display: flex;
-  align-items: center;
-}
 .email .form__btn {
   margin: 0px 0 0 8px;
+  transform: translateX(50%);
+  opacity: 0;
+  transition: all 0.8s ease;
 }
 .email__blur {
   position: absolute;
@@ -779,6 +827,15 @@ img, video {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;
+}
+
+input.error {
+  border: 1px solid #be1111;
+  box-shadow: none;
+}
+input.error:focus {
+  border: 1px solid #be1111;
+  box-shadow: none;
 }
 
 /* Webkit */
@@ -2015,6 +2072,36 @@ select:-webkit-autofill:focus {
   background-color: #fff;
 }
 
+.about__info._active {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.titiland__name._active {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.zoomloop__name._active {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.miticoin__name._active {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.team h2._active {
+  transform: translate(0);
+  opacity: 1;
+}
+
+.email._active input, .email._active .btn, .email._active .email__name, .email._active p {
+  transform: translate(0);
+  opacity: 1;
+}
+
 .preloader {
   position: fixed;
   top: 0;
@@ -2799,6 +2886,10 @@ body.overflow--hide {
   .titiland .btn .grad {
     display: none;
   }
+  .titiland .arr-left,
+.titiland .arr-right {
+    display: none;
+  }
   .miticoin {
     flex-direction: column-reverse;
   }
@@ -2808,12 +2899,16 @@ body.overflow--hide {
   .email h2 {
     max-width: 230px;
   }
+  .team .swiper {
+    max-width: 343px;
+  }
   .team__personal {
-    max-width: 95%;
     margin: 26px 0 0 0;
+    max-width: 100%;
+    width: 92%;
   }
   .team__item {
-    flex: 0 1 200px;
+    flex: 0 1 100%;
   }
   .team__liders {
     flex: 0;
@@ -2823,6 +2918,10 @@ body.overflow--hide {
   }
   .team__title {
     flex: 0;
+  }
+  .team img {
+    height: auto;
+    width: 100%;
   }
   .cookie {
     width: 80vw;
@@ -2854,6 +2953,9 @@ body.overflow--hide {
   .email .form {
     flex-direction: column;
   }
+  .email .form__item {
+    width: 100%;
+  }
   .email .form input {
     width: 100%;
   }
@@ -2878,6 +2980,12 @@ body.overflow--hide {
   .cookie__btn {
     margin: 10px 0 0 0;
     padding: 6px 32px;
+  }
+  .preloader img, .preloader svg, .preloader span {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  .preloader span {
+    margin-top: 0px;
   }
 }
 @media screen and (max-width: 767.89px) {
@@ -2978,6 +3086,9 @@ body.overflow--hide {
   .zoomloop__play-btn .grad {
     display: none;
   }
+  .preloader img, .preloader svg, .preloader span {
+    transform: translate(-50%, -50%) scale(0.6);
+  }
 }
 @media screen and (max-width: 424.89px) and (max-width: 350px) {
   .zoomloop__content .case-img {
@@ -2985,6 +3096,9 @@ body.overflow--hide {
     max-width: 280px;
     width: 80%;
     right: -69px;
+  }
+  .preloader img, .preloader svg, .preloader span {
+    transform: translate(-50%, -50%) scale(0.3);
   }
 }
 @media screen and (max-width: 424.89px) and (max-width: 270px) {

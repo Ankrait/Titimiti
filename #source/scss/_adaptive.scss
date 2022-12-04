@@ -330,6 +330,10 @@
          }
          background: linear-gradient(277.37deg, #2d0073 -24.21%, #c843ff 131.33%);
       }
+      .arr-left,
+      .arr-right {
+         display: none;
+      }
    }
 
    .miticoin {
@@ -346,12 +350,16 @@
    }
 
    .team {
+      & .swiper {
+         max-width: 343px;
+      }
       &__personal {
-         max-width: 95%;
          margin: 26px 0 0 0;
+         max-width: 100%;
+         width: 92%;
       }
       &__item {
-         flex: 0 1 200px;
+         flex: 0 1 100%;
       }
       &__liders {
          flex: 0;
@@ -361,6 +369,10 @@
       }
       &__title {
          flex: 0;
+      }
+      & img {
+         height: auto;
+         width: 100%;
       }
    }
 
@@ -395,7 +407,9 @@
          padding: 50px 20px;
          & .form {
             flex-direction: column;
-
+            &__item {
+               width: 100%;
+            }
             & input {
                width: 100%;
             }
@@ -422,6 +436,16 @@
          &__btn {
             margin: 10px 0 0 0;
             padding: 6px 32px;
+         }
+      }
+      .preloader {
+         & img,
+         & svg,
+         & span {
+            transform: translate(-50%,-50%) scale(0.8);
+         }
+         & span {
+            margin-top: 0px;
          }
       }
    }
@@ -555,6 +579,13 @@
          background: linear-gradient(277.37deg, #2d0073 -24.21%, #c843ff 131.33%);
       }
    }
+   .preloader {
+      & img,
+      & svg,
+      & span {
+         transform: translate(-50%,-50%) scale(0.6);
+      }
+   }
 
    @media (max-width: 350px) {
       .zoomloop__content {
@@ -563,6 +594,13 @@
             max-width: 280px;
             width: 80%;
             right: -69px;
+         }
+      }
+      .preloader {
+         & img,
+         & svg,
+         & span {
+            transform: translate(-50%,-50%) scale(0.3);
          }
       }
    }

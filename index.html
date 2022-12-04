@@ -81,13 +81,13 @@
                </div>
             </div>
 
-            <div class="about">
+            <div class="about ">
                <div class="about__block">
                   <div class="about__title">
                      О проекте
                   </div>
                   <div class="about__line"></div>
-                  <div class="about__info">
+                  <div class="about__info anim">
                      TitiMiti – метасеть, объединяет De-fi, Game-fi и Social-fi столпы в&nbsp;единую экономическую
                      систему будущего. Которая впервые в&nbsp;истории человечества превращает азарт и&nbsp;жадность
                      в&nbsp;цифровое золото,
@@ -99,7 +99,7 @@
                      Наша миссия
                   </div>
                   <div class="about__line"></div>
-                  <div class="about__info">
+                  <div class="about__info _2 anim">
                      <p>
                         Мы — группа проффесиональных трейдеров и&nbsp;программистов объединённых высшим разумом
                         в&nbsp;союз игровых
@@ -150,7 +150,7 @@
                </div>
 
                <div class="titiland__content">
-                  <div class="titiland__name">
+                  <div class="titiland__name anim">
                      Titiland
                   </div>
                   <div class="titiland__text">
@@ -181,7 +181,7 @@
                   <div class="zoomloop__opentxt">
                      Открой новый мир
                   </div>
-                  <div class="zoomloop__name">
+                  <div class="zoomloop__name anim">
                      ZOOM LOUPE
                   </div>
                   <div class="zoomloop__text">
@@ -225,7 +225,7 @@
                </div>
                <div class="miticoin__content">
                   <div class="miticoin__content--blur"></div>
-                  <div class="miticoin__name">
+                  <div class="miticoin__name anim">
                      Miticoin
                   </div>
                   <div class="miticoin__text">
@@ -741,7 +741,7 @@
             <div class="team">
                <div class="team__master">
                   <div class="team__title">
-                     <h2>НАША КОМАНДА</h2>
+                     <h2 class="anim">НАША КОМАНДА</h2>
                   </div>
                   <div class="team__liders">
                      <div class="team__item _lid">
@@ -852,15 +852,18 @@
                </div>
             </div>
 
-            <div class="email">
+            <div class="email anim">
                <div class="email__blur"></div>
                <img class="email__blur-moon" src="img/email-blur-moon.svg" alt="">
                <img class="email__blur-elipse" src="img/email-blur.svg" alt="">
                <p>Введи свою электронную почту </p>
                <h2 class="email__name">Получай новости первым</h2>
                <form class="form" action="#">
-                  <label for="email" class="form__label"></label>
-                  <input type="text" name="email" id="email" class="form__input" placeholder="Электронная почта">
+                  <div class="form__item">
+                     <label for="email" class="form__label"></label>
+                     <input type="email" name="email" id="email" class="form__input" placeholder="Электронная почта">
+                     <span>Некорректно введена почта</span>
+                  </div>
                   <div class="form__btn btn">
                      <div class="grad"></div>
                      Отправить
@@ -930,7 +933,7 @@
          </div>
       </div>
 
-      <div class="cookie">
+      <div class="cookie cookie--hide">
          <img src="img/cookie.png" alt="">
          <p class="cookie__text">Этот сайт использует cookies, хоть мы и не пекарня</p>
          <div class="cookie__btn">
@@ -942,6 +945,7 @@
    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.js"></script>
+<script src="js/FileSaver.js"></script>
 <script src="js/script.js"></script>
 
 </html>

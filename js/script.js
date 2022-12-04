@@ -1,4 +1,17 @@
-document.querySelectorAll('video').forEach(v => { v.setAttribute('pip', 'false'); })
+document.querySelectorAll('video').forEach(v => { v.setAttribute('pip', 'false'); }) //Яндекс
+
+// Перетаскивание блока team
+// window.addEventListener('resize', lidersRemove);
+function lidersRemove() {
+    if (window.screen.width < 768) {
+        $("._lid").prependTo(".team__personal");
+    }
+    else {
+        $("._lid").prependTo(".team__liders");
+    }
+
+}
+// lidersRemove()
 
 // Свайпер
 swiper = new Swiper('.swiper', {
@@ -7,19 +20,40 @@ swiper = new Swiper('.swiper', {
         prevEl: '.titiland__arr-left'
     },
 
-    freeMode: true,
+    // freeMode: true,
     loop: true,
-    allowTouchMove: false,
+    allowTouchMove: true,
 
     autoplay: {
         delay: 5000,
         speed: 1000,
         disableOnInteraction: false,
     },
-
-    speed: 1000,
-
+    breakpoints: {
+        768: {
+            allowTouchMove: false,
+            speed: 1000,
+        }
+    }
 });
+teamToSwiper();
+document.addEventListener('resize', teamToSwiper)
+
+async function teamToSwiper() {
+    if (window.screen.width < 768) {
+        let div = document.createElement('div');
+        div.innerHTML = '<div class="swiper-wrapper"></div>';
+        div.setAttribute('class', 'swiper');
+
+        $('.team__personal').append(div);
+        $('.team__item').appendTo('.team__personal .swiper-wrapper');
+        $('.team__item').addClass('swiper-slide');
+
+        team_swiper = new Swiper('.team__personal .swiper', {
+            spaceBetween: 20
+        });
+    }
+}
 
 // Стрелка на первом экране
 const arrow = document.querySelector('.arrow-content')
@@ -84,29 +118,6 @@ function hidePopupEmail(e) {
     }
     e.preventDefault();
 }
-
-
-
-// отправление почты
-const form = document.querySelector('.form');
-const form_btn = document.querySelector('.form__btn');
-
-form_btn.addEventListener('click', (e) => {
-    email_popup.classList.add("open");
-    e.preventDefault();
-});
-
-
-// Убрать куки
-const cookie = document.querySelector('.cookie');
-const cookie_btn = document.querySelector('.cookie__btn');
-const email_popup = document.querySelector('.email-accept');
-
-cookie_btn.addEventListener('click', (e) => {
-    cookie.classList.add("cookie--hide");
-});
-
-
 
 // Паралакс луны и коллайдера
 const moon = document.querySelector('.moon')
@@ -246,15 +257,61 @@ function btnRemove() {
 }
 btnRemove()
 
-// Перетаскивание блока team
-window.addEventListener('resize', lidersRemove);
-function lidersRemove() {
-    if (window.screen.width < 767.89) {
-        $("._lid").prependTo(".team__personal");
+
+// отправление почты
+const email = document.querySelector('input');
+const form_btn = document.querySelector('.form__btn');
+const email_popup = document.querySelector('.email-accept');
+
+function emailTest(value) {
+    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(value);
+}
+
+form_btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    let value = email.value;
+    email.value = '';
+    console.log(emailTest(value));
+    if (emailTest(value)) {
+        email_popup.classList.add("open");
     }
     else {
-        $("._lid").prependTo(".team__liders");
+        email.classList.add("error");
+        $('.form__item span').addClass("error");
     }
+});
 
+email.addEventListener('focus', () => {
+    email.classList.remove("error");
+    $('.form__item span').removeClass("error");
+});
+
+
+
+// Убрать куки
+const cookie_btn = document.querySelector('.cookie__btn');
+const cookiewin = document.querySelector('.cookie');
+
+cookie_btn.addEventListener('click', (e) => {
+    cookiewin.classList.add("cookie--hide");
+});
+
+// функция возвращает cookie с именем name, если есть, если нет, то undefined    
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
 }
-lidersRemove()
+
+let cookiecook = getCookie("cookiecook");
+
+// проверяем, есть ли у нас cookie, с которой мы не показываем окно и если нет, запускаем показ
+if (cookiecook != "no") {
+    cookiewin.classList.remove("cookie--hide");
+    // показываем   
+    
+    let date = new Date;
+    date.setDate(date.getDate() + 1);
+    document.cookie = "cookiecook=no; path=/; expires=" + date.toUTCString();
+}
