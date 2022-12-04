@@ -452,7 +452,7 @@ img, video {
   margin-top: 30px;
 }
 .swiper-pagination-bullet {
-  background: #521094;
+  background: #a233dd;
   width: 6px;
   height: 6px;
   margin: 0 6px;
@@ -2935,6 +2935,9 @@ body.overflow--hide {
   .miticoin__video {
     margin-top: 30px;
   }
+  .email {
+    margin: 650px 0 0 0;
+  }
   .email h2 {
     max-width: 230px;
   }
@@ -3192,6 +3195,7 @@ body.overflow--hide {
     font-size: 50px;
   }
   .email {
+    margin: 550px 0 0 0;
     padding: 40px 10px;
   }
   .email__name {
