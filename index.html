@@ -6,8 +6,8 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>TITIMITI</title>
+   <link rel="stylesheet" href="css/swiper-bundle.css">
    <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/swiper.min.css">
 
    <script src="js/jquery.js"></script>
    <script src="js/preload.js"></script>
@@ -55,7 +55,7 @@
       <main class="main">
          <div class="main__container">
             <div class="welcome">
-               <video loop autoplay muted preload="auto" controlsList="nodownload">
+               <video loop autoplay muted playsinline preload="auto" controlsList="nodownload">
                   <source src="video/world.mp4" type="video/mp4">
                </video>
                <div class="arrow-content">
@@ -142,6 +142,7 @@
                            <div class="arr-right"></div>
                            <div class="arr-right"></div>
                         </div>
+                        <div class="swiper-pagination"></div>
                      </div>
                      <div class="titiland__col-down">
                         <img src="img/col-down.png" alt="Нижняя плита">
@@ -335,7 +336,7 @@
                            </div>
                         </div>
 
-                        <div class="rm_point point-11 p-inactive">
+                        <div class="rm_point point-11 anim-show">
                            <div class="p-text">
                               <p class="p-info">Zoom Loupe Открытый бета-тест</p>
                            </div>
@@ -349,19 +350,19 @@
                            <p>4 этап</p>
                         </div>
 
-                        <div class="rm_point point-12 p-inactive">
+                        <div class="rm_point point-12 anim-show">
                            <div class="p-text">
                               <p class="p-info">Первый взгляд на NFT </p>
                            </div>
                         </div>
 
-                        <div class="rm_point point-13 p-inactive">
+                        <div class="rm_point point-13 anim-show">
                            <div class="p-text">
                               <p class="p-info">Miticoin release</p>
                            </div>
                         </div>
 
-                        <div class="rm_point point-14 p-big p-inactive">
+                        <div class="rm_point point-14 p-big anim-show">
                            <div class="p-text">
                               <p class="p-title">Декабрь <span> 2022</span></p>
                               <p class="p-info">Аудит смартконтрактов</p>
@@ -586,17 +587,17 @@
                      </div>
                      <div class="rm__elipse elipse-5"></div>
                      <div class="rm__line line-8">
-                        <div class="rm_point point-11 p-inactive">
+                        <div class="rm_point point-11 anim-show">
                            <div class="p-text">
                               <p class="p-info">Zoom Loupe Открытый бета-тест</p>
                            </div>
                         </div>
-                        <div class="rm_point point-12 p-inactive">
+                        <div class="rm_point point-12 anim-show">
                            <div class="p-text">
                               <p class="p-info">Первый взгляд на NFT </p>
                            </div>
                         </div>
-                        <div class="rm_point point-13 p-inactive">
+                        <div class="rm_point point-13 anim-show">
                            <div class="p-text">
                               <p class="p-info">Miticoin release</p>
                            </div>
@@ -605,7 +606,7 @@
                      <div class="rm__elipse elipse-6"></div>
                      <div class="rm__line line-9">
 
-                        <div class="rm_point point-14 p-big p-inactive">
+                        <div class="rm_point point-14 p-big anim-show">
                            <div class="p-text">
                               <p class="p-title">Декабрь <span> 2022</span></p>
                               <p class="p-info">Аудит смартконтрактов</p>
@@ -848,7 +849,114 @@
                         Solitaer "Heven" - puzzle game
                      </div>
                   </div>
-
+               </div>
+               <div class="team__personal phone anim">
+                  <div class="swiper">
+                     <div class="swiper-wrapper">
+                        <div class="team__item swiper-slide">
+                           <div class="team__item--photo">
+                              <img src="img/team/leader-1.png" alt="">
+                           </div>
+                           <div class="team__item--name">
+                              V
+                           </div>
+                        </div>
+                        <div class="team__item swiper-slide">
+                           <div class="team__item--photo">
+                              <img src="img/team/leader-2.png" alt="">
+                           </div>
+                           <div class="team__item--name">
+                              K
+                           </div>
+                        </div>
+                        <div class="team__item swiper-slide">
+                           <div class="team__item--photo">
+                              <img src="img/team/team-1.png" alt="">
+                           </div>
+                           <div class="team__item--name">
+                              ARTEM М
+                           </div>
+                           <div class="team__item--pos">
+                              co-Founder
+                           </div>
+                           <div class="team__item--info">
+                              Picsart - Deputy Director of the social department
+                           </div>
+                        </div>
+                        <div class="team__item swiper-slide">
+                           <div class="team__item--photo">
+                              <img src="img/team/team-2.png" alt="">
+                           </div>
+                           <div class="team__item--name">
+                              EUGEN F
+                           </div>
+                           <div class="team__item--pos">
+                              co-Founder
+                           </div>
+                           <div class="team__item--info">
+                              Battle for Giostone, Buddy AI, Subnautica
+                           </div>
+                        </div>
+                        <div class="team__item swiper-slide">
+                           <div class="team__item--photo">
+                              <img src="img/team/team-3.png" alt="">
+                           </div>
+                           <div class="team__item--name">
+                              ALINA S
+                           </div>
+                           <div class="team__item--pos">
+                              co-Founder
+                           </div>
+                           <div class="team__item--info">
+                              MAPSMI - server lead, Crypto antifraud - engineer
+                           </div>
+                        </div>
+                        <div class="team__item swiper-slide">
+                           <div class="team__item--photo">
+                              <img src="img/team/team-4.png" alt="">
+                           </div>
+                           <div class="team__item--name">
+                              PAVEL K S
+                           </div>
+                           <div class="team__item--pos">
+                              Producer
+                           </div>
+                           <div class="team__item--info">
+                              House of Kiiba, House of Kiiba, Gamma4, Game producer - Apollo 13 VR
+                           </div>
+                        </div>
+                        <div class="team__item swiper-slide">
+                           <div class="team__item--photo">
+                              <img src="img/team/team-5.png" alt="">
+                           </div>
+                           <div class="team__item--name">
+                              GRIGORY V
+                           </div>
+                           <div class="team__item--pos">
+                              Blockchain Dev.
+                           </div>
+                           <div class="team__item--info">
+                              Bar fight - blockchain NFT game <br>Stumble Upon Rumble - blockchain NFT game
+                           </div>
+                        </div>
+                        <div class="team__item swiper-slide">
+                           <div class="team__item--photo">
+                              <img src="img/team/team-6.png" alt="">
+                           </div>
+                           <div class="team__item--name">
+                              ALINA S
+                           </div>
+                           <div class="team__item--pos">
+                              quality assuarance
+                           </div>
+                           <div class="team__item--info">
+                              Prison Reason - mobile game
+                              Solitaer "Heven" - puzzle game
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
                </div>
             </div>
 
@@ -858,16 +966,13 @@
                <img class="email__blur-elipse" src="img/email-blur.svg" alt="">
                <p>Введи свою электронную почту </p>
                <h2 class="email__name">Получай новости первым</h2>
-               <form class="form" action="#">
+               <form target="_blank" class="form" action="send.php" method="POST">
                   <div class="form__item">
                      <label for="email" class="form__label"></label>
                      <input type="email" name="email" id="email" class="form__input" placeholder="Электронная почта">
                      <span>Некорректно введена почта</span>
                   </div>
-                  <div class="form__btn btn">
-                     <div class="grad"></div>
-                     Отправить
-                  </div>
+                  <input type="submit" class="form__btn btn">
                </form>
             </div>
          </div>
@@ -883,10 +988,10 @@
                Titimiti
             </div>
             <div class="footer__share">
-               <div class="footer__share--item"> <img src="img/twitter.svg" alt="Твиттер"></div>
-               <div class="footer__share--item"><img src="img/tg.svg" alt="Телеграм"></div>
-               <div class="footer__share--item"> <img src="img/insta.svg" alt="Инстаграм"></div>
-               <div class="footer__share--item"><img src="img/ds.svg" alt="Дискорд"></div>
+               <div class="footer__share--item er_404"> <img src="img/twitter.svg" alt="Твиттер"></div>
+               <div class="footer__share--item er_404"><img src="img/tg.svg" alt="Телеграм"></div>
+               <div class="footer__share--item er_404"> <img src="img/insta.svg" alt="Инстаграм"></div>
+               <div class="footer__share--item er_404"><img src="img/ds.svg" alt="Дискорд"></div>
             </div>
             <a href="mailto:info@titimiti.com" class="footer__email">
                info@titimiti.com
@@ -896,7 +1001,9 @@
                <img src="img/polygon.svg" alt="">
             </div>
             <div class="footer__policy">
-               <a href="">Privacy policy</a> and <a href="">Terms of use</a> Copyright © 2010-2022 DeSo. All rights
+               <a class="er_404" href="">Privacy policy</a> and <a class="er_404" href="">Terms of use</a> Copyright ©
+               2010-2022 DeSo.
+               All rights
                reserved.
             </div>
          </div>
@@ -918,7 +1025,6 @@
             </div>
          </div>
       </div>
-      <!-- Проявляется при загрузке страницы -->
 
       <div class="popup email-accept">
          <div class="popup__body">

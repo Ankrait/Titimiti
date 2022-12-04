@@ -281,7 +281,7 @@ img, video {
 .welcome__text {
   font-weight: 400;
   font-size: 18px;
-  line-height: 140%;
+  line-height: 130%;
   max-width: 240px;
   margin: 20px 0 0 0;
 }
@@ -375,9 +375,14 @@ img, video {
 .titiland__col-top img, .titiland__col-down img {
   width: 100%;
 }
+.titiland .swiper-pagination {
+  position: absolute;
+  bottom: -85px;
+}
 .titiland__photos {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .titiland__arr-left, .titiland__arr-right {
   display: flex;
@@ -423,7 +428,7 @@ img, video {
 .titiland__text {
   font-weight: 400;
   font-size: 18px;
-  line-height: 140%;
+  line-height: 130%;
   margin: 30px 0 0 0;
 }
 .titiland__more {
@@ -438,6 +443,23 @@ img, video {
      object-fit: contain;
   width: 100%;
   height: 300px;
+}
+.swiper-pagination {
+  position: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.swiper-pagination-bullet {
+  background: #521094;
+  width: 6px;
+  height: 6px;
+  margin: 0 6px;
+}
+.swiper-pagination-bullet-active {
+  width: 10px;
+  height: 10px;
 }
 
 .zoomloop {
@@ -482,7 +504,7 @@ img, video {
   margin: 19px 0 0 0;
   font-weight: 400;
   font-size: 18px;
-  line-height: 140%;
+  line-height: 130%;
 }
 .zoomloop__play-btn {
   margin: 60px 0 0 0;
@@ -655,6 +677,9 @@ img, video {
 .team {
   margin: 100px 0 0 0;
 }
+.team__personal.phone {
+  display: none;
+}
 .team__master {
   display: flex;
   justify-content: space-between;
@@ -799,6 +824,14 @@ img, video {
   transform: translateX(50%);
   opacity: 0;
   transition: all 0.8s ease;
+  background: #722494;
+  border: 0;
+}
+.email .form__btn:focus {
+  box-shadow: 0 0 0;
+}
+.email .form__btn:hover {
+  background: #8129a7;
 }
 .email__blur {
   position: absolute;
@@ -1187,6 +1220,7 @@ select:-webkit-autofill:focus {
   left: auto;
   right: 3px;
   top: 45px;
+  transition: background-color 1s ease 2s;
 }
 
 .elipse-2 .p-text {
@@ -1194,12 +1228,16 @@ select:-webkit-autofill:focus {
   width: 150px;
 }
 
+.point-12 {
+  transition: background-color 1s ease 2.2s;
+}
 .point-12 .p-text {
   transform: translate(-39%, 75%);
   width: 100px;
 }
 
 .point-13 {
+  transition: background-color 1s ease 2.4s;
   left: 31%;
 }
 .point-13 .p-text {
@@ -1208,6 +1246,7 @@ select:-webkit-autofill:focus {
 
 .point-14 {
   left: 62%;
+  transition: background-color 1s ease 2.6s;
 }
 
 .point-15 {
@@ -1448,7 +1487,7 @@ select:-webkit-autofill:focus {
 }
 .rm__etap-4 p {
   position: absolute;
-  top: 44%;
+  top: 35%;
   left: 74%;
 }
 
@@ -2785,7 +2824,7 @@ body.overflow--hide {
     line-height: 130%;
   }
   .email {
-    margin: 500px 0 0 0;
+    margin: 620px 0 0 0;
     padding: 40px;
   }
   .email p {
@@ -2906,6 +2945,7 @@ body.overflow--hide {
     margin: 26px 0 0 0;
     max-width: 100%;
     width: 92%;
+    display: none;
   }
   .team__item {
     flex: 0 1 100%;
@@ -2922,6 +2962,12 @@ body.overflow--hide {
   .team img {
     height: auto;
     width: 100%;
+  }
+  .team__liders {
+    display: none;
+  }
+  .team__personal.phone {
+    display: block;
   }
   .cookie {
     width: 80vw;
@@ -2952,6 +2998,7 @@ body.overflow--hide {
   }
   .email .form {
     flex-direction: column;
+    align-items: center;
   }
   .email .form__item {
     width: 100%;
@@ -3035,6 +3082,42 @@ body.overflow--hide {
   .popup__content h1 {
     font-size: 25vw;
     margin-top: 10%;
+  }
+}
+@media screen and (max-width: 767.89px) {
+  .team__personal {
+    transform: translateX(70%);
+    opacity: 0;
+    transition: all 0.7s ease;
+  }
+}
+@media screen and (max-width: 767.89px) {
+  .team__personal._active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 767.89px) {
+  .menu__item:hover {
+    color: #fcfcfc;
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 767.89px) {
+  .menu__item:active {
+    color: red;
+    transform: scale(1.2);
+  }
+}
+@media screen and (max-width: 767.89px) {
+  .btn:hover {
+    transform: scale(1);
+  }
+  .btn:hover .grad {
+    transform: translate(-70%, -60%);
+  }
+  .btn:active {
+    transform: scale(1.03);
   }
 }
 @media screen and (max-width: 530px) {

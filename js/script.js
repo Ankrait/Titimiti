@@ -1,20 +1,12 @@
 document.querySelectorAll('video').forEach(v => { v.setAttribute('pip', 'false'); }) //Яндекс
+body = document.body
 
-// Перетаскивание блока team
-// window.addEventListener('resize', lidersRemove);
-function lidersRemove() {
-    if (window.screen.width < 768) {
-        $("._lid").prependTo(".team__personal");
-    }
-    else {
-        $("._lid").prependTo(".team__liders");
-    }
-
-}
-// lidersRemove()
-
-// Свайпер
-swiper = new Swiper('.swiper', {
+///////////////////// Свайпер /////////////////////
+swiper = new Swiper('.titiland .swiper', {
+    pagination: {
+        el: '.titiland .swiper-pagination',
+        clickable: true,
+    },
     navigation: {
         nextEl: '.titiland__arr-right',
         prevEl: '.titiland__arr-left'
@@ -33,38 +25,34 @@ swiper = new Swiper('.swiper', {
         768: {
             allowTouchMove: false,
             speed: 1000,
+            pagination: false,
         }
     }
 });
-teamToSwiper();
-document.addEventListener('resize', teamToSwiper)
 
-async function teamToSwiper() {
-    if (window.screen.width < 768) {
-        let div = document.createElement('div');
-        div.innerHTML = '<div class="swiper-wrapper"></div>';
-        div.setAttribute('class', 'swiper');
+team_swiper = new Swiper('.team__personal.phone .swiper', {
+    freeMode: false,
+    loop: false,
+    pagination: {
+        el: '.team .swiper-pagination',
+        clickable: true,
+    },
+    spaceBetween: 20
+});
+///////////////////// Свайпер /////////////////////
 
-        $('.team__personal').append(div);
-        $('.team__item').appendTo('.team__personal .swiper-wrapper');
-        $('.team__item').addClass('swiper-slide');
 
-        team_swiper = new Swiper('.team__personal .swiper', {
-            spaceBetween: 20
-        });
-    }
-}
-
-// Стрелка на первом экране
+///////////////////// Стрелка на первом экране /////////////////////
 const arrow = document.querySelector('.arrow-content')
 arrow.addEventListener('click', () => {
     $('html, body').animate({
         scrollTop: $('.about').offset().top - 100
     }, 1000);
 });
+///////////////////// Стрелка на первом экране /////////////////////
 
 
-// Popup 404 visible 
+///////////////////// Popup 404 visible /////////////////////
 const er404_blocks = document.querySelectorAll('.er_404');
 const popup404 = document.querySelector('.popup404');
 
@@ -74,11 +62,13 @@ er404_blocks.forEach(item => {
 
 function openPopupFunc(e) {
     popup404.classList.add('open');
-    document.body.classList.add('overflow--hide');
+    body.classList.add('overflow--hide');
     e.preventDefault();
 }
+///////////////////// Popup 404 visible /////////////////////
 
-//popup404 hidden
+
+///////////////////// popup404 hidden /////////////////////
 const close_btns = document.querySelectorAll('.popup__close-btn');
 
 popup404.addEventListener('click', hidePopup404);
@@ -86,7 +76,7 @@ popup404.addEventListener('click', hidePopup404);
 close_btns.forEach(item => {
     item.addEventListener('click', (e) => {
         popup404.classList.remove('open');
-        document.body.classList.remove('overflow--hide')
+        body.classList.remove('overflow--hide')
         e.preventDefault();
     });
 });
@@ -98,15 +88,17 @@ function hidePopup404(e) {
     }
     e.preventDefault();
 }
+///////////////////// popup404 hidden /////////////////////
 
-//popup_email hidden
+
+///////////////////// popup_email hidden /////////////////////
 const popup_email = document.querySelector('.email-accept')
 popup_email.addEventListener('click', hidePopupEmail);
 
 close_btns.forEach(item => {
     item.addEventListener('click', (e) => {
         popup_email.classList.remove('open');
-        document.body.classList.remove('overflow--hide')
+        body.classList.remove('overflow--hide')
         e.preventDefault();
     });
 });
@@ -114,12 +106,13 @@ close_btns.forEach(item => {
 function hidePopupEmail(e) {
     if (!e.target.closest('.popup__content')) {
         popup_email.classList.remove('open');
-        document.body.classList.remove('overflow--hide')
+        body.classList.remove('overflow--hide')
     }
     e.preventDefault();
 }
+///////////////////// popup_email hidden /////////////////////
 
-// Паралакс луны и коллайдера
+///////////////////// Паралакс луны и коллайдера /////////////////////
 const moon = document.querySelector('.moon')
 const moon_bg = document.querySelector('.moon-bg')
 const collider_images = document.querySelectorAll('.swiper img')
@@ -144,17 +137,20 @@ function moonParalaks(e) {
         });
     }
 }
+///////////////////// Паралакс луны и коллайдера /////////////////////
 
 
-// Тык по логу = скролл на верх сайта
+///////////////////// Тык по логу = скролл на верх сайта /////////////////////
 const logo = document.querySelector('.menu__logo')
 logo.addEventListener('click', () => {
     $('html, body').animate({
         scrollTop: $('body').offset().top
     }, 1000);
 });
+///////////////////// Тык по логу = скролл на верх сайта /////////////////////
 
-// Тык по меню скролл
+
+///////////////////// Тык по меню скролл /////////////////////
 const menu_tocenomic = document.querySelector('.scroll_tocenomic');
 const menu_whitepaper = document.querySelector('.scroll_whitepaper');
 const menu_roadmap = document.querySelector('.scroll_roadmap');
@@ -196,10 +192,10 @@ menu_miticoin.addEventListener('click', (e) => {
     }, 1000);
     removeMenuOpened();
 });
+///////////////////// Тык по меню скролл /////////////////////
 
 
-
-// Выезжание при скролле к зум лупу
+///////////////////// Анимация /////////////////////
 const anim_items = document.querySelectorAll('.anim');
 
 if (anim_items.length > 0) {
@@ -226,10 +222,10 @@ if (anim_items.length > 0) {
     }
     animOnScroll();
 }
+///////////////////// Анимация /////////////////////
 
 
-
-// Бургер
+///////////////////// Бургер /////////////////////
 toggle.addEventListener('click', function (e) {
     this.classList.toggle('opened');
     menu.classList.toggle('opened');
@@ -243,10 +239,10 @@ function removeMenuOpened() {
     header.classList.remove('opened');
     body.classList.remove('overflow--hide');
 }
+///////////////////// Бургер /////////////////////
 
 
-
-// Перетаскивание блока кнопки
+///////////////////// Перетаскивание блока кнопки /////////////////////
 window.addEventListener('resize', btnRemove);
 function btnRemove() {
     if (window.screen.width < 767.89)
@@ -256,9 +252,9 @@ function btnRemove() {
 
 }
 btnRemove()
+///////////////////// Перетаскивание блока кнопки /////////////////////
 
-
-// отправление почты
+///////////////////// отправление почты /////////////////////
 const email = document.querySelector('input');
 const form_btn = document.querySelector('.form__btn');
 const email_popup = document.querySelector('.email-accept');
@@ -268,14 +264,14 @@ function emailTest(value) {
 }
 
 form_btn.addEventListener('click', (e) => {
-    e.preventDefault();
     let value = email.value;
-    email.value = '';
-    console.log(emailTest(value));
+
     if (emailTest(value)) {
         email_popup.classList.add("open");
+        email.value = '';
     }
     else {
+        e.preventDefault();
         email.classList.add("error");
         $('.form__item span').addClass("error");
     }
@@ -285,16 +281,18 @@ email.addEventListener('focus', () => {
     email.classList.remove("error");
     $('.form__item span').removeClass("error");
 });
+///////////////////// отправление почты /////////////////////
 
 
-
-// Убрать куки
+///////////////////// Убрать куки /////////////////////
 const cookie_btn = document.querySelector('.cookie__btn');
 const cookiewin = document.querySelector('.cookie');
 
 cookie_btn.addEventListener('click', (e) => {
     cookiewin.classList.add("cookie--hide");
 });
+///////////////////// Убрать куки /////////////////////
+
 
 // функция возвращает cookie с именем name, если есть, если нет, то undefined    
 function getCookie(name) {
@@ -310,7 +308,7 @@ let cookiecook = getCookie("cookiecook");
 if (cookiecook != "no") {
     cookiewin.classList.remove("cookie--hide");
     // показываем   
-    
+
     let date = new Date;
     date.setDate(date.getDate() + 1);
     document.cookie = "cookiecook=no; path=/; expires=" + date.toUTCString();

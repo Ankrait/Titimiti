@@ -212,7 +212,8 @@
     }
 }
 
-.anim-show {}
+.anim-show {
+}
 
 .point-1 {
     transition: background-color 1s ease 0s;
@@ -289,6 +290,7 @@
     left: auto;
     right: 3px;
     top: 45px;
+    transition: background-color 1s ease 2s;
 }
 
 .elipse-2 .p-text {
@@ -297,6 +299,7 @@
 }
 
 .point-12 {
+    transition: background-color 1s ease 2.2s;
     & .p-text {
         transform: translate(-39%, 75%);
         width: 100px;
@@ -304,6 +307,7 @@
 }
 
 .point-13 {
+    transition: background-color 1s ease 2.4s;
     left: 31%;
     & .p-text {
         transform: translate(-45%, 150%);
@@ -312,6 +316,7 @@
 
 .point-14 {
     left: 62%;
+    transition: background-color 1s ease 2.6s;
 }
 
 .point-15 {
@@ -568,7 +573,7 @@
     }
     & p {
         position: absolute;
-        top: 44%;
+        top: 35%;
         left: 74%;
     }
 }
@@ -617,7 +622,6 @@
 }
 
 @media screen and (max-width: 1023.89px) {
-
     .roadmap {
         margin: 280px 0 0 0;
         height: 900px;
@@ -1286,7 +1290,6 @@
         }
     }
 }
-
 
 .line-mobile {
     position: absolute;
