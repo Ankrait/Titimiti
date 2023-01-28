@@ -1,0 +1,55 @@
+.img_down._active {
+    & img {
+        &:first-child {
+            transform: translate(0, 0) scale(1);
+        }
+    }
+}
+
+.zoomloop__phone._active .anim-show {
+    & ._1 {
+        transform: translate(0, 0) rotate(150deg) scale(1);
+    }
+
+    & ._2 {
+        transform: translate(0, 0) rotate(45deg) scale(1);
+    }
+}
+
+.roadmap._active .anim-show {
+    background-color: #fff;
+}
+
+.about__info._active {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.titiland__name._active {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.zoomloop__name._active {
+    transform: translate(0);
+    opacity: 1;
+}
+.miticoin__name._active {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.team h2._active {
+    transform: translate(0);
+    opacity: 1;
+}
+
+.email._active {
+    & input,
+    & .btn,
+    & .email__name,
+    & p {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
