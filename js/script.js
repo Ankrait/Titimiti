@@ -242,15 +242,15 @@ function removeMenuOpened() {
 ///
 ///
 ///////////////////// Перетаскивание блока кнопки /////////////////////
-window.addEventListener('resize', btnRemove);
-function btnRemove() {
+window.addEventListener('resize', btnRemove1);
+function btnRemove1() {
     if (window.matchMedia('screen and (max-width: 768px)').matches)
         $(".titiland__more").appendTo(".titiland");
     else
         $(".titiland__more").appendTo(".titiland__content");
 
 }
-btnRemove()
+btnRemove1()
 ///////////////////// Перетаскивание блока кнопки /////////////////////
 ///
 ///
