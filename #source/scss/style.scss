@@ -416,7 +416,7 @@ body.overflow--hide {
 //////////////////////////////////////////////////////
 
 .footer {
-   margin: 15% 0 0 0;
+   margin: 150px 0 0 0;
    background: #040718;
 
    & a {
@@ -515,6 +515,11 @@ body.overflow--hide {
       display: flex;
       align-items: center;
       gap: 10px;
+
+      &:last-child {
+         background: #26272c;
+         text-decoration: line-through;
+      }
    }
 
    // .footer__lang--item:hover
@@ -716,36 +721,30 @@ body.overflow--hide {
 }
 
 .unit:nth-child(1) {
-   // stroke: #86cfa3;
    stroke-dasharray: 18.5 125;
 }
 
 .unit:nth-child(2) {
-   // stroke: #a2c6e0;
    stroke-dasharray: 44 125;
    stroke-dashoffset: -19;
 }
 
 .unit:nth-child(3) {
-   // stroke: #ffc7ec;
    stroke-dasharray: 13 125;
    stroke-dashoffset: -63.5;
 }
 
 .unit:nth-child(4) {
-   // stroke: #f8faa0;
    stroke-dasharray: 12 125;
    stroke-dashoffset: -77;
 }
 
 .unit:nth-child(5) {
-   // stroke: #adffd8;
    stroke-dasharray: 4 125;
    stroke-dashoffset: -89.5;
 }
 
 .unit:nth-child(6) {
-   // stroke: #86cfa3;
    stroke-dasharray: 31 125;
    stroke-dashoffset: -94;
 }

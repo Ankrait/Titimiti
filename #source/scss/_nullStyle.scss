@@ -135,8 +135,13 @@ h6 {
 p {
    margin-top: 10px;
 }
-img,
 video {
+   -moz-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+img {
    pointer-events: none;
    -moz-user-select: none;
    -webkit-user-select: none;

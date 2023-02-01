@@ -38,18 +38,19 @@ team_swiper = new Swiper('.team__personal.phone .swiper', {
     spaceBetween: 20
 });
 ///////////////////// Свайпер /////////////////////
-
-
+///
+///
+///
 ///////////////////// Стрелка на первом экране /////////////////////
-const arrow = document.querySelector('.arrow-content')
-arrow.addEventListener('click', () => {
+$('.arrow-content').bind('click', () => {
     $('html, body').animate({
         scrollTop: $('.about').offset().top - 100
     }, 1000);
 });
 ///////////////////// Стрелка на первом экране /////////////////////
-
-
+///
+///
+///
 ///////////////////// Popup 404 visible /////////////////////
 const er404_blocks = document.querySelectorAll('.er_404');
 const popup404 = document.querySelector('.popup404');
@@ -64,16 +65,19 @@ function openPopupFunc(e) {
     e.preventDefault();
 }
 ///////////////////// Popup 404 visible /////////////////////
-
-
+///
+///
+///
 ///////////////////// popup404 hidden /////////////////////
 const close_btns = document.querySelectorAll('.popup__close-btn');
+const popup_email = document.querySelector('.email-accept');
 
 popup404.addEventListener('click', hidePopup404);
 
 close_btns.forEach(item => {
     item.addEventListener('click', (e) => {
         popup404.classList.remove('open');
+        popup_email.classList.remove('open');
         body.classList.remove('overflow--hide')
         e.preventDefault();
     });
@@ -87,20 +91,11 @@ function hidePopup404(e) {
     e.preventDefault();
 }
 ///////////////////// popup404 hidden /////////////////////
-
-
+///
+///
+///
 ///////////////////// popup_email hidden /////////////////////
-const popup_email = document.querySelector('.email-accept')
 popup_email.addEventListener('click', hidePopupEmail);
-
-close_btns.forEach(item => {
-    item.addEventListener('click', (e) => {
-        popup_email.classList.remove('open');
-        body.classList.remove('overflow--hide')
-        e.preventDefault();
-    });
-});
-
 function hidePopupEmail(e) {
     if (!e.target.closest('.popup__content')) {
         popup_email.classList.remove('open');
@@ -109,16 +104,18 @@ function hidePopupEmail(e) {
     e.preventDefault();
 }
 ///////////////////// popup_email hidden /////////////////////
-
+///
+///
+///
 ///////////////////// Паралакс луны и коллайдера /////////////////////
 const moon = document.querySelector('.moon')
 const moon_bg = document.querySelector('.moon-bg')
 const collider_images = document.querySelectorAll('.swiper img')
 const lines = document.querySelectorAll('.lines')
 
-document.addEventListener('mousemove', moonParalaks)
+document.addEventListener('mousemove', paralaks)
 
-function moonParalaks(e) {
+function paralaks(e) {
     if (window.matchMedia('screen and (min-width: 780px)').matches) {
         let offsetX = (e.clientX / window.innerWidth * 12) - 6;
         let offsetY = (e.clientY / window.innerHeight * 12) - 6;
@@ -136,11 +133,14 @@ function moonParalaks(e) {
     }
 }
 ///////////////////// Паралакс луны и коллайдера /////////////////////
-
-
+///
+///
+///
 ///////////////////// Тык по логу = скролл на верх сайта /////////////////////
-let logo = document.querySelector('.menu__logo')
-logo.addEventListener('click', () => {
+const logo = document.querySelector('.menu__logo');
+const logo_phone = document.querySelector('.logo-phone');
+
+const onLogoClick = () => {
     let scroll_to = $('body').offset().top;
     if ($('html, body').is(':animated'))
         return;
@@ -150,23 +150,14 @@ logo.addEventListener('click', () => {
     $('html, body').animate({
         scrollTop: scroll_to
     }, 1000);
-});
+}
 
-logo = document.querySelector('.logo-phone')
-logo.addEventListener('click', () => {
-    let scroll_to = $('body').offset().top;
-    if ($('html, body').is(':animated'))
-        return;
-    if (window.scrollY == scroll_to)
-        return;
-
-    $('html, body').animate({
-        scrollTop: scroll_to
-    }, 1000);
-});
+logo.addEventListener('click', onLogoClick);
+logo_phone.addEventListener('click', onLogoClick);
 ///////////////////// Тык по логу = скролл на верх сайта /////////////////////
-
-
+///
+///
+///
 ///////////////////// Тык по меню скролл /////////////////////
 const menu_tocenomic = document.querySelector('.scroll_tocenomic');
 const menu_whitepaper = document.querySelector('.scroll_whitepaper');
@@ -179,8 +170,8 @@ const menu = document.querySelector('.menu');
 const toggle = document.querySelector('.burger');
 const header = document.querySelector('.header');
 
-menu_roadmap.addEventListener('click', (e) => {
-    let scroll_to = $('.roadmap').offset().top - 220;
+const onMenuClick = (blockName, offset) => {
+    let scroll_to = $(blockName).offset().top + offset;
     if ($('html, body').is(':animated'))
         return;
     if (window.scrollY == Math.floor(scroll_to))
@@ -190,49 +181,17 @@ menu_roadmap.addEventListener('click', (e) => {
         scrollTop: scroll_to
     }, 1000);
     removeMenuOpened();
-});
+}
 
-menu_titiland.addEventListener('click', (e) => {
-    let scroll_to = $('.titiland').offset().top - 100;
-    if ($('html, body').is(':animated'))
-        return;
-    if (window.scrollY == Math.floor(scroll_to))
-        return;
-
-    $('html, body').animate({
-        scrollTop: scroll_to
-    }, 1000);
-    removeMenuOpened();
-});
-
-menu_zoomloop.addEventListener('click', (e) => {
-    let scroll_to = $('.zoomloop').offset().top - 180;
-    if ($('html, body').is(':animated'))
-        return;
-    if (window.scrollY == Math.floor(scroll_to))
-        return;
-
-    $('html, body').animate({
-        scrollTop: scroll_to
-    }, 1000);
-    removeMenuOpened();
-});
-
-menu_miticoin.addEventListener('click', (e) => {
-    let scroll_to = $('.miticoin').offset().top - 170;
-    if ($('html, body').is(':animated'))
-        return;
-    if (window.scrollY == Math.floor(scroll_to))
-        return;
-
-    $('html, body').animate({
-        scrollTop: scroll_to
-    }, 1000);
-    removeMenuOpened();
-});
+menu_tocenomic.addEventListener('click', () => onMenuClick('.tocenomics', -200));
+menu_roadmap.addEventListener('click', () => onMenuClick('.roadmap', -220));
+menu_titiland.addEventListener('click', () => onMenuClick('.titiland', -100));
+menu_zoomloop.addEventListener('click', () => onMenuClick('.zoomloop', -180));
+menu_miticoin.addEventListener('click', () => onMenuClick('.miticoin', -170));
 ///////////////////// Тык по меню скролл /////////////////////
-
-
+///
+///
+///
 ///////////////////// Анимация /////////////////////
 const anim_items = document.querySelectorAll('.anim');
 
@@ -249,7 +208,7 @@ if (anim_items.length > 0) {
 
             let anim_item_point = window.innerHeight - anim_item_height / anim_start;
             if (anim_item_height > window.innerHeight) {
-                let anim_item_point = anim_item_height - window.innerHeight / anim_start;
+                anim_item_point = anim_item_height - window.innerHeight / anim_start;
             }
 
             if ((scrollY > anim_item_offsetY - anim_item_point) && (scrollY < (anim_item_offsetY + anim_item_height))) {
@@ -261,8 +220,9 @@ if (anim_items.length > 0) {
     animOnScroll();
 }
 ///////////////////// Анимация /////////////////////
-
-
+///
+///
+///
 ///////////////////// Бургер /////////////////////
 toggle.addEventListener('click', function (e) {
     this.classList.toggle('opened');
@@ -278,8 +238,9 @@ function removeMenuOpened() {
     body.classList.remove('overflow--hide');
 }
 ///////////////////// Бургер /////////////////////
-
-
+///
+///
+///
 ///////////////////// Перетаскивание блока кнопки /////////////////////
 window.addEventListener('resize', btnRemove);
 function btnRemove() {
@@ -291,8 +252,9 @@ function btnRemove() {
 }
 btnRemove()
 ///////////////////// Перетаскивание блока кнопки /////////////////////
-
-
+///
+///
+///
 ///////////////////// Перетаскивание mititocen /////////////////////
 window.addEventListener('resize', btnRemove);
 function btnRemove() {
@@ -304,8 +266,9 @@ function btnRemove() {
 }
 btnRemove()
 ///////////////////// Перетаскивание mititocen /////////////////////
-
-
+///
+///
+///
 ///////////////////// отправление почты /////////////////////
 const email = document.querySelector('input');
 const form_btn = document.querySelector('.form__btn');
@@ -333,8 +296,9 @@ email.addEventListener('focus', () => {
     $('.form__item span').removeClass("error");
 });
 ///////////////////// отправление почты /////////////////////
-
-
+///
+///
+///
 ///////////////////// Убрать куки /////////////////////
 const cookie_btn = document.querySelector('.cookie__btn');
 const cookiewin = document.querySelector('.cookie');
@@ -362,8 +326,9 @@ if (cookiecook != "no" || cookiecook == null) {
     cookiewin.classList.remove("cookie--hide");
 }
 ///////////////////// Убрать куки /////////////////////
-
-
+///
+///
+///
 ///////////////// Скролл на тим /////////////////
 const team_personal = document.querySelector('.team__personal')
 
@@ -389,7 +354,7 @@ if (team_personal.addEventListener) {
 ///
 ///
 ///
-///////////////// mititocen hove /////////////////
+///////////////// mititocen hover /////////////////
 const mititoken_hover_items = document.querySelectorAll(".mititoken__item");
 const mititoken_value = document.querySelector(".mititoken__value");
 const mititoken_image = document.querySelector(".mititoken__image");
