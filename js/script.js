@@ -404,3 +404,8 @@ const hoverMititocen = (item) => {
 mititoken_hover_items.forEach(item => hoverMititocen(item));
 circle_hover_items.forEach(item => hoverMititocen(item));
 ///////////////// mititocen hove /////////////////
+var vid = document.querySelectorAll("video");
+vid.forEach((el) => {
+    el.defaultMuted = true;
+    el.play();
+})
