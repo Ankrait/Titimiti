@@ -315,7 +315,7 @@
    &__content {
       margin: 60px 0 60px 60px;
 
-      flex: 0 1 562px;
+      flex: 0 1 500px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -324,9 +324,9 @@
       .case-img {
          position: absolute;
          top: -104px;
-         right: -142px;
+         right: -102px;
          z-index: -1;
-         width: 69%;
+         width: 50%;
       }
 
       & .blur {
@@ -372,7 +372,7 @@
 
          & .img_down {
             position: absolute;
-            bottom: -8%;
+            bottom: -12%;
             left: 0;
             z-index: -12;
             width: 100%;
@@ -415,12 +415,14 @@
 
    &__back {
       position: absolute;
-      top: 3%;
+      top: 50%;
       left: 0;
       z-index: -11;
+      transform: translateY(-50%);
 
       width: 100%;
-      height: 94%;
+      height: 80%;
+      min-height: 320px;
 
       background: linear-gradient(96.36deg, #0021cc -10.12%, #04125e 128.75%), #000000;
       opacity: 0.6;
@@ -523,7 +525,7 @@
    }
 
    &__content {
-      flex: 0 1 608px;
+      flex: 0 1 50%;
       position: relative;
    }
 
