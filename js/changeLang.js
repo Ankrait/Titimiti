@@ -32,6 +32,12 @@ function translation() {
     const translate_blocks = document.querySelectorAll('[data-lang]');
     const rmPoints = document.querySelectorAll('.rm_point');
 
+    const email_input = document.getElementById('email');
+    if (lang == 'en')
+        email_input.placeholder = 'Email';
+    else if (lang == 'ru')
+        email_input.placeholder = 'Электронная почта';
+
     translate_blocks.forEach(el => {
         el.innerHTML = translate[lang][el.dataset.lang];
     });
@@ -44,8 +50,21 @@ function translation() {
             point.querySelector(".p-title").innerHTML = translate[lang][pointNum + 'd'];
         }
     });
-
 }
 
 
 // const userLang = (navigator.languages && navigator.languages.length) ? navigator.languages[0] : navigator.userLanguage || navigator.language || navigator.browserLanguage || 'en';
+
+// const translate_blocks = document.querySelectorAll('[data-lang]');
+// const rmPoints = document.querySelectorAll('.rm_point');
+// const tr = {}
+// translate_blocks.forEach(el => {
+//     tr[el.dataset.lang] = el.innerHTML.trim();
+// });
+
+// let str = "";
+// for (let el in tr){
+//     str+= '"' + el + '": ' +  '"' + tr[el].split('\n').join().trim() + '",';
+// }
+// let json = JSON.stringify(tr);
+// console.log(json);
