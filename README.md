@@ -1,8 +1,11 @@
 # Titimiti
-Лендинг.
-Коммерческий проект, состоящий из 4 сайтов: 2 лендинга и 2 верстки под дальнейшее внедрения во фреймворк.
+Лендинг. 
 <br />
-[Ссылка на GitHub Pages](https://ankrait.github.io/Titimiti/)
+Коммерческий проект, состоящий из 4 сайтов: 2 лендинга и 2 верстки под дальнейшее внедрения во фреймворк 
+<br />
+([ZoomLoupe](https://github.com/Ankrait/ZoomLoupe), [TitimitiShop](https://github.com/Ankrait/TitimitiShop), [titiland](https://github.com/Ankrait/titiland)).
+<hr />
+<a href="https://ankrait.github.io/Titimiti/">Ссылка на GitHub Pages</a>
 <br />
 <br />
 
