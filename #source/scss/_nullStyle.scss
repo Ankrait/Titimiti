@@ -150,19 +150,4 @@ img {
 }
 //////////////////////////////// Обнуление ////////////////////////////////
 
-[class*="__container"] {
-   max-width: 1370px;
-   padding: 0 15px;
-   margin: 0 auto;
-}
 
-.wrapper {
-   overflow: hidden;
-   display: flex;
-   flex-direction: column;
-   min-height: 100%;
-}
-
-.main {
-   flex: 1 1 100%;
-}

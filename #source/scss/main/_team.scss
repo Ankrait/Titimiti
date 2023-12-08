@@ -1,0 +1,172 @@
+.team {
+	margin: 100px 0 0 0;
+	&__personal.phone {
+		display: none;
+		position: relative;
+	}
+	&__master {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__title {
+		flex: 0 1 50%;
+		font-weight: 700;
+		font-size: 60px;
+		line-height: 73px;
+		text-transform: uppercase;
+		display: flex;
+		align-items: flex-end;
+		justify-content: start;
+
+		& h2 {
+			max-width: 400px;
+			transform: translateX(-50%);
+			opacity: 0;
+			transition: all 0.8s ease;
+		}
+	}
+
+	&__liders {
+		flex: 0 1 50%;
+		display: flex;
+
+		& .team__item {
+			margin: 0 8px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		flex: 0 0 220px;
+		overflow: hidden;
+		&:last-child {
+			margin-right: 30px;
+		}
+	}
+
+	&__item--photo {
+		border-radius: 10px;
+		overflow: hidden;
+		transition: box-shadow 0.5s ease 0s;
+		& img {
+			width: 100%;
+			object-fit: cover;
+			transition: transform 0.5s ease 0s;
+		}
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&__item--name {
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 19px;
+		margin-top: 16px;
+		color: #ffffff;
+		text-transform: uppercase;
+	}
+
+	&__personal {
+		position: absolute;
+		gap: 16px;
+		margin: 50px 0 0 0;
+		display: flex;
+		gap: 20px;
+		overflow-x: scroll;
+	}
+
+	&__personal::-webkit-scrollbar {
+		position: absolute;
+		display: none;
+	}
+
+	&__item--pos {
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 130%;
+		margin-top: 4px;
+		color: #939393;
+		text-transform: uppercase;
+	}
+
+	&__item--info {
+		font-weight: 400;
+		font-size: 10px;
+		line-height: 130%;
+		margin-top: 8px;
+		color: #ffffff;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.team {
+		&__title {
+			font-size: 40px;
+			line-height: 48px;
+			& h2 {
+				width: 150px;
+			}
+		}
+		&__item {
+			flex: 0 1 158px;
+		}
+		&__personal {
+			position: absolute;
+			overflow-x: scroll;
+			& .team__item {
+				flex-shrink: 0;
+			}
+		}
+		&__item--name {
+			font-size: 14px;
+			line-height: 9px;
+		}
+		&__item--pos {
+			font-size: 10px;
+			line-height: 130%;
+		}
+		&__item--info {
+			font-size: 10px;
+			line-height: 130%;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.team {
+		& .swiper {
+			max-width: 343px;
+		}
+		&__personal {
+			margin: 26px 0 0 0;
+			display: none;
+		}
+		&__item {
+			flex: 0 1 100%;
+		}
+		&__liders {
+			flex: 0;
+		}
+		& h2 {
+			width: auto;
+		}
+		&__title {
+			flex: 0;
+		}
+		& img {
+			height: auto;
+			width: 100%;
+		}
+		&__liders {
+			display: none;
+		}
+		&__personal.phone {
+			display: block;
+		}
+	}
+}

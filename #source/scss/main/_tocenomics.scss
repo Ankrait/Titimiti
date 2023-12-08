@@ -1,0 +1,162 @@
+.tocenomics {
+	margin: 200px 0 0 0;
+
+	&__txt {
+		font-size: 30px;
+		line-height: calc(36 / 30);
+		margin: 0 0 6px 0;
+	}
+
+	&__stat {
+		margin: 40px 0 0 0;
+	}
+}
+
+.stat-tm {
+	&__item {
+		display: flex;
+	}
+
+	&__bar:first-child,
+	&__description:first-child {
+		flex: 0 1 51%;
+	}
+
+	&__bar:last-child,
+	&__description:last-child {
+		flex: 0 1 300px;
+		margin-left: -20px;
+	}
+
+	&__bar {
+		text-align: center;
+		padding: 12px 10px;
+		background: #521094;
+		box-shadow: 0px 0px 11px #650eba;
+		border-radius: 11px;
+
+		&.pink {
+			background: #9c30d7;
+			box-shadow: 0px 0px 11px #9c30d7;
+		}
+	}
+
+	&__value {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 140%;
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 140%;
+	}
+
+	&__description {
+		display: flex;
+		align-items: center;
+		margin: 25px 0 0 0;
+	}
+
+	&__procent {
+		font-weight: 700;
+		font-size: 25px;
+		line-height: calc(36 / 30);
+	}
+
+	&__info {
+		font-size: 14px;
+		line-height: 140%;
+	}
+
+	&__line {
+		width: 1px;
+		height: 40px;
+
+		background: #9c30d7;
+		border-radius: 1px;
+		margin: 0 12px;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.tocenomics {
+		margin: 120px 0 0 0;
+
+		&__txt {
+			font-size: 20px;
+		}
+
+		&__name {
+		}
+
+		&__stat {
+			margin: 30px 0 0 0;
+		}
+	}
+
+	.stat-tm {
+		&__bar:first-child,
+		&__description:first-child {
+			flex: 0 1 65%;
+		}
+
+		&__bar:last-child,
+		&__description:last-child {
+			flex: 1 0 230px;
+		}
+
+		&__value {
+			font-size: 18px;
+		}
+
+		&__text {
+			font-size: 14px;
+		}
+
+		&__info {
+			font-size: 14px;
+			line-height: 17px;
+			white-space: nowrap;
+		}
+
+		&__procent {
+			font-size: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 630px) {
+	.stat-tm {
+		&__item:last-child {
+			flex-direction: column;
+		}
+
+		&__bar:first-child,
+		&__description:first-child {
+		}
+
+		&__description:last-child {
+			margin-left: 0;
+			flex: 1 1 auto;
+		}
+
+		&__bar:last-child {
+			flex: 1 1 auto;
+			width: 30%;
+			min-width: 120px;
+		}
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.stat-tm {
+		&__value {
+			font-size: 16px;
+		}
+
+		&__text {
+			font-size: 12px;
+		}
+	}
+}

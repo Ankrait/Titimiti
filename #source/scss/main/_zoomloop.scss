@@ -1,0 +1,288 @@
+.zoomloop {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 15% 0 0 0;
+	position: relative;
+
+	&__content {
+		margin: 60px 0 60px 60px;
+
+		flex: 0 1 500px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		position: relative;
+
+		.case-img {
+			position: absolute;
+			top: -104px;
+			right: -102px;
+			z-index: -1;
+			width: 50%;
+		}
+
+		& .blur {
+			position: absolute;
+			width: 40%;
+			filter: blur(150px);
+			top: 76px;
+		}
+	}
+
+	&__opentxt {
+		font-weight: 500;
+		font-size: 30px;
+	}
+
+	&__name {
+		margin-top: 8px;
+		transform: translateX(-50%);
+		opacity: 0;
+		transition: all 0.8s ease;
+	}
+
+	&__text {
+		margin: 19px 0 0 0;
+
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 130%;
+	}
+
+	&__play-btn {
+		margin: 60px 0 0 0;
+	}
+
+	&__phone {
+		flex: 0 1 50%;
+		.phone-base {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			max-width: 427px;
+			margin: 0 auto;
+
+			& .img_down {
+				position: absolute;
+				bottom: -12%;
+				left: 0;
+				z-index: -12;
+				width: 100%;
+			}
+			& img:first-child {
+				z-index: -12;
+				width: 100%;
+				transform: translate(0, -100%) scale(0);
+				transition: transform 0.7s ease 0s;
+			}
+
+			& img:nth-child(2) {
+				z-index: 1;
+				width: 66%;
+			}
+		}
+	}
+
+	.phone-bg-img {
+		position: absolute;
+		z-index: -13;
+		width: 100%;
+		transform: translate(45%, 30%) rotate(150deg) scale(0);
+		transition: transform 0.8s ease 0s;
+
+		&._1 {
+			max-width: 340px;
+			left: -75px;
+			top: -240px;
+		}
+
+		&._2 {
+			transform: translate(-90%, 62%) rotate(45deg) scale(0);
+			max-width: 170px;
+			right: -59px;
+			top: -213px;
+		}
+	}
+
+	&__back {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		z-index: -11;
+		transform: translateY(-50%);
+
+		width: 100%;
+		height: 80%;
+		min-height: 320px;
+
+		background: linear-gradient(96.36deg, #0021cc -10.12%, #04125e 128.75%), #000000;
+		opacity: 0.6;
+		border-radius: 50px;
+
+		&:nth-child(2) {
+			z-index: -10;
+			background: rgba(0, 0, 0, 0.9);
+			opacity: 0.6;
+			border-radius: 50px;
+		}
+	}
+
+	&__lines {
+		width: 78%;
+		position: absolute;
+		left: -50px;
+		top: -50px;
+		z-index: -13;
+	}
+
+	&__blur-1 {
+		position: absolute;
+		width: 35%;
+		top: -92px;
+		right: -132px;
+		z-index: -13;
+		filter: blur(200px);
+	}
+
+	&__blur-2 {
+		position: absolute;
+		width: 35%;
+		bottom: -150px;
+		right: -96px;
+		z-index: -13;
+		filter: blur(200px);
+	}
+
+	&__blur-3 {
+		position: absolute;
+		width: 35%;
+		bottom: -66px;
+		left: 56px;
+		z-index: -13;
+		filter: blur(200px);
+	}
+
+	.case-img2 {
+		position: absolute;
+		width: 17%;
+		bottom: -100px;
+		right: -112px;
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.zoomloop {
+		margin: 150px 0 0 0;
+
+		& .case-img2 {
+			display: none;
+		}
+		&__phone {
+			.phone-base {
+				max-width: 248px;
+				& .img_down {
+					z-index: 1;
+				}
+			}
+		}
+		&__blur-2 {
+			bottom: 1px;
+			right: 122px;
+			z-index: -1;
+		}
+		&__blur-1 {
+			top: 113px;
+			right: 22px;
+			z-index: -1;
+		}
+		&__content {
+			margin: 40px 0 40px 40px;
+			& .case-img {
+				max-width: 250px;
+				top: -68px;
+				right: -36px;
+			}
+		}
+		&__opentxt {
+			font-size: 18px;
+		}
+		&__text {
+			font-size: 14px;
+		}
+		.phone-bg-img {
+			z-index: -1;
+
+			&._1 {
+				max-width: 200px;
+				left: -22px;
+				top: -159px;
+			}
+			&._2 {
+				max-width: 140px;
+				right: -29px;
+				top: -163px;
+			}
+		}
+		&__play-btn {
+			margin: 30px 0 0 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 660px) {
+	.zoomloop {
+		&__phone {
+			display: none;
+		}
+
+		&__content {
+			margin: 60px 20px;
+		}
+
+		&__back {
+			height: 96%;
+		}
+	}
+}
+
+@media only screen and (max-width: 530px) {
+	.zoomloop {
+		&__phone {
+			display: none;
+		}
+
+		&__content {
+			margin: 60px 20px;
+		}
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.zoomloop {
+		&__play-btn {
+			width: 100%;
+			padding: 12.5px 0;
+			display: flex;
+			justify-content: center;
+			background: linear-gradient(277.37deg, #2d0073 -24.21%, #c843ff 131.33%);
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	.zoomloop {
+		&__content {
+			& .case-img {
+				top: -33px;
+				max-width: 280px;
+				width: 80%;
+				right: -69px;
+			}
+		}
+	}
+}
