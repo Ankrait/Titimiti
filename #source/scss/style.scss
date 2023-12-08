@@ -619,6 +619,18 @@ body.overflow--hide {
    }
 }
 
+.txt_subname {
+   color: var(--White, #fcfcfc);
+   text-shadow: 0px 0px 40px rgba(255, 41, 246, 0.4);
+
+   font-family: Montserrat;
+   font-size: 18px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 130%;
+   text-transform: uppercase;
+}
+
 .cookie--hide {
    opacity: 0;
    transform: translate(0, 140%);
