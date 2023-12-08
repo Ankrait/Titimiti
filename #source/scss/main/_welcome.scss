@@ -1,0 +1,157 @@
+.welcome {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	position: relative;
+
+	video {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-height: 100%;
+		z-index: -1;
+		object-fit: contain;
+	}
+
+	.blur {
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 1920px;
+		z-index: -1;
+		background: radial-gradient(
+			51.93% 81.64% at 49.17% 44.44%,
+			rgba(0, 0, 0, 0) 39.06%,
+			rgba(6, 4, 0, 0.22) 57.81%,
+
+			rgba(12, 0, 21, 0.58) 88.54%
+		);
+	}
+
+	.eart-bg {
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 1920px;
+		z-index: -10;
+	}
+
+	&__wel {
+		margin: 33vh 0 0 0;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 130%;
+		text-transform: uppercase;
+
+		color: #939393;
+	}
+
+	&__title {
+		font-weight: 900;
+		font-size: 150px;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 130%;
+		max-width: 240px;
+		margin: 20px 0 0 0;
+	}
+
+	&__btn {
+		cursor: pointer;
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 130%;
+
+		display: flex;
+		align-items: center;
+		padding: 10px 32px;
+		margin: 50px 0 0 0;
+		gap: 10px;
+
+		background: #5865f2;
+		box-shadow: 0px 0px 30px rgba(88, 101, 242, 0.3);
+		border-radius: 100px;
+
+		transition: background 0.6s ease 0s;
+		&:hover {
+			background: #3b4bfa;
+		}
+
+		& span {
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.welcome {
+		&__wel {
+			margin: 30vh 0 0 0;
+			font-size: 12px;
+		}
+
+		&__title {
+			font-size: 100px;
+			line-height: 121px;
+		}
+
+		&__text {
+			font-size: 14px;
+			margin-top: 10px;
+		}
+
+		&__btn {
+			margin-top: 40px;
+			padding: 14px 50px;
+		}
+
+		& .arrow-content {
+			display: none;
+		}
+
+		& video {
+			width: 150%;
+		}
+	}
+}
+
+@media screen and (max-width: 660px) {
+	.welcome video {
+		width: 250%;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	.welcome {
+		&__wel {
+			margin: 60vh 0 0 0;
+		}
+
+		&__title {
+			font-size: 60px;
+			line-height: 73px;
+		}
+
+		&__btn {
+			width: 100%;
+			padding: 14px 0;
+			justify-content: center;
+		}
+
+		& .arrow-content {
+		}
+
+		& video {
+			top: 35%;
+		}
+	}
+}

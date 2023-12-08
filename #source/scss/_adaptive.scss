@@ -51,32 +51,6 @@
       font-size: 40px;
    }
 
-   .welcome {
-      &__wel {
-         margin: 30vh 0 0 0;
-         font-size: 12px;
-      }
-      &__title {
-         font-size: 100px;
-         line-height: 121px;
-      }
-      &__text {
-         font-size: 14px;
-         margin-top: 10px;
-      }
-      &__btn {
-         margin-top: 40px;
-         padding: 14px 50px;
-      }
-
-      & .arrow-content {
-         display: none;
-      }
-      & video {
-         width: 150%;
-      }
-   }
-
    .menu {
       &__logo {
          margin: 0 4%;
@@ -730,9 +704,6 @@
    }
 
    @media (max-width: 660px) {
-      .welcome video {
-         width: 250%;
-      }
       .zoomloop {
          &__phone {
             display: none;
@@ -885,20 +856,6 @@
    }
 }
 @media screen and (max-width: 630px) {
-   .tocenomics {
-      // .tocenomics__txt
-      &__txt {
-      }
-
-      // .tocenomics__name
-      &__name {
-      }
-
-      // .tocenomics__stat
-      &__stat {
-      }
-   }
-
    .stat-tm {
       // .stat-tm__item
       &__item:last-child {
@@ -1005,29 +962,6 @@
       }
    }
 
-   .welcome {
-      &__wel {
-         margin: 60vh 0 0 0;
-      }
-      &__title {
-         font-size: 60px;
-         line-height: 73px;
-      }
-      &__text {
-      }
-      &__btn {
-         width: 100%;
-         padding: 14px 0;
-         justify-content: center;
-      }
-
-      & .arrow-content {
-      }
-      & video {
-         top: 35%;
-      }
-   }
-
    .stat-tm {
       &__value {
          font-size: 16px;
@@ -1125,8 +1059,6 @@
       }
       .welcome__title {
          font-size: 50px;
-      }
-      .welcome__text {
       }
       .email {
          padding: 40px 10px;
