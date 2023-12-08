@@ -39,11 +39,6 @@
     opacity: 1;
 }
 
-.team h2._active {
-    transform: translate(0);
-    opacity: 1;
-}
-
 .email._active {
     & input,
     & .btn,

@@ -3,7 +3,9 @@
    font-style: normal;
    font-weight: 400;
    font-display: swap;
-   src: url("../fonts/Inter-Light.woff2") format("woff2"), url("../fonts/Inter-Light.woff") format("woff");
+   src:
+      url("../fonts/Inter-Light.woff2") format("woff2"),
+      url("../fonts/Inter-Light.woff") format("woff");
 }
 
 @font-face {
@@ -11,7 +13,9 @@
    font-style: normal;
    font-weight: 500;
    font-display: swap;
-   src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+   src:
+      url("../fonts/Inter-Regular.woff2") format("woff2"),
+      url("../fonts/Inter-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -19,7 +23,9 @@
    font-style: normal;
    font-weight: 600;
    font-display: swap;
-   src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+   src:
+      url("../fonts/Inter-Medium.woff2") format("woff2"),
+      url("../fonts/Inter-Medium.woff") format("woff");
 }
 
 @font-face {
@@ -27,7 +33,9 @@
    font-style: normal;
    font-weight: 700;
    font-display: swap;
-   src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
+   src:
+      url("../fonts/Inter-SemiBold.woff2") format("woff2"),
+      url("../fonts/Inter-SemiBold.woff") format("woff");
 }
 
 @font-face {
@@ -35,7 +43,9 @@
    font-style: normal;
    font-weight: 800;
    font-display: swap;
-   src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
+   src:
+      url("../fonts/Inter-Bold.woff2") format("woff2"),
+      url("../fonts/Inter-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -43,8 +53,12 @@
    font-style: normal;
    font-weight: 900;
    font-display: swap;
-   src: url("../fonts/Inter-ExtraBold.woff2") format("woff2"), url("../fonts/Inter-ExtraBold.woff") format("woff");
+   src:
+      url("../fonts/Inter-ExtraBold.woff2") format("woff2"),
+      url("../fonts/Inter-ExtraBold.woff") format("woff");
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Prosto+One&display=swap");
 
 /*Обнуление*/
 * {
@@ -125,9 +139,10 @@ h6 {
    font-weight: inherit;
 }
 p {
-   margin-top: 10px;
+   margin-top: 20px;
 }
-img, video {
+img,
+video {
    pointer-events: none;
 }
 /*--------------------*/

@@ -2,11 +2,31 @@ document.querySelectorAll('video').forEach(v => { v.setAttribute('pip', 'false')
 body = document.body
 
 ///////////////////// Свайпер /////////////////////
-swiper = new Swiper('.titiland .swiper', {
-    pagination: {
-        el: '.titiland .swiper-pagination',
-        clickable: true,
+swiper = new Swiper('.swiper.titiland_photo', {
+    navigation: {
+        nextEl: '.titiland__arr-right',
+        prevEl: '.titiland__arr-left'
     },
+
+    // freeMode: true,
+    loop: true,
+    allowTouchMove: true,
+
+    autoplay: {
+        delay: 5000,
+        speed: 1000,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        768: {
+            allowTouchMove: false,
+            speed: 1000,
+            pagination: false,
+        }
+    }
+});
+
+swiper2 = new Swiper('.swiper.titiland_text', {
     navigation: {
         nextEl: '.titiland__arr-right',
         prevEl: '.titiland__arr-left'

@@ -1,10 +1,20 @@
-@media screen and (max-width: 1199.89px) {
+@media screen and (max-width: 1200px) {
    .titiland__content {
       margin: 0 40px 0 0;
    }
+
+   .ecosystem {
+      &__content {
+         gap: 20px;
+      }
+   }
+
+   .item-ecosystem {
+      padding: 20px 14px;
+   }
 }
 
-@media screen and (max-width: 1023.89px) {
+@media screen and (max-width: 1024px) {
    [class*="__container"] {
       max-width: 900px;
       padding: 0 25px;
@@ -41,6 +51,12 @@
       }
    }
 
+   .item-ecosystem {
+      &__title {
+         font-size: 20px;
+      }
+   }
+
    .menu {
       &__logo {
          margin: 0 4%;
@@ -52,21 +68,7 @@
    }
 
    .about {
-      gap: 30px;
       margin: 50px 0 0 0;
-      &__block {
-         flex: 0 1 50%;
-         margin: 0;
-      }
-      &__title {
-         font-size: 20px;
-      }
-      &__info {
-         font-size: 14px;
-      }
-      &__block {
-         margin: 15px 0;
-      }
    }
 
    .titiland {
@@ -172,46 +174,21 @@
 
    .miticoin {
       margin: 150px 0 0 0;
-      justify-content: space-between;
+      &__mititoken {
+         justify-content: space-between;
+      }
       &__content {
          flex: 50% 0 1;
       }
       &__text {
-         font-size: 14px;
+         color: #918bb4;
+
+         font-family: Montserrat;
+         font-size: 18px;
+         line-height: 130%;
       }
    }
 
-   .team {
-      &__title {
-         font-size: 40px;
-         line-height: 48px;
-         & h2 {
-            width: 150px;
-         }
-      }
-      &__item {
-         flex: 0 1 158px;
-      }
-      &__personal {
-         position: absolute;
-         overflow-x: scroll;
-         & .team__item {
-            flex-shrink: 0;
-         }
-      }
-      &__item--name {
-         font-size: 14px;
-         line-height: 9px;
-      }
-      &__item--pos {
-         font-size: 10px;
-         line-height: 130%;
-      }
-      &__item--info {
-         font-size: 10px;
-         line-height: 130%;
-      }
-   }
 
    .email {
       margin: 420px 0 0 0;
@@ -227,7 +204,7 @@
       }
    }
 }
-@media screen and (max-width: 767.89px) {
+@media screen and (max-width: 768px) {
    .header {
       background: none;
       backdrop-filter: flur(0);
@@ -336,7 +313,9 @@
    }
 
    .miticoin {
-      flex-direction: column-reverse;
+      &__mititoken {
+         flex-direction: column-reverse;
+      }
       &__video {
          margin-top: 30px;
       }
@@ -346,40 +325,6 @@
       margin: 650px 0 0 0;
       & h2 {
          max-width: 230px;
-      }
-   }
-
-   .team {
-      & .swiper {
-         max-width: 343px;
-      }
-      &__personal {
-         margin: 26px 0 0 0;
-         max-width: 100%;
-         width: 92%;
-         display: none;
-      }
-      &__item {
-         flex: 0 1 100%;
-      }
-      &__liders {
-         flex: 0;
-      }
-      & h2 {
-         width: auto;
-      }
-      &__title {
-         flex: 0;
-      }
-      & img {
-         height: auto;
-         width: 100%;
-      }
-      &__liders {
-         display: none;
-      }
-      &__personal.phone {
-         display: block;
       }
    }
 
@@ -519,16 +464,6 @@
       }
    }
 
-   .team__personal {
-      transform: translateX(70%);
-      opacity: 0;
-      transition: all 0.7s ease;
-   }
-   .team__personal._active {
-      transform: translateX(0);
-      opacity: 1;
-   }
-
    //Hover to Click
    .menu__item:hover {
       color: #fcfcfc;
@@ -576,7 +511,7 @@
    }
 }
 
-@media screen and (max-width: 424.89px) {
+@media screen and (max-width: 425px) {
    [class*="__container"] {
       max-width: 400px;
       padding: 0 15px;
