@@ -53,10 +53,3 @@
         opacity: 1;
     }
 }
-
-.helpus__name._active,
-.helpus__txt._active {
-    transform: translateX(0);
-    opacity: 1;
-    transition: transform 1.2s ease 0.1s, opacity 1.2s ease 0.4s;
-}

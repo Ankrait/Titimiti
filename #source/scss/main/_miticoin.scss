@@ -1,9 +1,22 @@
 .miticoin {
-	margin: 18% 0 0 0;
 	display: flex;
-	align-items: center;
-	justify-content: space-around;
+	flex-direction: column;
+	gap: 150px;
+
+	margin: 200px 0 0 0;
+	padding: 100px 40px;
 	position: relative;
+
+	border-radius: 15px;
+	background: rgba(61, 63, 75, 0.3);
+	box-shadow: 0px 1px 4px 0px rgba(255, 255, 255, 0.35) inset;
+
+	&__info {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 27px;
+	}
+
 	&__name {
 		transform: translateX(50%);
 		opacity: 1;
@@ -11,24 +24,10 @@
 	}
 
 	&__video {
-		flex: 0 1 50%;
-		display: flex;
-		flex-direction: column;
-
-		.blur {
-			position: absolute;
-			left: 2.5%;
-			bottom: 8%;
-			width: 95%;
-			z-index: 2;
-			filter: blur(13.5px);
-		}
-	}
-
-	&__main {
-		max-width: 315px;
+		max-width: 370px;
 		margin: 0 auto;
 		position: relative;
+
 		& video,
 		& img {
 			width: 100%;
@@ -41,10 +40,19 @@
 		& img {
 			z-index: 3;
 		}
+
+		.blur {
+			position: absolute;
+			left: 2.5%;
+			bottom: 8%;
+			width: 95%;
+			z-index: 2;
+			filter: blur(13.5px);
+		}
 	}
 
 	&__content {
-		flex: 0 1 50%;
+		flex: 0 1 608px;
 		position: relative;
 	}
 
@@ -60,9 +68,6 @@
 
 	&__text {
 		margin: 30px 0 0 0;
-		font-weight: 400;
-		font-size: 20px;
-		line-height: 130%;
 	}
 
 	&__lines {
@@ -70,29 +75,192 @@
 		top: 19px;
 		left: 371px;
 	}
+
+	&__action {
+		margin: 60px 0 0 0;
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+
+		& > div:first-child {
+			font-size: 24px;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		gap: 30px;
+	}
+
+	&__btn {
+		white-space: nowrap;
+	}
+}
+
+.advantages {
+	// .advantages__subtext
+	&__subtext {
+		margin: 0 0 6px 0;
+		color: #fcfcfc;
+		text-align: center;
+
+		font-family: Montserrat;
+		font-size: 18px;
+		line-height: 130%;
+		text-transform: uppercase;
+	}
+
+	// .advantages__name
+	&__name {
+		text-align: center;
+	}
+
+	// .advantages__list
+	&__list {
+		margin: 50px 0 0 0;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 20px;
+	}
+
+	// .advantages__item
+	&__item {
+		border-radius: 15px;
+		background: #0f111b;
+		box-shadow: 0px 1px 4px 0px #db5fff inset;
+		padding: 30px;
+	}
+
+	// .advantages__image
+	&__image {
+		margin: 0 0 30px 0;
+		max-width: 69px;
+		aspect-ratio: 1 / 1;
+		img {
+			width: 100%;
+			object-fit: contain;
+		}
+	}
+
+	// .advantages__title
+	&__title {
+		margin: 0 0 12px 0;
+		color: #fcfcfc;
+
+		font-family: Prosto One;
+		font-size: 18px;
+		line-height: 140%;
+	}
+
+	// .advantages__text
+	&__text {
+		color: #918bb4;
+		font-family: Montserrat;
+		font-size: 18px;
+		line-height: 130%;
+	}
+}
+
+@media only screen and (max-width: 1150px) {
+	.advantages {
+		&__list {
+			margin: 30px 0 0 0;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		&__image {
+			margin: 0 0 15px 0;
+		}
+	}
 }
 
 @media only screen and (max-width: 1024px) {
 	.miticoin {
-		margin: 150px 0 0 0;
-		justify-content: space-between;
+		margin: 100px 0 0 0;
+		padding: 50px 35px;
+		gap: 80px;
+
+		&__info {
+			justify-content: space-between;
+		}
+
+		&__video {
+			max-width: 330px;
+		}
 
 		&__content {
 			flex: 50% 0 1;
 		}
 
-		&__text {
-			font-size: 14px;
+		&__action {
+			margin: 30px 0 0 0;
+			gap: 20px;
+
+			& > div:first-child {
+				font-size: 20px;
+			}
+		}
+
+		&__buttons {
+			gap: 20px;
+		}
+
+		&__btn {
+			padding: 12px 16px;
 		}
 	}
 }
 
 @media only screen and (max-width: 768px) {
 	.miticoin {
-		flex-direction: column-reverse;
+		padding: 40px 20px;
+
+		&__info {
+			grid-template-columns: 1fr;
+		}
 
 		&__video {
-			margin-top: 30px;
+			margin-top: 10px;
+			grid-row: 2;
+		}
+
+		&__action {
+			margin: 0 0 0 0;
+		}
+	}
+
+	.advantages {
+		&__item {
+			padding: 24px;
+		}
+	}
+}
+
+@media only screen and (max-width: 630px ) {
+	.advantages {
+		&__list {
+			margin: 20px 0 0 0;
+			grid-template-columns: 1fr;
+			gap: 15px;
+		}
+	}
+}
+
+
+@media only screen and (max-width: 370px) {
+	.miticoin {
+		&__buttons {
+			flex-wrap: wrap;
+		}
+		&__btn {
+			width: 100%;
 		}
 	}
 }

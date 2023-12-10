@@ -1,0 +1,142 @@
+.distribution {
+	&__txt {
+		margin: 0 0 6px 0;
+	}
+
+	&__stat {
+		margin: 40px 0 0 0;
+		display: flex;
+		align-items: center;
+	}
+
+	&__bar {
+		position: relative;
+		z-index: 1;
+
+		padding: 16px 10px;
+		border-radius: 16px;
+		background: #291633;
+		box-shadow: 0px 0px 11px 0px #361f42;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 16px;
+		flex: 0 0 40%;
+
+		&:last-child {
+			z-index: 1;
+			flex: 0 0 calc(60% + 30px);
+			margin-left: -30px;
+		}
+	}
+
+	&__percent {
+		color: #fcfcfc;
+		font-family: Montserrat;
+		font-size: 29px;
+		font-style: normal;
+		font-weight: 800;
+		line-height: 130%;
+	}
+
+	&__line {
+		width: 2px;
+		height: 35px;
+		border-radius: 1px;
+		background: #a839ff;
+		box-shadow: 0px 0px 40px 0px rgba(255, 41, 246, 0.4);
+	}
+
+	&__name {
+		white-space: nowrap;
+		color: #fcfcfc;
+		font-family: Montserrat;
+		font-size: 16px;
+		line-height: 130%;
+	}
+
+	&__mobile {
+		display: none;
+	}
+}
+
+.distribution__bar.active {
+	z-index: 2;
+	background: #9c30d7;
+	box-shadow: 0px 0px 11px 0px #9c30d7;
+
+	.distribution__line {
+		background: #040718;
+		box-shadow: 0px 0px 40px 0px rgba(4, 7, 24, 0.4);
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.distribution {
+		&__stat {
+			margin: 30px 0 0 0;
+		}
+
+		&__percent {
+			font-size: 18px;
+			font-weight: 500;
+		}
+
+		&__name {
+			font-size: 10px;
+			font-weight: 400;
+			line-height: 130%;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.distribution {
+		&__txt,
+		&__title {
+			text-align: center;
+		}
+
+		&__name:not(._mobile) {
+			display: none;
+		}
+
+		&__bar {
+			border-radius: 11px;
+			justify-content: flex-start;
+
+			&:last-child {
+				flex-direction: row-reverse;
+			}
+		}
+
+		&__stat,
+		&__mobile {
+			max-width: 500px;
+			margin: 0 auto;
+		}
+
+		&__stat {
+			margin-top: 30px;
+		}
+
+		&__mobile {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 10px;
+
+			padding: 10px;
+
+			& .distribution__name {
+				&:first-child {
+					text-align: left;
+				}
+				&:last-child {
+					text-align: right;
+				}
+			}
+		}
+	}
+}

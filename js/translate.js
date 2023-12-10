@@ -13,16 +13,16 @@ const translate = {
         "zoomloop__text": "Люди, а&nbsp;не деньги, вот настоящая ценность. Поэтому для&nbsp;людей мы разбрасываем деньги прямо на&nbsp;улице. Но не для всех а&nbsp;только для самых умных, тех кто установил игру на&nbsp;свой телефон. Умным быть круто! Короче стань крутым и&nbsp;установи нашу приложуху.",
         "zoomloop__btntxt": "Начать играть",
         "miticoin__text": "Расчётный инструмент метасети TitiMiti. Уникальная криптовалюта с&nbsp;механизмом стабильно-постоянного роста курса. Экономика проекта гарантирует, что&nbsp;цена MitiCoin никогда не&nbsp;будет ниже его&nbsp;бесконечно растущей капитализации.",
-        "tocenomics__txt": "Распредление MitiToken",
+        "distribution__txt": "Распредление MitiToken",
         "stat-tm__info": "Предстоит<br> добыть майнерам",
         "stat-tm__info2": "Первичное<br> распредление MitiToken",
-        "mititoken__name": "Первичное распредление MitiToken",
-        "mititoken__text1": "Владельцы участков",
-        "mititoken__text2": "Seed A",
-        "mititoken__text3": "Seed B",
-        "mititoken__text4": "Фонд розыгрышей",
-        "mititoken__text5": "Команда",
-        "mititoken__btntxt": "Полная токеномика",
+        "stats__name": "Первичное распредление MitiToken",
+        "stats__text1": "Владельцы участков",
+        "stats__text2": "Seed A",
+        "stats__text3": "Seed B",
+        "stats__text4": "Фонд розыгрышей",
+        "stats__text5": "Команда",
+        "stats__btntxt": "Полная токеномика",
         "rm-step1": "1 этап",
         "rm-step2": "2 этап",
         "rm-step3": "3 этап",
@@ -182,7 +182,7 @@ const translate = {
         "form__btntxt":
             "",
 
-        "tocenomics__txt":
+        "distribution__txt":
             "",
 
         "stat-tm__info":
@@ -191,25 +191,25 @@ const translate = {
         "stat-tm__info2":
             "",
 
-        "mititoken__name":
+        "stats__name":
             "",
 
-        "mititoken__text1":
+        "stats__text1":
             "",
 
-        "mititoken__text2":
+        "stats__text2":
             "",
 
-        "mititoken__text3":
+        "stats__text3":
             "",
 
-        "mititoken__text4":
+        "stats__text4":
             "",
 
-        "mititoken__text5":
+        "stats__text5":
             "",
 
-        "mititoken__btntxt":
+        "stats__btntxt":
             "",
 
         "popup__txt":
@@ -392,7 +392,7 @@ const translate = {
         "form__btntxt":
             "",
 
-        "tocenomics__txt":
+        "distribution__txt":
             "",
 
         "stat-tm__info":
@@ -401,25 +401,25 @@ const translate = {
         "stat-tm__info2":
             "",
 
-        "mititoken__name":
+        "stats__name":
             "",
 
-        "mititoken__text1":
+        "stats__text1":
             "",
 
-        "mititoken__text2":
+        "stats__text2":
             "",
 
-        "mititoken__text3":
+        "stats__text3":
             "",
 
-        "mititoken__text4":
+        "stats__text4":
             "",
 
-        "mititoken__text5":
+        "stats__text5":
             "",
 
-        "mititoken__btntxt":
+        "stats__btntxt":
             "",
 
         "popup__txt":
@@ -563,16 +563,16 @@ let j = {
     "zoomloop__text": "Люди, а&nbsp;не деньги, вот настоящая ценность. Поэтому для&nbsp;людей мы разбрасываем деньги прямо на&nbsp;улице. Но не для всех а&nbsp;только для самых умных, тех кто установил игру на&nbsp;свой телефон. Умным быть круто! Короче стань крутым и&nbsp;установи нашу приложуху.",
     "zoomloop__btntxt": "Начать играть",
     "miticoin__text": "Расчётный инструмент метасети TitiMiti. Уникальная криптовалюта с&nbsp;механизмом стабильно-постоянного роста курса. Экономика проекта гарантирует, что&nbsp;цена MitiCoin никогда не&nbsp;будет ниже его&nbsp;бесконечно растущей капитализации.",
-    "tocenomics__txt": "Распредление MitiToken",
+    "distribution__txt": "Распредление MitiToken",
     "stat-tm__info": "Предстоит<br> добыть майнерам",
     "stat-tm__info2": "Первичное<br> распредление MitiToken",
-    "mititoken__name": "Первичное распредление MitiToken",
-    "mititoken__text1": "Владельцы участков",
-    "mititoken__text2": "Seed A",
-    "mititoken__text3": "Seed B",
-    "mititoken__text4": "Фонд розыгрышей",
-    "mititoken__text5": "Команда",
-    "mititoken__btntxt": "Полная токеномика",
+    "stats__name": "Первичное распредление MitiToken",
+    "stats__text1": "Владельцы участков",
+    "stats__text2": "Seed A",
+    "stats__text3": "Seed B",
+    "stats__text4": "Фонд розыгрышей",
+    "stats__text5": "Команда",
+    "stats__btntxt": "Полная токеномика",
     "rm-step1": "1 этап",
     "rm-step2": "2 этап",
     "rm-step3": "3 этап",

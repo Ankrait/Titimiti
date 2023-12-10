@@ -4,7 +4,7 @@ const current_select = document.querySelector('.footer__lang--current');
 
 let lang = getCookie("lang") || "ru";
 current_select.innerHTML = document.querySelector(`[data-value = ${lang}]`).innerHTML;
-translation();
+// translation();
 
 but_select.addEventListener("click", () => {
     but_select.classList.toggle("active");
@@ -14,7 +14,6 @@ select.forEach((el) => {
     el.addEventListener("click", () => changeLanguage(el));
 })
 
-// перенаправить на url с указанием языка
 function changeLanguage(el) {
     if (lang != el.dataset.value && el.dataset.value !== 'zh') {
         lang = el.dataset.value;

@@ -76,18 +76,18 @@
 
 @import "main/welcome";
 @import "main/about";
+@import "main/ecosystem";
 @import "main/titiland";
 @import "main/zoomloop";
 @import "main/miticoin";
-@import "main/tocenomics";
-@import "main/mititoken";
-@import "main/team";
+@import "main/distribution";
+@import "main/stats";
+@import "main/advert";
+@import "main/roadmap";
 @import "main/email";
-@import "main/helpus";
 
 // TODO - welcome TITIMITI adaptiv
 
-@import "_roadmap";
 @import "_animations";
 
 ////////////////////////////////////
@@ -431,12 +431,18 @@ body.overflow--hide {
       justify-content: space-between;
    }
 
-   &__title {
-      margin-top: 12px;
-      font-weight: 800;
-      font-size: 30px;
-      line-height: 36px;
-      text-transform: uppercase;
+   &__logo {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+         margin-top: 12px;
+         font-weight: 800;
+         font-size: 30px;
+         text-transform: uppercase;
+      }
    }
 
    &__lang {
@@ -483,9 +489,6 @@ body.overflow--hide {
          bottom: 0;
          transform: rotate(45deg);
       }
-   }
-
-   &__flag {
    }
 
    &__langname {

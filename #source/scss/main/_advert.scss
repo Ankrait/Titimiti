@@ -1,0 +1,133 @@
+.advert {
+	margin: 200px 0 0 0;
+	border-radius: 15px;
+
+	background: rgba(73, 61, 75, 0.3);
+	box-shadow: 0px 1px 4px 0px #9b34ff inset;
+	padding: 50px 80px;
+
+	position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border-radius: 15px;
+		padding: 4px;
+		background: linear-gradient(278deg, #0571ff -48.26%, #e64dff 40.28%, #8a2fff 112.11%);
+		-webkit-mask:
+			linear-gradient(#fff 0 0) content-box,
+			linear-gradient(#fff 0 0);
+		-webkit-mask-composite: xor;
+		mask-composite: exclude;
+
+		pointer-events: none;
+	}
+
+	&__head {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 6px;
+		text-align: center;
+	}
+
+	&__content {
+		margin: 30px 0 0 0;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+	}
+
+	&__image {
+		padding: 0 6% 0 0;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 60px;
+	}
+
+	&__items {
+		align-self: stretch;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 42px 8px;
+	}
+
+	&__item {
+		align-self: stretch;
+		padding: 0 0 13px 0;
+
+		font-family: Montserrat;
+		font-size: 30px;
+		font-weight: 600;
+		line-height: 130%;
+		text-align: center;
+		white-space: nowrap;
+
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0.01%, #be3ffe 49.99%, rgba(25, 27, 22, 0) 101.01%);
+			bottom: 0;
+			left: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.advert {
+		margin: 100px 0 0 0;
+		padding: 50px 40px;
+
+		&__info {
+			gap: 40px;
+		}
+
+		&__items {
+			gap: 55px 33px;
+		}
+
+		&__item {
+			font-size: 20px;
+		}
+	}
+}
+
+@media only screen and (max-width: 650px) {
+	.advert {
+		padding: 40px 20px;
+
+		&__content {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			gap: 30px;
+		}
+
+		&__info {
+			max-width: 360px;
+			width: 100%;
+		}
+
+		&__items {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&__image {
+			max-width: 360px;
+			padding: 0 0 0 0;
+		}
+	}
+}

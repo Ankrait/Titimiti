@@ -1,0 +1,145 @@
+.ecosystem {
+	margin: 80px 0 0 0;
+
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+
+	&__name {
+		text-align: center;
+	}
+
+	&__content {
+		display: grid;
+
+		grid-template-columns: repeat(3, 1fr);
+		gap: 40px;
+	}
+}
+.item-ecosystem {
+	padding: 30px 60px;
+	border-radius: 15px;
+	background: rgba(61, 63, 75, 0.3);
+	box-shadow: 0px 1px 3px 0px rgba(219, 95, 255, 0.8) inset;
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	&__image {
+		aspect-ratio: 1 / 1;
+		flex: 1 1 auto;
+		width: 80%;
+		height: 100%;
+		position: relative;
+		margin: 0 0 25px 0;
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&._token img {
+			height: 120%;
+			width: 120%;
+		}
+	}
+
+	&__title {
+		white-space: nowrap;
+		color: #fcfcfc;
+
+		font-family: Montserrat;
+		font-size: 30px;
+		font-weight: 600;
+		line-height: 130%;
+
+		margin: 0 0 4px 0;
+	}
+
+	&__text {
+		margin: 0 0 20px 0;
+	}
+
+	&__btn {
+		flex: 1 1 61px;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.ecosystem {
+		&__content {
+			gap: 20px;
+		}
+	}
+
+	.item-ecosystem {
+		padding: 20px 14px;
+
+		&__image {
+			width: 60%;
+		}
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.item-ecosystem {
+		&__title {
+			font-size: 20px;
+		}
+
+		&__btn {
+			padding: 12px 20px;
+			width: 100%;
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.ecosystem {
+		&__content {
+			grid-template-columns: repeat(2, 1fr);
+			justify-items: center;
+		}
+	}
+
+	.item-ecosystem {
+		max-width: 350px;
+
+		&:last-child {
+			grid-column: 1 / span 2;
+		}
+	}
+}
+
+@media only screen and (max-width: 530px) {
+	.ecosystem {
+		gap: 20px;
+
+		&__content {
+			grid-template-columns: 1fr;
+			justify-items: center;
+		}
+	}
+
+	.item-ecosystem {
+		max-width: 350px;
+
+		&:last-child {
+			grid-column: 1;
+		}
+
+		&__text {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: justify;
+		}
+	}
+}
