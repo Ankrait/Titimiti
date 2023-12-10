@@ -8,9 +8,7 @@
 	box-shadow: 0px 1px 3px 0px rgba(219, 95, 255, 0.8) inset;
 	backdrop-filter: blur(4.5px);
 
-	& p {
-		font-weight: 400;
-		font-size: 30px;
+	&__subtitle {
 		transform: translateX(-50%);
 		opacity: 0;
 		transition: all 0.8s ease;
@@ -48,19 +46,19 @@
 	}
 
 	& input {
-		padding: 10px 32px 10px 20px;
-
-		width: 309px;
-		height: 39px;
+		padding: 12px 20px;
+		max-width: 309px;
 
 		background: #040718;
 		border: 1px solid #8951ff;
 		border-radius: 100px;
 
+		font-family: Montserrat;
 		font-weight: 400;
-		font-size: 15px;
-
+		font-size: 18px;
+		line-height: 130%;
 		color: #fcfcfc;
+
 		transform: translateX(-50%);
 		opacity: 0;
 		transition: all 0.8s ease;
@@ -80,13 +78,15 @@
 	}
 
 	& .form__btn {
-		width: 309px;
+		max-width: 202px;
 		text-align: center;
 		margin: 0px 0 0 8px;
+
 		transform: translateX(50%);
 		opacity: 0;
 		transition: all 0.8s ease;
 		border: 0;
+
 		&:focus {
 			box-shadow: 0 0 0;
 		}

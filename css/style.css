@@ -3405,9 +3405,7 @@ img {
   -webkit-backdrop-filter: blur(4.5px);
           backdrop-filter: blur(4.5px);
 }
-.email p {
-  font-weight: 400;
-  font-size: 30px;
+.email__subtitle {
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
@@ -3457,14 +3455,15 @@ img {
   opacity: 1;
 }
 .email input {
-  padding: 10px 32px 10px 20px;
-  width: 309px;
-  height: 39px;
+  padding: 12px 20px;
+  max-width: 309px;
   background: #040718;
   border: 1px solid #8951ff;
   border-radius: 100px;
+  font-family: Montserrat;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 18px;
+  line-height: 130%;
   color: #fcfcfc;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -3488,7 +3487,7 @@ img {
           box-shadow: none;
 }
 .email .form__btn {
-  width: 309px;
+  max-width: 202px;
   text-align: center;
   margin: 0px 0 0 8px;
   -webkit-transform: translateX(50%);
