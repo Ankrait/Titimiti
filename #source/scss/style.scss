@@ -86,8 +86,6 @@
 @import "main/roadmap";
 @import "main/email";
 
-// TODO - welcome TITIMITI adaptiv
-
 @import "_animations";
 
 ////////////////////////////////////
@@ -102,7 +100,7 @@
    overflow: hidden;
    background: #040718;
 
-   &__procents {
+   &__percents {
       position: absolute;
       left: 50%;
       top: 90%;
@@ -674,46 +672,7 @@ body.overflow--hide {
 }
 
 /////////////////////////
-.chart {
-   height: 100%;
-   width: 100%;
-   position: absolute;
-}
-.unit {
-   fill: none;
-   stroke-width: 10;
-   cursor: pointer;
-   stroke: transparent;
 
-   &:nth-child(1) {
-      stroke-dasharray: 18.5 125;
-   }
-
-   &:nth-child(2) {
-      stroke-dasharray: 44 125;
-      stroke-dashoffset: -19;
-   }
-
-   &:nth-child(3) {
-      stroke-dasharray: 13 125;
-      stroke-dashoffset: -63.5;
-   }
-
-   &:nth-child(4) {
-      stroke-dasharray: 12 125;
-      stroke-dashoffset: -77;
-   }
-
-   &:nth-child(5) {
-      stroke-dasharray: 4 125;
-      stroke-dashoffset: -89.5;
-   }
-
-   &:nth-child(6) {
-      stroke-dasharray: 31 125;
-      stroke-dashoffset: -94;
-   }
-}
 /////////////////////////
 
 @import "_adaptive";

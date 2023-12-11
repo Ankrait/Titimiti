@@ -3,7 +3,7 @@ $(document).ready(function () {
     video_count = $('video').length;
     media_count = img_count + video_count;
 
-    const span = document.querySelector('.procents');
+    const span = document.querySelector('.percents');
     const preload = document.querySelector('.preloader');
 
     const circle = document.querySelector('circle');

@@ -32,3 +32,12 @@ dataMoveBlock.forEach((el) => {
 		moveBlock(el, to, +data[1], +data[2]);
 	}
 });
+
+// TODO - welcome TITIMITI adaptiv
+// TODO - div -> buttons
+// TODO - translate
+// TODO - delete Inter font
+// TODO - share icons
+// TODO - popup adaptiv
+// TODO - animations
+// TODO - stats Большие кнопки не кликабельны

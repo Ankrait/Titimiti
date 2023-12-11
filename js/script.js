@@ -312,50 +312,102 @@ if (cookiecook != 'no' || cookiecook == null) {
 ///
 ///
 ///////////////// mititocen hover /////////////////
-const mititoken_hover_items = document.querySelectorAll('.stats__item');
-const mititoken_value = document.querySelector('.stats__value');
-const mititoken_image = document.querySelector('.stats__image');
+const statsWrapper = document.querySelector('.stats');
+const [defaultStatsButton, miningStatsButton] = document.querySelectorAll('.stats__tab');
+
+defaultStatsButton.addEventListener('click', () => {
+	statsWrapper.classList.remove('_mining');
+	defaultStatsButton.classList.add('_active');
+	miningStatsButton.classList.remove('_active');
+});
+
+miningStatsButton.addEventListener('click', () => {
+	statsWrapper.classList.add('_mining');
+	defaultStatsButton.classList.remove('_active');
+	miningStatsButton.classList.add('_active');
+});
+
+const stats_hover_items = document.querySelectorAll('.stats__item');
 const circle_hover_items = document.querySelectorAll('.unit');
+
+const defaultStatsImage = document.querySelector('.stats__circle');
+const defaultStatsValue = defaultStatsImage.querySelector('.stats__value');
+
+const miningStatsImage = document.querySelector('.stats__circle._mining');
+const miningStatsValue = miningStatsImage.querySelector('.stats__value');
+
+const getNumberFromElement = (el) => {
+	return +el.innerHTML.trim().replace(/[ %]/g, '').replace(/,/g, '.');
+};
 
 const hoverMititocen = (item) => {
 	let num;
-	for (let i = 1; i <= mititoken_hover_items.length; i++)
-		if (item.classList.contains('_' + i)) {
-			num = '_' + i;
+	let percent;
+
+	for (let i = 1; i <= stats_hover_items.length; i++) {
+		let checkNum = '_' + i;
+		if (item.classList.contains(checkNum)) {
+			num = checkNum;
 			break;
 		}
 
-	let base_value = '329 857 812';
-	let values = {
-		_1: '131 943 125',
-		_2: '13 194 312',
-		_3: '118 748 812',
-		_4: '32 985 781',
-		_5: '32 985 781',
-	};
+		checkNum = '_1' + i;
+		if (item.classList.contains(checkNum)) {
+			num = checkNum;
+			break;
+		}
+	}
+
+	for (let i = 0; i < stats_hover_items.length; i++) {
+		const hovered_item = stats_hover_items[i];
+		if (hovered_item.classList.contains(num)) {
+			percent = getNumberFromElement(hovered_item.querySelector('.stats__percent'));
+		}
+	}
+
+	let baseValue;
+	let statsValue;
+	let statsImage;
+
+	if (/^_1\d$/.test(num)) {
+		console.log(1);
+		baseValue = getNumberFromElement(miningStatsValue);
+		statsValue = miningStatsValue;
+		statsImage = miningStatsImage;
+	} else {
+		baseValue = getNumberFromElement(defaultStatsValue);
+		statsValue = defaultStatsValue;
+		statsImage = defaultStatsImage;
+	}
+
+	// console.log(num, statsValue);
 
 	item.addEventListener('mouseenter', () => {
 		if (item.classList.contains(num)) {
-			mititoken_image.classList.add(num);
-			mititoken_value.innerHTML = values[num];
+			console.log('HOVERD' + num);
+			statsImage.classList.add(num);
+			statsValue.innerHTML = Math.round((baseValue * percent) / 100).toLocaleString(
+				'ru-RU'
+			);
 
-			mititoken_hover_items.forEach((el) => {
+			stats_hover_items.forEach((el) => {
 				if (el.classList.contains(num)) el.classList.add('hovered');
 			});
 		}
 	});
 	item.addEventListener('mouseleave', () => {
 		if (item.classList.contains(num)) {
-			mititoken_image.classList.remove(num);
-			mititoken_value.innerHTML = base_value;
+			console.log('CANCEL' + num);
+			statsImage.classList.remove(num);
+			statsValue.innerHTML = baseValue.toLocaleString('ru-RU');
 
-			mititoken_hover_items.forEach((el) => {
+			stats_hover_items.forEach((el) => {
 				if (el.classList.contains(num)) el.classList.remove('hovered');
 			});
 		}
 	});
 };
 
-mititoken_hover_items.forEach((item) => hoverMititocen(item));
+stats_hover_items.forEach((item) => hoverMititocen(item));
 circle_hover_items.forEach((item) => hoverMititocen(item));
 ///////////////// mititocen hove /////////////////

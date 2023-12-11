@@ -2,55 +2,60 @@ const but_select = document.querySelector('.footer__lang');
 const select = document.querySelectorAll('.footer__lang--item');
 const current_select = document.querySelector('.footer__lang--current');
 
-let lang = getCookie("lang") || "ru";
-current_select.innerHTML = document.querySelector(`[data-value = ${lang}]`).innerHTML;
-// translation();
+let language = getCookie('lang') || 'ru';
+current_select.innerHTML = document.querySelector(`[data-value = ${language}]`).innerHTML;
+// translation(language);
 
-but_select.addEventListener("click", () => {
-    but_select.classList.toggle("active");
+but_select.addEventListener('click', () => {
+	but_select.classList.toggle('active');
 });
 
 select.forEach((el) => {
-    el.addEventListener("click", () => changeLanguage(el));
-})
+	el.addEventListener('click', () => changeLanguage(el));
+});
 
 function changeLanguage(el) {
-    if (lang != el.dataset.value && el.dataset.value !== 'zh') {
-        lang = el.dataset.value;
-        translation();
+	if (language !== el.dataset.value && el.dataset.value !== 'zh') {
+		language = el.dataset.value;
+		translation(el);
 
-        let date = new Date;
-        date.setDate(date.getDate() + 30);
-        document.cookie = `lang=${lang}; path=/; expires=` + date.toUTCString();
+		let date = new Date();
+		date.setDate(date.getDate() + 30);
+		document.cookie = `lang=${language}; path=/; expires=` + date.toUTCString();
 
-        current_select.innerHTML = el.innerHTML;
-    }
+		current_select.innerHTML = el.innerHTML;
+	}
 }
 
-function translation() {
-    const translate_blocks = document.querySelectorAll('[data-lang]');
-    const rmPoints = document.querySelectorAll('.rm_point');
+function translation(lang) {
+	const getTranslate = (key) => {
+		try {
+			return translate[key][language] || '';
+		} catch {
+			return '';
+		}
+	};
 
-    const email_input = document.getElementById('email');
-    if (lang == 'en')
-        email_input.placeholder = 'Email';
-    else if (lang == 'ru')
-        email_input.placeholder = 'Электронная почта';
+	const translate_blocks = document.querySelectorAll('[data-lang]');
+	const rmPoints = document.querySelectorAll('.rm_point');
 
-    translate_blocks.forEach(el => {
-        el.innerHTML = translate[lang][el.dataset.lang];
-    });
+	const email_input = document.getElementById('email');
+	if (language == 'en') email_input.placeholder = 'Email';
+	else if (language == 'ru') email_input.placeholder = 'Электронная почта';
 
-    rmPoints.forEach(point => {
-        let pointNum = point.className.match(/point-\d+/)[0];
-        point.querySelector(".p-info").innerHTML = translate[lang][pointNum];
+	translate_blocks.forEach((el) => {
+		el.innerHTML = getTranslate(el.dataset.lang);
+	});
 
-        if (point.querySelector(".p-title")) {
-            point.querySelector(".p-title").innerHTML = translate[lang][pointNum + 'd'];
-        }
-    });
+	rmPoints.forEach((point) => {
+		let pointNum = point.className.match(/point-\d+/)[0];
+		point.querySelector('.p-info').innerHTML = getTranslate(pointNum);
+
+		if (point.querySelector('.p-title')) {
+			point.querySelector('.p-title').innerHTML = getTranslate(pointNum + 'd');
+		}
+	});
 }
-
 
 // const userLang = (navigator.languages && navigator.languages.length) ? navigator.languages[0] : navigator.userLanguage || navigator.language || navigator.browserLanguage || 'en';
 

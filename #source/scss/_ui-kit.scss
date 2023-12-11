@@ -52,6 +52,8 @@
 		background: linear-gradient(277.37deg, #2d0073 -24.21%, #c843ff 131.33%);
 		transform: translate(-70%, -60%);
 		transition: transform 0.6s ease 0s;
+
+		pointer-events: none;
 	}
 
 	&:hover {
@@ -126,4 +128,8 @@
 	font-style: normal;
 	line-height: 130%;
 	text-transform: uppercase;
+
+	@media only screen and (max-width: 1024px) {
+		font-size: 14px;
+	}
 }
