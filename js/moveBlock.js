@@ -34,10 +34,9 @@ dataMoveBlock.forEach((el) => {
 });
 
 // TODO - welcome TITIMITI adaptiv
-// TODO - div -> buttons
-// TODO - translate
-// TODO - delete Inter font
-// TODO - share icons
 // TODO - popup adaptiv
+
+// TODO - delete Inter font
 // TODO - animations
-// TODO - stats Большие кнопки не кликабельны
+// TODO - ССЫЛКИ В ШАПКЕ + ПЕРЕХОДЫ СДЕЛАТЬ ОДНОЙ ФУНКЦИЕЙ (+ПЕРЕХОД ПО ЛОГУ)
+// TODO - Roadmap

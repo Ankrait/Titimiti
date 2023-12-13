@@ -27,6 +27,10 @@
 			</svg>
 			<span class="preloader__percents"> <span class="percents">0</span>% </span>
 		</div>
+		<div class="stars">
+			<div class="star"></div>
+			<div class="star"></div>
+		</div>
 		<div class="wrapper">
 			<header class="header">
 				<div class="header__container container_main">
@@ -131,9 +135,9 @@
 								<div data-lang="ecosystem_text_1" class="item-ecosystem__text txt_main">
 									Планета, разделённая на функциональные токены
 								</div>
-								<div data-lang="ecosystem_btn" class="item-ecosystem__btn btn">
+								<button data-lang="ecosystem_btn" class="item-ecosystem__btn btn">
 									Подробнее
-								</div>
+								</button>
 							</div>
 							<div class="ecosystem__item item-ecosystem">
 								<div class="item-ecosystem__image">
@@ -143,9 +147,9 @@
 								<div data-lang="ecosystem_text_2" class="item-ecosystem__text txt_main">
 									Настоящие сокровища в дополненной реальности
 								</div>
-								<div data-lang="ecosystem_btn" class="item-ecosystem__btn btn">
+								<button data-lang="ecosystem_btn" class="item-ecosystem__btn btn">
 									Подробнее
-								</div>
+								</button>
 							</div>
 							<div class="ecosystem__item item-ecosystem">
 								<div class="item-ecosystem__image _token">
@@ -155,9 +159,9 @@
 								<div data-lang="ecosystem_text_3" class="item-ecosystem__text txt_main">
 									Функциональная монета метасети TITIMITI
 								</div>
-								<div data-lang="ecosystem_btn" class="item-ecosystem__btn btn">
+								<button data-lang="ecosystem_btn" class="item-ecosystem__btn btn">
 									Подробнее
-								</div>
+								</button>
 							</div>
 						</div>
 					</div>
@@ -234,9 +238,9 @@
 												выдвигают на рассмотрение владельцев земельных участков
 												все ключевые предложения по управлению метасетью TITIMITI.
 											</div>
-											<div data-lang="titiland_btn" class="block-titiland__btn btn">
+											<button data-lang="titiland_btn" class="block-titiland__btn btn">
 												Приобрести
-											</div>
+											</button>
 										</div>
 										<div class="swiper-slide block-titiland">
 											<div
@@ -249,9 +253,9 @@
 												на своём участке mining pool. Добыча токенов MITI происходит,
 												посредством стейкинга MITI в mining pool.
 											</div>
-											<div data-lang="titiland_btn" class="block-titiland__btn btn">
+											<button data-lang="titiland_btn" class="block-titiland__btn btn">
 												Приобрести
-											</div>
+											</button>
 										</div>
 										<div class="swiper-slide block-titiland">
 											<div
@@ -263,9 +267,9 @@
 												Владельцы NFTE получают комиссию с продажи всех игровых предметов,
 												а также путём голосования участвуют в управлении мета сетью.
 											</div>
-											<div data-lang="titiland_btn" class="block-titiland__btn btn">
+											<button data-lang="titiland_btn" class="block-titiland__btn btn">
 												Приобрести
-											</div>
+											</button>
 										</div>
 									</div>
 								</div>
@@ -276,7 +280,7 @@
 							</div>
 						</div>
 
-						<div data-lang="titiland_btn" class="titiland__btn btn">Приобрести</div>
+						<button data-lang="titiland_btn" class="titiland__btn btn">Приобрести</button>
 					</div>
 
 					<div class="zoomloop">
@@ -297,12 +301,12 @@
 										Loupe на свой телефон.
 									</p>
 								</div>
-								<div
+								<button
 									data-lang="zoomloop_btn"
 									data-move=".zoomloop__block, -1, 768"
 									class="zoomloop__btn btn er_404">
 									Подробнее
-								</div>
+								</button>
 							</div>
 							<div class="zoomloop__phone anim">
 								<img src="img/zoomloop/main.png" alt="phone" />
@@ -372,12 +376,8 @@
 										Как мне получить Miti&nbsp;Tocken?
 									</div>
 									<div class="miticoin__buttons">
-										<div data-lang="miticoin_btn_1" class="miticoin__btn btn">
-											Air drop
-										</div>
-										<div data-lang="miticoin_btn_2" class="miticoin__btn btn">
-											Legendary pack
-										</div>
+										<button class="miticoin__btn btn">Air drop</button>
+										<button class="miticoin__btn btn">Legendary pack</button>
 									</div>
 								</div>
 							</div>
@@ -446,7 +446,7 @@
 							</div>
 							<div class="distribution__title txt_title_1">tokenomics</div>
 							<div class="distribution__stat">
-								<div class="distribution__bar active">
+								<div class="distribution__bar _active">
 									<div class="distribution__percent">40%</div>
 									<div class="distribution__line"></div>
 									<div data-lang="distribution_1" class="distribution__name">
@@ -584,9 +584,9 @@
 										</div>
 									</div>
 
-									<div data-move="#stats, -1, 1024" class="stats__button btn">
-										<div data-lang="stats__btn">Полная токеномика</div>
-									</div>
+									<button data-lang="stats__btn" data-move="#stats, -1, 1024" class="stats__button btn">
+										Полная токеномика
+									</button>
 								</div>
 								<div class="stats__circle--wrapper">
 									<div class="stats__circle">
@@ -676,9 +676,12 @@
 									<div class="advert__item">GNFT SET</div>
 									<div class="advert__item">NTFE</div>
 								</div>
-								<div data-move=".advert__content, -1, 650" class="advert__btn btn">
+								<button
+									data-lang="advert_btn"
+									data-move=".advert__content, -1, 650"
+									class="advert__btn btn">
 									Купить
-								</div>
+								</button>
 							</div>
 						</div>
 					</div>
@@ -1165,9 +1168,9 @@
 									placeholder="Электронная почта" />
 								<span data-lang="email_error">Некорректно введена почта</span>
 							</div>
-							<div type="submit" class="form__btn btn">
-								<div data-lang="email_send">Отправить</div>
-							</div>
+							<button data-lang="email_send" type="submit" class="form__btn btn">
+								Отправить
+							</button>
 						</form>
 					</div>
 				</div>
@@ -1200,34 +1203,28 @@
 								</div>
 								<div class="footer__langname">Английский</div>
 							</div>
-							<div data-value="zh" class="footer__lang--item">
-								<div class="footer__flag">
-									<img src="img/china.png" alt="" />
-								</div>
-								<div class="footer__langname">Китайский</div>
-							</div>
 						</div>
 					</div>
 					<div class="footer__share">
-						<div class="footer__share--item er_404">
-							<img src="img/twitter.svg" alt="Твиттер" />
-						</div>
-						<div class="footer__share--item er_404">
-							<img src="img/tg.svg" alt="Телеграм" />
-						</div>
-						<div class="footer__share--item er_404">
-							<img src="img/insta.svg" alt="Инстаграм" />
-						</div>
-						<div class="footer__share--item er_404">
-							<img src="img/ds.svg" alt="Дискорд" />
-						</div>
+						<button class="footer__share--item er_404">
+							<img src="img/share/_1.svg" alt="Твиттер" />
+						</button>
+						<button class="footer__share--item er_404">
+							<img src="img/share/_2.svg" alt="Телеграм" />
+						</button>
+						<button class="footer__share--item er_404">
+							<img src="img/share/_3.svg" alt="Инстаграм" />
+						</button>
+						<button class="footer__share--item er_404">
+							<img src="img/share/_4.svg" alt="Дискорд" />
+						</button>
 					</div>
 					<a href="mailto:info@titimiti.com" class="footer__email"> info@titimiti.com </a>
 					<div class="footer__power">
 						Powered by
 						<img src="img/polygon.svg" alt="" />
 					</div>
-					<div class="footer__policy">
+					<div class="footer__policy txt_main">
 						<a class="er_404" href="">Privacy policy</a> and
 						<a class="er_404" href="">Terms of use</a> Copyright © 2010-2022 DeSo. All
 						rights reserved.
@@ -1244,9 +1241,9 @@
 						</div>
 						<h1 class="__name txt_title_1">404</h1>
 						<p data-lang="popup_404_text">Страница еще в разработке</p>
-						<div class="popup__close-btn btn">
+						<button class="popup__close-btn btn">
 							<span data-lang="popup_btn">Закрыть</span>
-						</div>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -1256,9 +1253,9 @@
 					<div class="popup__content">
 						<img class="" src="img/accept.svg" alt="" />
 						<p data-lang="popup_email_text">Вы успешно подписались<br />на рассылку</p>
-						<div class="popup__close-btn btn">
+						<button class="popup__close-btn btn">
 							<span data-lang="popup_btn">Закрыть</span>
-						</div>
+						</button>
 					</div>
 				</div>
 			</div>

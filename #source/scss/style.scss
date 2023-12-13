@@ -130,8 +130,40 @@
    display: none;
 }
 
+.stars {
+   position: fixed;
+   top: 150px;
+   left: 20px;
+   right: 0;
+   bottom: 0;
+
+   .star {
+      position: absolute;
+      top: 0;
+      left: 110%;
+      opacity: 1;
+
+      width: 180px;
+      height: 1px;
+      background: white;
+      border-radius: 100%;
+
+      &::before {
+         content: "";
+         position: absolute;
+         top: 50%;
+         left: 0;
+         transform: translateY(-50%);
+
+         width: 4px;
+         height: 4px;
+         border-radius: 50%;
+         background: white;
+      }
+   }
+}
+
 circle {
-   stroke: #e64dff;
    transition: all 0.2s ease;
 }
 
@@ -445,7 +477,7 @@ body.overflow--hide {
 
    &__lang {
       margin: 12px 0 0 0;
-      padding: 8px 24px;
+      padding: 12px 24px;
       border: 1px solid #d9d9d9;
       border-radius: 100px;
 
@@ -491,7 +523,6 @@ body.overflow--hide {
 
    &__langname {
       font-size: 18px;
-      line-height: 130%;
    }
 
    &__block {
@@ -507,7 +538,7 @@ body.overflow--hide {
    }
 
    &__lang--item {
-      padding: 10px 20px;
+      padding: 14px 20px;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -535,6 +566,7 @@ body.overflow--hide {
    &__share {
       margin-top: 20px;
       display: flex;
+
       &--item {
          cursor: pointer;
          display: flex;
@@ -550,13 +582,20 @@ body.overflow--hide {
          border: solid 1px;
          border-radius: 5px;
          border-color: rgba(255, 138, 229, 1);
+
+         transition: background 0.2s ease;
+
+         &:hover {
+            background: #7a32bd;
+         }
       }
    }
 
    &__email {
       margin-top: 12px;
-      font-weight: 400;
+      font-family: Montserrat;
       font-size: 18px;
+      line-height: 130%;
    }
 
    &__power {
@@ -579,13 +618,10 @@ body.overflow--hide {
 
    &__policy {
       margin: 60px 0 14px 0;
-      font-weight: 400;
-      font-size: 10px;
-      line-height: 130%;
       text-align: center;
 
+      font-size: 13px;
       text-transform: uppercase;
-
       color: #939393;
 
       & a {
@@ -595,6 +631,20 @@ body.overflow--hide {
          &:hover {
             color: #a2a2a2;
          }
+      }
+   }
+
+   &__flag {
+      width: 28px;
+      height: 17px;
+      position: relative;
+
+      img {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
       }
    }
 }

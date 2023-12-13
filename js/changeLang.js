@@ -4,7 +4,7 @@ const current_select = document.querySelector('.footer__lang--current');
 
 let language = getCookie('lang') || 'ru';
 current_select.innerHTML = document.querySelector(`[data-value = ${language}]`).innerHTML;
-// translation(language);
+translation(language);
 
 but_select.addEventListener('click', () => {
 	but_select.classList.toggle('active');
@@ -48,11 +48,18 @@ function translation(lang) {
 	});
 
 	rmPoints.forEach((point) => {
-		let pointNum = point.className.match(/point-\d+/)[0];
-		point.querySelector('.p-info').innerHTML = getTranslate(pointNum);
+		const pointNum = point.className.match(/point-\d+/)[0];
+
+		const text = getTranslate(pointNum);
+		if (text) {
+			point.querySelector('.p-info').innerHTML = getTranslate(pointNum);
+		}
 
 		if (point.querySelector('.p-title')) {
-			point.querySelector('.p-title').innerHTML = getTranslate(pointNum + 'd');
+			const text = getTranslate(pointNum + 'd');
+			if (text) {
+				point.querySelector('.p-title').innerHTML = text;
+			}
 		}
 	});
 }

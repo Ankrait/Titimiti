@@ -1,247 +1,239 @@
 const translate = {
 	welcome_subtitle: {
 		ru: 'Добро пожаловать в&nbsp;метасеть',
-		en: '',
+		en: 'WELCOME TO THE METROSET',
 	},
 	welcome_text: {
 		ru: 'Играй, созидай, властвуй!',
-		en: '',
+		en: 'Play, create, conquer!',
 	},
 	welcome_button: {
 		ru: 'Вступить в&nbsp;cообщество',
-		en: '',
+		en: 'Join us',
 	},
 
 	about__info: {
 		ru: '<p> Мы захотели выпендриться и придумали крутую тему: TITIMITI — первую в мире метасеть, объединяющую Play-to-earn, AR, Blockchain и B2P в единую экономическую систему будущего. </p> <p> Жадность и азарт больше не смогу сделать вас банкротом, теперь они трансформируются в «цифровое золото» – актив, работающий на благо всего сообщества. </p> <p> Так наши комплексы и ваши пороки изменят будущее человечества, естественно к лучшему. </p> <p> Наша миссия — создание революционной геймифицированной социально-экономической системы, которая включает в себя разработку инновационной структуры, основанной на блокчейн технологиях. </p>',
-		en: '',
+		en: "<p>We wanted to show off, so we came up with something cool: TITIMITI, the world's first meta network that combines Play-to-Earn, AR, Blockchain, and B2P. We created a single economic system for the future.</p><p>Greed and gambling will no longer make you go bust. Now, they turn into \"digital gold\" — an asset that benefits all the network's participants.</p><p>So, our collective vices will change the future of humanity. For the better, of course.</p><p>Our mission is to create a revolutionary gamified social financial ecosystem, which includes the development of an innovative blockchain-based structure.</p>",
 	},
 
 	ecosystem_title: {
 		ru: 'экосистема titimiti',
-		en: '',
+		en: 'TITIMITI ECOSYSTEM',
 	},
 	ecosystem_btn: {
 		ru: 'Подробнее',
-		en: 'More',
+		en: 'Learn more',
 	},
 	ecosystem_text_1: {
 		ru: 'Планета, разделённая на функциональные токены',
-		en: '',
+		en: 'Our planet, divided into functional tokens',
 	},
 	ecosystem_text_2: {
 		ru: 'Настоящие сокровища в дополненной реальности',
-		en: '',
+		en: 'Real treasure in the AR universe',
 	},
 	ecosystem_text_3: {
 		ru: 'Функциональная монета метасети TITIMITI',
-		en: '',
+		en: 'The functional coin of the TITIMITI meta network',
 	},
 
 	titiland_subtitle: {
 		ru: 'Зарабатывай и властвуй',
-		en: '',
+		en: 'Earn and conquer',
 	},
 	titiland_text: {
 		ru: '<p>Мир давно поделили, но мы поняли, что его можно поделить ещё раз.</p> <p> И примерно за 6 дней сотворили TITI LAND, разделив виртуальную карту планеты Земля на равные участки суши и воды. </p> <p> Каждый из этих участков является функциональным NFT токеном и в свою очередь ключевым активом в экосистеме TITIMITI. Держатели получают доступ к тем или иным возможностям в метасети TITIMITI и получает ряд эксклюзивных привилегий. </p>',
-		en: '',
+		en: '<p>The world was divided long ago, but we realized it could be divided again.</p><p>We created TITI LAND in under 6 days, dividing a virtual map of planet Earth into equal plots of land and water.</p><p>Each of these plots is a functional NFT token and a key asset in the TITIMITI ecosystem. Token holders gain access to certain features in the TITIMITI meta network and receive exclusive privileges.</p>',
 	},
 	titiland_1_name: {
 		ru: 'УЧАСТКИ АНТАРКТИКИ (NFTA)',
-		en: '',
+		en: 'ANTARCTICA (NFTA)',
 	},
 	titiland_1_text: {
 		ru: 'Принадлежат команде разработчиков проекта, владельцы NFTA выдвигают на рассмотрение владельцев земельных участков все ключевые предложения по управлению метасетью TITIMITI.',
-		en: '',
+		en: 'Antarctica tokens belong to the project development team; NFTA owners submit all key proposals for managing the TITI MITI meta network to the Landlords for consideration.',
 	},
 	titiland_2_name: {
 		ru: 'УЧАСТКИ ВОДЫ (NFTS)',
-		en: '',
+		en: 'SEA PLOTS (NFTS)',
 	},
 	titiland_2_text: {
 		ru: 'Владельцы NFTS получают доступ к добыче MITI, после активации на своём участке mining pool. Добыча токенов MITI происходит, посредством стейкинга MITI в mining pool.',
-		en: '',
+		en: 'NFTS owners get access to MITI mining after activating a mining pool on their plots. Mining occurs through staking MITI in the mining pool.',
 	},
 	titiland_3_name: {
 		ru: 'ЗЕМЕЛЬНЫЕ УЧАСТКИ (NFTE)',
-		en: '',
+		en: 'EARTH PLOTS (NFTE)',
 	},
 	titiland_3_text: {
-		ru: 'Владельцы NFTS получают доступ к добыче MITI, после активации на своём участке mining pool. Добыча токенов MITI происходит, посредством стейкинга MITI в mining pool.',
-		en: '',
+		ru: 'Владельцы NFTE получают комиссию с продажи всех игровых предметов, а также путём голосования участвуют в управлении мета сетью.',
+		en: 'NFTE owners receive a commission from the sale of all in-game items and participate in the management of the meta network through voting.',
 	},
 	titiland_btn: {
 		ru: 'Приобрести',
-		en: '',
+		en: 'Buy',
 	},
 
 	zoomloop_subtitle: {
 		ru: 'Открой новый мир',
-		en: '',
+		en: 'Open new world',
 	},
 	zoomloop_btn: {
 		ru: 'Подробнее',
-		en: 'More',
+		en: 'Learn more',
 	},
 	zoomloop_text: {
 		ru: '<p> Люди, а не деньги, вот настоящая ценность. Поэтому для людей мы разбрасываем деньги прямо на улице. Но не для всех а только для самых умных, тех кто обзавёлся ключом от нашей метасети. </p> <p> Умным быть круто! Короче стань крутым и установи нашу приложуху Zoom Loupe на свой телефон. </p>',
-		en: '',
+		en: '<p>What we value the most are people, not money. That\'s why we leave money in the streets — for people. But not for everyone: only for the smartest, those who have a key to our meta network.</p><p>It\'s cool to be smart! So be cool and install our Zoom Loupe app on your smartphone.</p>',
 	},
 
 	miticoin_text: {
 		ru: '<p> Призовой билет вселенной Zoom Loupe, денежная единица светлого будущего. </p> <p> Экономическая модель проекта предполагает, что цена MITI привязана к капитализации основных фондов метасети TITIMITI. И задача нашего сообщества, сделать так чтобы эта капитализация росла. </p>',
-		en: '',
+		en: '<p>The prize ticket of the Zoom Loupe universe, the currency of a bright future.</p><p>The economic model of the project stipulates that the price of MITI is tied to the capitalization of the fixed assets of the TITIMITI meta network. And the goal of our community is to make this capitalization grow.</p>',
 	},
 	miticoin_subtitle: {
 		ru: 'Как мне получить Miti&nbsp;Tocken?',
-		en: '',
-	},
-	miticoin_btn_1: {
-		ru: 'Air drop',
-		en: '',
-	},
-	miticoin_btn_2: {
-		ru: 'Legendary pack',
-		en: '',
+		en: 'How do I get a MITI TOKEN?',
 	},
 
 	advantages_subtitle: {
 		ru: 'Все преимущества',
-		en: '',
+		en: 'Owners\' benefits',
 	},
 	advantages_title: {
-		ru: 'Владельцев Miti tocken',
-		en: '',
+		ru: 'Владельцев MITI TOKEN',
+		en: 'MITI TOKEN',
 	},
 	advantages_1_name: {
 		ru: 'Высокий потенциал',
-		en: '',
+		en: 'High potential',
 	},
 	advantages_1_text: {
 		ru: 'Благодаря уникальной финансовой модели',
-		en: '',
+		en: 'Thanks to the unique financial model',
 	},
 	advantages_2_name: {
 		ru: 'Устойчивая цена',
-		en: '',
+		en: 'Sustainable price',
 	},
 	advantages_2_text: {
 		ru: 'Обеспеченная капитализацией метасети',
-		en: '',
+		en: 'Secured by meta network capitalization',
 	},
 	advantages_3_name: {
 		ru: 'Возможность заработать',
-		en: '',
+		en: 'Earning opportunity',
 	},
 	advantages_3_text: {
 		ru: 'При помощи стейкинга',
-		en: '',
+		en: 'By staking',
 	},
 	advantages_4_name: {
 		ru: 'Востребованный актив',
-		en: '',
+		en: 'An in-demand asset',
 	},
 	advantages_4_text: {
 		ru: 'Единая валюта для множества проектов метасети',
-		en: '',
+		en: 'Single currency for multiple meta network projects',
 	},
 
 	distribution_subtitle: {
 		ru: 'Распредление MitiToken',
-		en: '',
+		en: 'MitiToken distribution',
 	},
 	distribution_1: {
 		ru: 'Первичное<br />распредление MitiToken',
-		en: '',
+		en: 'Primary distribution of MitiToken',
 	},
 	distribution_2: {
 		ru: 'Предстоит<br />добыть майнерам',
-		en: '',
+		en: 'To be mined',
 	},
 
 	stats_tab_1: {
 		ru: 'Первичное распределение',
-		en: '',
+		en: 'Primary distribution',
 	},
 	stats_tab_2: {
 		ru: 'Распределение майнинга',
-		en: '',
+		en: 'To be mined',
 	},
 	stats__btn: {
 		ru: 'Полная токеномика',
-		en: '',
+		en: 'Full tokenomics',
 	},
 
 	advert_subtitle: {
 		ru: 'Успей купить!',
-		en: '',
+		en: 'Buy now!',
 	},
 	advert_btn: {
 		ru: 'Купить',
-		en: '',
+		en: 'Buy',
 	},
 
 	rm_step1: {
 		ru: '1 этап',
-		en: '',
+		en: '1 step',
 	},
 	rm_step2: {
 		ru: '2 этап',
-		en: '',
+		en: '2 step',
 	},
 	rm_step3: {
 		ru: '3 этап',
-		en: '',
+		en: '3 step',
 	},
 	rm_step4: {
 		ru: '4 этап',
-		en: '',
+		en: '4 step',
 	},
 	rm_step5: {
 		ru: '5 этап',
-		en: '',
+		en: '5 step',
 	},
 	rm_moon: {
-		ru: '5 этап',
-		en: '',
+		ru: 'На луну!',
+		en: 'To the moon!',
 	},
 
 	email_subtitle: {
 		ru: 'Введи свою электронную почту',
-		en: '',
+		en: 'Enter your email',
 	},
 	email_title: {
 		ru: 'Получай новости первым',
-		en: '',
+		en: 'Receive news first',
 	},
 	email_error: {
 		ru: 'Некорректно введена почта',
-		en: '',
+		en: 'Email is incorrect',
 	},
 	email_send: {
 		ru: 'Отправить',
-		en: '',
+		en: 'Send',
 	},
 
 	popup_btn: {
 		ru: 'Закрыть',
-		en: '',
+		en: 'Close',
 	},
 	popup_404_text: {
 		ru: 'Страница еще в разработке',
-		en: '',
+		en: 'In development',
 	},
 	popup_email_text: {
 		ru: 'Вы успешно подписались<br>на рассылку',
-		en: '',
+		en: 'You have successfully subscribed',
 	},
 	cookie_text: {
 		ru: 'Этот сайт использует cookies, хоть мы и не пекарня',
-		en: '',
+		en: 'This site uses cookies, even though we are not a bakery',
 	},
 	cookie_btn: {
 		ru: 'Хорошо',
-		en: '',
+		en: 'Okey',
 	},
 
 	'point-1': {

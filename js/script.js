@@ -314,18 +314,30 @@ if (cookiecook != 'no' || cookiecook == null) {
 ///////////////// mititocen hover /////////////////
 const statsWrapper = document.querySelector('.stats');
 const [defaultStatsButton, miningStatsButton] = document.querySelectorAll('.stats__tab');
+const [defaultBarButton, miningBarButton] =
+	document.querySelectorAll('.distribution__bar');
 
-defaultStatsButton.addEventListener('click', () => {
+const defaultActivate = () => {
 	statsWrapper.classList.remove('_mining');
 	defaultStatsButton.classList.add('_active');
+	defaultBarButton.classList.add('_active');
 	miningStatsButton.classList.remove('_active');
-});
+	miningBarButton.classList.remove('_active');
+};
 
-miningStatsButton.addEventListener('click', () => {
+const miningActivate = () => {
 	statsWrapper.classList.add('_mining');
 	defaultStatsButton.classList.remove('_active');
+	defaultBarButton.classList.remove('_active');
 	miningStatsButton.classList.add('_active');
-});
+	miningBarButton.classList.add('_active');
+};
+
+defaultStatsButton.addEventListener('click', defaultActivate);
+defaultBarButton.addEventListener('click', defaultActivate);
+miningStatsButton.addEventListener('click', miningActivate);
+miningBarButton.addEventListener('click', miningActivate);
+
 
 const stats_hover_items = document.querySelectorAll('.stats__item');
 const circle_hover_items = document.querySelectorAll('.unit');
@@ -411,3 +423,53 @@ const hoverMititocen = (item) => {
 stats_hover_items.forEach((item) => hoverMititocen(item));
 circle_hover_items.forEach((item) => hoverMititocen(item));
 ///////////////// mititocen hove /////////////////
+///
+///
+///
+// =============== Звезды =============== //
+const speed = 800;
+
+const sleep = (ms) => {
+	return new Promise((resolve) => setTimeout(resolve, ms));
+};
+
+/**
+ *
+ * @param {Element} star
+ */
+const moveStar = async (star) => {
+	const vw = window.innerWidth;
+	const vh = window.innerHeight;
+
+	const corner = Math.atan(vh / vw) * (180 / 3.14);
+	console.log(corner);
+
+	star.style.rotate = `-${Math.round(corner * (0.5 + Math.random()))}deg`;
+	star.style.top = `-${Math.round(10 + Math.random() * 300)}px`;
+	star.style.transition = `transform ${speed}ms ease-in, opacity ${speed}ms linear`;
+
+	await sleep(speed);
+
+	star.style.transform = `translateX(-${vw * 2}px)`;
+	star.style.opacity = `0`;
+
+	await sleep(speed);
+
+	star.style.transition = '';
+	star.style.transform = '';
+	star.style.opacity = '';
+
+	await sleep(1000 + Math.round(Math.random() * 3000));
+	moveStar(star);
+};
+
+const stars = document.querySelectorAll('.star');
+const startStarFall = async () => {
+	for (let star of stars) {
+		await sleep(2000);
+		moveStar(star);
+	}
+};
+startStarFall();
+
+// =============== Звезды =============== //
