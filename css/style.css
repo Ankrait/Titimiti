@@ -2309,7 +2309,7 @@ img {
 }
 .roadmap {
   margin: 371px 0 0 0;
-  height: 1500px;
+  height: 925px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2372,7 +2372,7 @@ img {
   border-width: 8.5px 15px 8.5px 0;
   border-color: transparent #d848ff transparent transparent;
   position: absolute;
-  top: 1257px;
+  top: 752px;
   left: -10px;
 }
 
@@ -2422,37 +2422,10 @@ img {
 }
 
 .line-6 {
-  left: auto;
-  right: 128px;
-  top: 759px;
-}
-
-.elipse-4 {
-  right: auto;
-  left: 0;
-  top: 759px;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.line-7 {
-  left: 128px;
-  top: 1012px;
-}
-
-.elipse-5 {
-  right: 0;
-  left: auto;
-  top: 1012px;
-}
-
-.line-8 {
   max-width: calc(100% - 128px);
-  width: 100%;
-  left: auto;
   right: 128px;
-  top: 1265px;
+  top: 759px;
+  width: 100%;
 }
 
 .rm_point {
@@ -2704,20 +2677,12 @@ img {
 
 .point-19 {
   left: auto;
-  right: 33%;
+  right: 26%;
 }
 
 .point-20 {
-  left: auto;
-  right: 66%;
+  left: 46%;
 }
-.point-20 .p-text {
-  -webkit-transform: translate(0%, 22px);
-      -ms-transform: translate(0%, 22px);
-          transform: translate(0%, 22px);
-}
-
-.point-19 .p-text,
 .point-20 .p-text {
   width: 100px;
   -webkit-transform: translate(-40%, 75%);
@@ -2725,102 +2690,14 @@ img {
           transform: translate(-40%, 75%);
 }
 
-.point-22 {
-  rotate: 180deg;
-  left: auto;
-  right: -13px;
-  top: 45%;
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
+.point-21 {
+  left: 25%;
 }
-.point-22 .p-text {
+.point-21 .p-text {
   width: 100px;
-  -webkit-transform: translate(-100%, -30%);
-      -ms-transform: translate(-100%, -30%);
-          transform: translate(-100%, -30%);
-}
-
-.point-23 {
-  left: 0;
-}
-.point-23 .p-text {
-  -webkit-transform: translate(-44%, 150%);
-      -ms-transform: translate(-44%, 150%);
-          transform: translate(-44%, 150%);
-}
-
-.point-24 {
-  right: 50%;
-}
-.point-24 .p-text {
-  -webkit-transform: translate(-44%, 75%);
-      -ms-transform: translate(-44%, 75%);
-          transform: translate(-44%, 75%);
-}
-
-.point-25 {
-  right: -10px;
-}
-.point-25 .p-text {
-  -webkit-transform: translate(-41%, -135%);
-      -ms-transform: translate(-41%, -135%);
-          transform: translate(-41%, -135%);
-}
-
-.point-26 {
-  right: -16px;
-  bottom: 45%;
-}
-.point-26 .p-text {
-  width: 150px;
-  -webkit-transform: translate(-109%, -41%);
-      -ms-transform: translate(-109%, -41%);
-          transform: translate(-109%, -41%);
-}
-
-.point-27 .p-text,
-.point-28 .p-text,
-.point-29 .p-text,
-.point-30 .p-text {
-  width: 100px;
-  -webkit-transform: translate(-40px, 28px);
-      -ms-transform: translate(-40px, 28px);
-          transform: translate(-40px, 28px);
-}
-
-.point-27 {
-  left: auto;
-  right: -10px;
-}
-.point-27 .p-text {
-  width: 120px;
-  -webkit-transform: translate(-47px, 28px);
-      -ms-transform: translate(-47px, 28px);
-          transform: translate(-47px, 28px);
-}
-
-.point-28 {
-  left: auto;
-  right: 27%;
-}
-
-.point-29 {
-  left: auto;
-  right: 54%;
-}
-
-.point-30 {
-  left: 16%;
-}
-.point-30 .p-title {
-  position: absolute;
-  left: 23px;
-  top: -72px;
-  background: linear-gradient(277.65deg, #0571ff -48.26%, #e64dff 40.28%, #8a2fff 112.11%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  -webkit-transform: translate(-40%, 75%);
+      -ms-transform: translate(-40%, 75%);
+          transform: translate(-40%, 75%);
 }
 
 .text-moon {
@@ -2837,7 +2714,7 @@ img {
 
 .rm__moon {
   position: absolute;
-  top: 868px;
+  top: 368px;
   left: -700px;
 }
 .rm__moon img {
@@ -3442,7 +3319,7 @@ img {
   .point-15,
   .point-16,
   .point-20,
-  .point-21,
+  .point-19,
   .point-24,
   .point-25,
   .point-29,
@@ -3653,8 +3530,6 @@ img {
   background: rgba(61, 63, 75, 0.3);
   -webkit-box-shadow: 0px 1px 3px 0px rgba(219, 95, 255, 0.8) inset;
           box-shadow: 0px 1px 3px 0px rgba(219, 95, 255, 0.8) inset;
-  -webkit-backdrop-filter: blur(4.5px);
-          backdrop-filter: blur(4.5px);
 }
 .email__subtitle {
   -webkit-transform: translateX(-50%);
@@ -3912,8 +3787,8 @@ img {
 
 .stars {
   position: fixed;
-  top: 150px;
-  left: 20px;
+  top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
 }
