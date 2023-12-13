@@ -415,7 +415,8 @@ img {
 .welcome__btn {
   cursor: pointer;
   font-weight: 500;
-  font-size: 15px;
+  font-family: Montserrat;
+  font-size: 18px;
   line-height: 130%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,6 +453,8 @@ img {
   .welcome__btn {
     margin-top: 40px;
     padding: 14px 50px;
+    color: #fcfcfc;
+    text-align: center;
   }
   .welcome .arrow-content {
     display: none;
