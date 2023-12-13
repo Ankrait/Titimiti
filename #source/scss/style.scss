@@ -542,11 +542,6 @@ body.overflow--hide {
       display: flex;
       align-items: center;
       gap: 10px;
-
-      &:last-child {
-         background: #26272c;
-         text-decoration: line-through;
-      }
    }
 
    &__lang--item:hover {

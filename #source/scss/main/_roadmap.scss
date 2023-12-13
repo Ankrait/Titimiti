@@ -133,13 +133,32 @@
 }
 
 .p-text {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
     width: 200px;
-    transform: translate(-44%, 50%);
+    transform: translateX(-50%);
+
     text-align: center;
 }
 
+.p-top .p-text {
+    top: auto;
+    bottom: calc(100% + 15px);
+}
+
+.p-left .p-text {
+    top: 50%;
+    bottom: auto;
+    left: auto;
+    right: calc(100% + 20px);
+
+    transform: translateY(-50%);
+}
+
 .p-big .p-text {
-    transform: translate(-40%, -150%);
+    top: auto;
+    bottom: calc(100% + 20px);
 }
 
 .p-title {
@@ -193,69 +212,52 @@
     }
 }
 
-.anim-show {
-}
-
-.point-1 {
-    transition: background-color 1s ease 0s;
+@for $i from 1 through 14 {
+    .point-#{$i} {
+        transition: background-color 1s ease ($i - 1) * 200ms;
+    }
 }
 
 .point-2 {
     left: 18%;
-    transition: background-color 1s ease 0.2s;
 }
 
 .point-3 {
     left: 50%;
-    transition: background-color 1s ease 0.4s;
 }
 
 .point-4 {
     left: auto;
     right: 18%;
+
     & .p-text {
-        transform: translate(-44%, 75%);
         width: 150px;
     }
-    transition: background-color 1s ease 0.6s;
 }
 
 .point-5 {
     left: auto;
     right: -10px;
-    transition: background-color 1s ease 0.8s;
 }
 
 .point-6 {
     left: auto;
     right: -10px;
-    transition: background-color 1s ease 1s;
 }
 
 .point-7 {
     left: auto;
     right: 24.5%;
-
-    & .p-text {
-        transform: translate(-45%, 150%);
-    }
-    transition: background-color 1s ease 1.2s;
 }
 
 .point-8 {
     left: auto;
     right: 328px;
     right: 49%;
-    transition: background-color 1s ease 1.4s;
 }
 
 .point-9 .p-text {
     width: 300px;
-    transform: translate(-45%, -150%);
-}
-
-.point-9 {
-    transition: background-color 1s ease 1.6s;
 }
 
 .point-10 {
@@ -263,7 +265,10 @@
     left: auto;
     right: 16px;
     bottom: 50px;
-    transition: background-color 1s ease 1.8s;
+
+    .p-text {
+        width: 130px;
+    }
 }
 
 .point-11 {
@@ -271,33 +276,24 @@
     left: auto;
     right: 3px;
     top: 45px;
-    transition: background-color 1s ease 2s;
-}
 
-.elipse-2 .p-text {
-    transform: translate(-120%, -25%);
-    width: 150px;
+    .p-text {
+        width: 100px;
+    }
 }
 
 .point-12 {
-    transition: background-color 1s ease 2.2s;
     & .p-text {
-        transform: translate(-39%, 75%);
         width: 100px;
     }
 }
 
 .point-13 {
-    transition: background-color 1s ease 2.4s;
     left: 31%;
-    & .p-text {
-        transform: translate(-45%, 150%);
-    }
 }
 
 .point-14 {
     left: 62%;
-    transition: background-color 1s ease 2.6s;
 }
 
 .point-15 {
@@ -306,7 +302,6 @@
 }
 
 .elipse-3 .p-text {
-    transform: translate(-105%, -25%);
     width: 100px;
 }
 
@@ -325,30 +320,26 @@
 .point-18 {
     left: auto;
     right: -10px;
-    & .p-text {
-        transform: translate(-46%, 150%);
-    }
 }
 
 .point-19 {
     left: auto;
-    right: 26%;
+    right: 20%;
 }
 
 .point-20 {
-    left: 46%;
+    left: 47%;
 
     & .p-text {
         width: 100px;
-        transform: translate(-40%, 75%);
     }
 }
 
 .point-21 {
-    left: 25%;
+    left: 14%;
+
     & .p-text {
         width: 100px;
-        transform: translate(-40%, 75%);
     }
 }
 
@@ -380,7 +371,7 @@
     }
 }
 
-.rm__etap-1 {
+.rm__etap {
     font-weight: 400;
     font-size: 10px;
     line-height: 12px;
@@ -389,108 +380,46 @@
     color: #ffffff;
 
     position: absolute;
-    top: -64px;
-    width: 90%;
-    left: 46px;
-    & img {
+
+    img {
         width: 100%;
     }
-    & p {
+    p {
         position: absolute;
-        top: -37%;
-        left: 44%;
     }
-}
 
-.rm__etap-2 {
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 12px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #ffffff;
+    &._1 {
+        top: -64px;
+        width: 90%;
+        left: 46px;
 
-    position: absolute;
-    top: -37px;
-    width: 44%;
-    right: 33px;
-    & img {
-        width: 100%;
+        p {
+            top: -37%;
+            left: 44%;
+        }
     }
-    & p {
-        position: absolute;
-        top: -68%;
-        left: 44%;
+
+    &._2 {
+        top: -37px;
+        width: 44%;
+        right: 33px;
+
+        & p {
+            top: -68%;
+            left: 44%;
+        }
     }
-}
 
-.rm__etap-3 {
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 12px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #ffffff;
-    height: 256px;
+    &._3 {
+        top: 26px;
+        width: 59%;
+        left: 15px;
 
-    position: absolute;
-    top: 26px;
-    width: 59%;
-    left: 15px;
-
-    & img {
-        width: 100%;
-    }
-    & p {
-        position: absolute;
-        top: 50%;
-        left: 26%;
-    }
-}
-
-.rm__etap-4 {
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 12px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #ffffff;
-    // background-image: url("../img/rm/etap-4.svg");
-    height: 256px;
-
-    position: absolute;
-    top: 23px;
-    width: 93%;
-    right: 12px;
-    & img {
-        width: 100%;
-    }
-    & p {
-        position: absolute;
-        top: 35%;
-        left: 74%;
-    }
-}
-
-.rm__etap-5 {
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 12px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #ffffff;
-
-    position: absolute;
-    top: 30px;
-    width: 93%;
-    right: 30px;
-    & img {
-        width: 100%;
-    }
-    & p {
-        position: absolute;
-        top: 55%;
-        left: 22%;
+        p {
+            position: absolute;
+            top: 50%;
+            left: 26%;
+        }
     }
 }
 
@@ -500,22 +429,9 @@
             left: -750px;
         }
     }
-    .rm__etap-3 {
-        & p {
-        }
-    }
 }
 
-@media screen and (max-width: 1115px) {
-    .rm__etap-3 {
-        overflow: hidden;
-        & img {
-            height: 100%;
-        }
-    }
-}
-
-@media screen and (max-width: 1023.89px) {
+@media screen and (max-width: 1024px) {
     .roadmap {
         margin: 280px 0 0 0;
         height: 900px;
@@ -541,7 +457,12 @@
             top: 792.5px;
         }
     }
-    [class*="rm__etap-"] {
+
+    .p-left .p-text {
+        right: calc(100% + 8px);
+    }
+
+    .rm__etap {
         display: none;
     }
 
@@ -582,12 +503,7 @@
         right: 80px;
         top: 480px;
     }
-    .elipse-4 {
-        right: auto;
-        left: 0;
-        top: 480px;
-        transform: rotate(180deg);
-    }
+
     .line-7 {
         left: 80px;
         top: 640px;
@@ -605,12 +521,6 @@
         top: 800px;
     }
 
-    .p-text {
-        transform: translate(-33%, 50%);
-    }
-    .p-big .p-text {
-        transform: translate(-45%, -150%);
-    }
     .p-title {
         font-size: 14px;
         line-height: 17px;
@@ -631,128 +541,60 @@
         height: 26px;
     }
 
-    .point-2 {
-        & .p-info {
-            width: 145px;
-        }
-    }
-
+    .point-2,
     .point-3 {
-        & .p-info {
+        & .p-text {
             width: 145px;
         }
     }
 
     .point-4 {
-        & .p-text {
-            transform: translate(-29%, 75%);
-        }
         & .p-info {
             width: 100px;
         }
     }
-    .point-7 .p-text {
-        transform: translate(-47%, 150%);
-    }
 
-    .point-10,
-    .point-11 {
-        & .p-text {
-            width: 110px;
-        }
-    }
     .point-10 {
         bottom: 40px;
         right: 2px;
+
+        & .p-text {
+            width: 80px;
+        }
     }
     .point-11 {
         top: 36px;
         right: -2px;
+
+        & .p-text {
+            width: 65px;
+        }
     }
-    .elipse-2 .p-text {
-        transform: translate(-113%, -25%);
-    }
+
     .point-12 .p-text,
     .point-13 .p-text {
-        transform: translate(-42%, 95%);
         width: 70px;
     }
 
     .point-16 {
-        top: 34px;
-        right: 3px;
+        top: 48px;
+        right: -4px;
     }
     .point-17 {
         bottom: 28px;
         right: -3px;
     }
+
     .point-16,
     .point-17 {
         & .p-text {
-            width: 68px;
-        }
-    }
-    .point-18 .p-text {
-        transform: translate(-46%, 190%);
-    }
-    .point-19 .p-text,
-    .point-20 .p-text {
-        width: 100px;
-        transform: translate(-45%, 95%);
-    }
-    .elipse-2 .p-text {
-        transform: translate(-114%, -25%);
-    }
-    .point-22 {
-        right: -9px;
-        & .p-text {
-            transform: translate(-104%, -14%);
-        }
-    }
-    .point-23 {
-        & .p-text {
-            width: 65px;
-            transform: translate(-41%, 95%);
-        }
-    }
-    .point-24 {
-        & .p-text {
-            width: 140px;
-            transform: translate(-44%, 95%);
-        }
-    }
-    .point-25 {
-        & .p-text {
-            width: 125px;
-            transform: translate(-39%, -150%);
-        }
-    }
-    .point-26 {
-        right: -10px;
-        & .p-text {
-            width: 110px;
-        }
-    }
-    .point-27 {
-        & .p-text {
-            width: 90px;
-            transform: translate(-37px, 22px);
-        }
-    }
-    .point-28,
-    .point-29,
-    .point-30 {
-        & .p-text {
-            width: 70px;
-            transform: translate(-28px, 22px);
+            width: 80px;
         }
     }
 
-    .point-30 {
-        & .p-title {
-            left: 16px;
-            top: -55px;
-        }
+    .point-19 .p-text,
+    .point-20 .p-text {
+        width: 100px;
     }
 
     .text-moon {
@@ -778,12 +620,6 @@
         }
     }
 
-    .point-22 {
-        & .p-text {
-            transform: translate(34%, -24%);
-            width: 50px;
-        }
-    }
     .point-1 {
         left: calc(160px);
     }
@@ -1144,7 +980,7 @@
     }
 }
 
-@media screen and (max-width: 319.97px) {
+@media screen and (max-width: 320px) {
     .point-2 {
         & .p-text {
             transform: translate(-40%, 52%);
