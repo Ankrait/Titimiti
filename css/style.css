@@ -163,6 +163,7 @@ img {
           align-items: center;
 }
 .menu__item {
+  white-space: nowrap;
   cursor: pointer;
   font-weight: 500;
   font-size: 15px;
