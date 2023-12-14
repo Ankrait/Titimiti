@@ -55,12 +55,12 @@ const translate = {
 		en: 'Antarctica tokens belong to the project development team; NFTA owners submit all key proposals for managing the TITI MITI meta network to the Landlords for consideration.',
 	},
 	titiland_2_name: {
-		ru: 'УЧАСТКИ ВОДЫ (NFTS)',
-		en: 'SEA PLOTS (NFTS)',
+		ru: 'УЧАСТКИ ВОДЫ (NFTM)',
+		en: 'SEA PLOTS (NFTM)',
 	},
 	titiland_2_text: {
-		ru: 'Владельцы NFTS получают доступ к добыче MITI, после активации на своём участке mining pool. Добыча токенов MITI происходит, посредством стейкинга MITI в mining pool.',
-		en: 'NFTS owners get access to MITI mining after activating a mining pool on their plots. Mining occurs through staking MITI in the mining pool.',
+		ru: 'Владельцы NFTM получают доступ к добыче MITI, после активации на своём участке mining pool. Добыча токенов MITI происходит, посредством стейкинга MITI в mining pool.',
+		en: 'NFTM owners get access to MITI mining after activating a mining pool on their plots. Mining occurs through staking MITI in the mining pool.',
 	},
 	titiland_3_name: {
 		ru: 'ЗЕМЕЛЬНЫЕ УЧАСТКИ (NFTE)',
@@ -288,8 +288,8 @@ const translate = {
 		en: 'MITI listing',
 	},
 	'point-20': {
-		ru: 'Старт продаж NFTS',
-		en: 'Starting sales of NFTS',
+		ru: 'Старт продаж NFTM',
+		en: 'Starting sales of NFTM',
 	},
 	'point-21': {
 		ru: 'MITI STACKING & MINING',

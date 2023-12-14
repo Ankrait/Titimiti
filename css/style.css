@@ -698,6 +698,14 @@ img {
   min-width: 0;
   max-width: 600px;
 }
+.titiland__slaider--text .swiper-slide {
+  opacity: 0 !important;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+.titiland__slaider--text .swiper-slide.swiper-slide-active {
+  opacity: 1 !important;
+}
 .titiland__slaider-body {
   min-width: 0;
   position: relative;
@@ -2310,7 +2318,7 @@ img {
 }
 .roadmap {
   margin: 371px 0 0 0;
-  height: 925px;
+  height: 1100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2796,7 +2804,7 @@ img {
 @media screen and (max-width: 1024px) {
   .roadmap {
     margin: 280px 0 0 0;
-    height: 900px;
+    height: 600px;
   }
   .text-rm {
     font-size: 40px;

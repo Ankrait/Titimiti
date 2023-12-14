@@ -32,20 +32,19 @@ swiper1 = new Swiper('.swiper.titiland_photo', {
 swiper2 = new Swiper('.swiper.titiland_text', {
 	spaceBetween: 20,
 
+	effect: 'fade',
 	freeMode: false,
-	loop: true,
-	speed: 1000,
+	speed: 600,
 	allowTouchMove: false,
-
-	coverflowEffect: {
-		rotate: 30,
-		slideShadows: false,
-	},
 });
 
-swiper1.on('slideChange', () => {
-	swiper2.slideTo(swiper1.activeIndex);
-});
+const slideHandler = () => {
+	const dir = swiper1.realIndex;
+
+	swiper2.slideToLoop(dir);
+};
+
+swiper1.on('slideChange', slideHandler);
 
 // =============== Свайпер =============== //
 ///
@@ -165,15 +164,10 @@ document.querySelectorAll('.logo').forEach((logo) =>
 ///
 ///
 ///////////////////// Тык по меню скролл /////////////////////
-const menu_tocenomic = document.querySelector('.scroll_tocenomic');
-const menu_whitepaper = document.querySelector('.scroll_whitepaper');
-const menu_roadmap = document.querySelector('.scroll_roadmap');
-const menu_titiland = document.querySelector('.scroll_titiland');
-const menu_zoomloop = document.querySelector('.scroll_zoomloop');
-const menu_miticoin = document.querySelector('.scroll_miticoin');
+const scrollLinks = document.querySelectorAll('[data-scroll]');
 
-const onMenuClick = (blockName, offset) => {
-	let scroll_to = $(blockName).offset().top + offset;
+const onMenuClick = (name) => {
+	let scroll_to = $('body').find(`[data-to='${name}']`).offset().top - 180;
 	if ($('html, body').is(':animated')) return;
 	if (window.scrollY == Math.floor(scroll_to)) return;
 
@@ -186,11 +180,9 @@ const onMenuClick = (blockName, offset) => {
 	removeMenuOpened();
 };
 
-menu_tocenomic.addEventListener('click', () => onMenuClick('.distribution', -200));
-menu_roadmap.addEventListener('click', () => onMenuClick('.roadmap', -220));
-menu_titiland.addEventListener('click', () => onMenuClick('.titiland', -100));
-menu_zoomloop.addEventListener('click', () => onMenuClick('.zoomloop', -180));
-menu_miticoin.addEventListener('click', () => onMenuClick('.miticoin', -170));
+scrollLinks.forEach((el) => {
+	el.addEventListener('click', () => onMenuClick(el.dataset.scroll));
+});
 ///////////////////// Тык по меню скролл /////////////////////
 ///
 ///
@@ -337,7 +329,6 @@ defaultStatsButton.addEventListener('click', defaultActivate);
 defaultBarButton.addEventListener('click', defaultActivate);
 miningStatsButton.addEventListener('click', miningActivate);
 miningBarButton.addEventListener('click', miningActivate);
-
 
 const stats_hover_items = document.querySelectorAll('.stats__item');
 const circle_hover_items = document.querySelectorAll('.unit');
