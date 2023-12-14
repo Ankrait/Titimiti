@@ -454,16 +454,13 @@
             width: calc(100% - 160px);
         }
         &__arr {
-            top: 792.5px;
+            top: 474px;
+            left: 66px;
         }
     }
 
     .p-left .p-text {
         right: calc(100% + 8px);
-    }
-
-    .rm__etap {
-        display: none;
     }
 
     .line-1 {
@@ -548,12 +545,6 @@
         }
     }
 
-    .point-4 {
-        & .p-info {
-            width: 100px;
-        }
-    }
-
     .point-10 {
         bottom: 40px;
         right: 2px;
@@ -615,7 +606,6 @@
     .point-10,
     .point-11 {
         & .p-text {
-            transform: translate(20%, -37%);
             width: 80px;
         }
     }
@@ -628,8 +618,10 @@
     }
     .point-3 {
         left: calc(160px + 35%);
+
         & .p-text {
-            transform: translate(-33%, -127%);
+            top: auto;
+            bottom: calc(100% + 15px);
         }
     }
     .point-4 {
@@ -646,6 +638,14 @@
     }
     .point-8 {
         left: 46%;
+    }
+
+    .point-10,
+    .point-11 {
+        & .p-text {
+            left: calc(100% + 10px);
+            right: auto;
+        }
     }
 
     .text-moon {
@@ -689,6 +689,11 @@
         top: 0;
         left: 0;
         rotate: 0deg;
+
+        & .p-text {
+            top: auto;
+            bottom: calc(100% + 20px);
+        }
     }
 
     .line-3 {
@@ -761,50 +766,14 @@
         top: 1200px;
     }
     .line-12 {
-        left: 75px;
         top: 1350px;
-    }
-    .elipse-10 {
-        right: 0;
-        top: 1350px;
-    }
-    .line-13 {
-        max-width: 100%;
-        left: auto;
         right: 75px;
-        top: 1500px;
-    }
-    .elipse-11 {
-        top: 1500px;
-    }
-    .line-14 {
         left: 75px;
-        top: 1650px;
-    }
-    .elipse-12 {
-        right: 0;
-        top: 1650px;
-    }
-    .line-15 {
-        max-width: 100%;
-        left: auto;
-        right: 75px;
-        top: 1800px;
-    }
-    .elipse-13 {
-        top: 1800px;
-    }
-    .line-16 {
-        width: calc(100% - 75px);
-        right: 75px;
-        left: auto;
-        top: 1950px;
     }
 
+    .elipse-4,
     .elipse-6,
-    .elipse-8,
-    .elipse-10,
-    .elipse-12 {
+    .elipse-8 {
         transform: rotate(180deg);
         left: 0;
         right: auto;
@@ -812,6 +781,11 @@
 
     .point-1 {
         left: 150px;
+    }
+
+    .point-19 {
+        left: 0;
+        right: auto;
     }
 
     .point-2,
@@ -823,160 +797,53 @@
     .point-15,
     .point-16,
     .point-20,
-    .point-19,
-    .point-24,
-    .point-25,
-    .point-29,
-    .point-30 {
+    .point-21 {
         left: auto;
         right: -10px;
     }
 
     .point-12,
-    .point-17,
-    .point-28 {
+    .point-17 {
         left: 50%;
     }
 
-    .rm_point {
+    .point-10,
+    .point-11 {
         & .p-text {
-            transform: translate(-33%, -127%);
+            left: 100%;
+            right: auto;
         }
     }
-    .point-1 {
-        .p-text {
-            transform: translate(-44%, -127%);
-        }
-    }
-    .point-3 {
-        .p-text {
-            transform: translate(-40%, -127%);
-        }
-    }
-    .point-4 {
-        .p-text {
-            transform: translate(-29%, -127%);
-        }
-    }
-    .point-5 {
-        .p-text {
-            transform: translate(-44%, -127%);
-        }
-    }
-    .point-6 {
-        .p-text {
-            transform: translate(-43%, -127%);
-        }
-    }
-    .point-7 {
-        .p-text {
-            transform: translate(-47%, -154%);
-        }
-    }
-    .point-8 {
-        .p-text {
-            transform: translate(-44%, -127%);
-        }
-    }
+
     .point-9 {
         .p-text {
             width: 120px;
-            transform: translate(-39%, -127%);
         }
     }
     .point-10 {
         .p-text {
             width: 120px;
-            transform: translate(-42%, -129%);
         }
     }
     .point-11 {
         .p-text {
             width: 100px;
-            transform: translate(-43%, -125%);
-        }
-    }
-    .point-12 {
-        .p-text {
-            transform: translate(-40%, 58%);
-        }
-    }
-    .point-13 {
-        .p-text {
-            transform: translate(-40%, -125%);
-        }
-    }
-    .point-14,
-    .point-15 {
-        .p-text {
-            transform: translate(-44%, -127%);
-        }
-    }
-    .point-16 {
-        .p-text {
-            transform: translate(-41%, -127%);
-        }
-    }
-    .point-17 {
-        .p-text {
-            transform: translate(-41%, 75%);
         }
     }
     .point-18 {
         .p-text {
-            transform: translate(-47%, -142%);
-        }
-    }
-    .point-19,
-    .point-20 {
-        .p-text {
-            transform: translate(-45%, -127%);
-        }
-    }
-    .point-21 {
-        .p-text {
-            transform: translate(-45%, -127%);
+            width: 60px;
         }
     }
 
-    .point-22 {
-        top: -6px;
-        right: auto;
-        .p-text {
-            transform: translate(-37%, -127%);
-        }
-    }
-
-    .point-23,
-    .point-24 {
-        & .p-text {
-            transform: translate(-41%, -127%);
-        }
-    }
-    .point-25,
-    .point-26 {
-        & .p-text {
-            transform: translate(-42%, -127%);
-        }
-    }
-    .point-27,
-    .point-29,
-    .point-30 {
-        & .p-text {
-            transform: translate(-41%, -127%);
-        }
-    }
-    .point-28 {
-        & .p-text {
-            transform: translate(-41%, 72%);
-        }
-    }
-    .point-30 .p-title {
-        left: 17px;
-        top: -20px;
+    .rm_moon {
+        margin-top: -30px !important;
+        margin-left: -30px !important;
     }
     .rm__arr {
-        top: 1942.5px;
+        left: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 

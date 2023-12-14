@@ -14,7 +14,7 @@ const translate = {
 
 	about__info: {
 		ru: '<p> Мы захотели выпендриться и придумали крутую тему: TITIMITI — первую в мире метасеть, объединяющую Play-to-earn, AR, Blockchain и B2P в единую экономическую систему будущего. </p> <p> Жадность и азарт больше не смогу сделать вас банкротом, теперь они трансформируются в «цифровое золото» – актив, работающий на благо всего сообщества. </p> <p> Так наши комплексы и ваши пороки изменят будущее человечества, естественно к лучшему. </p> <p> Наша миссия — создание революционной геймифицированной социально-экономической системы, которая включает в себя разработку инновационной структуры, основанной на блокчейн технологиях. </p>',
-		en: "<p>We wanted to show off, so we came up with something cool: TITIMITI, the world's first meta network that combines Play-to-Earn, AR, Blockchain, and B2P. We created a single economic system for the future.</p><p>Greed and gambling will no longer make you go bust. Now, they turn into \"digital gold\" — an asset that benefits all the network's participants.</p><p>So, our collective vices will change the future of humanity. For the better, of course.</p><p>Our mission is to create a revolutionary gamified social financial ecosystem, which includes the development of an innovative blockchain-based structure.</p>",
+		en: '<p>We wanted to show off, so we came up with something cool: TITIMITI, the world\'s first meta network that combines Play-to-Earn, AR, Blockchain, and B2P. We created a single economic system for the future.</p><p>Greed and gambling will no longer make you go bust. Now, they turn into "digital gold" — an asset that benefits all the network\'s participants.</p><p>So, our collective vices will change the future of humanity. For the better, of course.</p><p>Our mission is to create a revolutionary gamified social financial ecosystem, which includes the development of an innovative blockchain-based structure.</p>',
 	},
 
 	ecosystem_title: {
@@ -85,7 +85,7 @@ const translate = {
 	},
 	zoomloop_text: {
 		ru: '<p> Люди, а не деньги, вот настоящая ценность. Поэтому для людей мы разбрасываем деньги прямо на улице. Но не для всех а только для самых умных, тех кто обзавёлся ключом от нашей метасети. </p> <p> Умным быть круто! Короче стань крутым и установи нашу приложуху Zoom Loupe на свой телефон. </p>',
-		en: '<p>What we value the most are people, not money. That\'s why we leave money in the streets — for people. But not for everyone: only for the smartest, those who have a key to our meta network.</p><p>It\'s cool to be smart! So be cool and install our Zoom Loupe app on your smartphone.</p>',
+		en: "<p>What we value the most are people, not money. That's why we leave money in the streets — for people. But not for everyone: only for the smartest, those who have a key to our meta network.</p><p>It's cool to be smart! So be cool and install our Zoom Loupe app on your smartphone.</p>",
 	},
 
 	miticoin_text: {
@@ -99,7 +99,7 @@ const translate = {
 
 	advantages_subtitle: {
 		ru: 'Все преимущества',
-		en: 'Owners\' benefits',
+		en: "Owners' benefits",
 	},
 	advantages_title: {
 		ru: 'Владельцев MITI TOKEN',
@@ -173,31 +173,6 @@ const translate = {
 		en: 'Buy',
 	},
 
-	rm_step1: {
-		ru: '1 этап',
-		en: '1 step',
-	},
-	rm_step2: {
-		ru: '2 этап',
-		en: '2 step',
-	},
-	rm_step3: {
-		ru: '3 этап',
-		en: '3 step',
-	},
-	rm_step4: {
-		ru: '4 этап',
-		en: '4 step',
-	},
-	rm_step5: {
-		ru: '5 этап',
-		en: '5 step',
-	},
-	rm_moon: {
-		ru: 'На луну!',
-		en: 'To the moon!',
-	},
-
 	email_subtitle: {
 		ru: 'Введи свою электронную почту',
 		en: 'Enter your email',
@@ -238,162 +213,119 @@ const translate = {
 
 	'point-1': {
 		ru: 'Формирование идеи',
-		en: '',
+		en: 'Making up an idea',
 	},
 	'point-2': {
 		ru: 'Формирование высокопрофессиональной команды',
-		en: '',
+		en: 'Creating a highly professional team',
 	},
 	'point-3': {
 		ru: 'Первые концепты и выбор художественного направления',
-		en: '',
+		en: 'First concepts and choosing the artistic approach',
 	},
 	'point-4': {
 		ru: 'Техническая документация',
-		en: '',
+		en: 'Technical documentation',
 	},
 	'point-5': {
 		ru: 'Прототипирование',
-		en: '',
+		en: 'Designing prototypes',
 	},
 	'point-6': {
 		ru: 'Дизайн документ',
-		en: '',
+		en: 'Documenting design',
 	},
 	'point-7': {
 		ru: 'Токеномика',
-		en: '',
+		en: 'Tokenomics',
 	},
 	'point-8': {
 		ru: 'Whitepaper',
-		en: '',
+		en: 'Whitepaper',
 	},
 	'point-9': {
-		ru: 'Запуск сайта Titimiti и Zoom Loupe',
-		en: '',
+		ru: 'Анонс метасети TITI MITI',
+		en: 'Announcing TITI MIT metanetwork',
 	},
 	'point-10': {
-		ru: 'Запуск социальных сетей',
-		en: '',
+		ru: 'Legendary pack cтарт продаж',
+		en: 'Starting sales of Legendary pack ',
 	},
 	'point-11': {
-		ru: 'Zoom Loupe Открытый бета-тест',
-		en: '',
+		ru: 'Аудит смарт контрактов',
+		en: 'Auditing smartcontracts',
 	},
 	'point-12': {
-		ru: 'Первый взгляд на NFT',
-		en: '',
+		ru: 'Zoom Loupe Открытый бета-тест',
+		en: 'Zoom Loupe Open beta-testing',
 	},
 	'point-13': {
-		ru: 'Miticoin release',
-		en: '',
+		ru: 'Запуск маркетплейса',
+		en: 'Launching the marketplace',
 	},
 	'point-14': {
-		ru: 'Аудит смартконтрактов',
-		en: '',
+		ru: 'Zoom Loupe альфа релиз',
+		en: 'Zoom Loupe alpha release',
 	},
 	'point-15': {
-		ru: 'Запуск сайта Titiland ',
-		en: '',
+		ru: 'Titi Land альфа релиз',
+		en: 'Titi Land alpha release',
 	},
 	'point-16': {
-		ru: 'Продажи NFTW',
-		en: '',
+		ru: 'Старт продаж NFTW',
+		en: 'Starting sales of NFTW',
 	},
 	'point-17': {
-		ru: 'Zoom Loupe Beta release',
-		en: '',
+		ru: 'DAO TITI MITI',
+		en: 'DAO TITI MITI',
 	},
 	'point-18': {
-		ru: 'NFTA drops',
-		en: '',
+		ru: 'Лорды и королевства',
+		en: 'Lords and Kingdoms',
 	},
 	'point-19': {
-		ru: 'Запуск маркетплейса',
-		en: '',
+		ru: 'Листинг MITI',
+		en: 'MITI listing',
 	},
 	'point-20': {
-		ru: 'Формирование Landlords',
-		en: '',
+		ru: 'Старт продаж NFTS',
+		en: 'Starting sales of NFTS',
 	},
 	'point-21': {
-		ru: 'Продажи NFTO',
-		en: '',
+		ru: 'MITI STACKING & MINING',
+		en: 'MITI STACKING & MINING',
 	},
-	'point-22': {
-		ru: 'Запуск майнинга',
-		en: '',
-	},
-	'point-23': {
-		ru: 'Запуск стейкинга',
-		en: '',
-	},
-	'point-24': {
-		ru: 'Создание инфраструктуры земель Titiland',
-		en: '',
-	},
-	'point-25': {
-		ru: 'Формирование Союзов, Стран и Орденов',
-		en: '',
-	},
-	'point-26': {
-		ru: 'Первое децентрализованное голосование',
-		en: '',
-	},
-	'point-27': {
-		ru: 'Внедрение NFT паспорт системы',
-		en: '',
-	},
-	'point-28': {
-		ru: 'Социальная сеть Titimiti',
-		en: '',
-	},
-	'point-29': {
-		ru: 'Titimiti multichain',
-		en: '',
-	},
-	'point-30': {
-		ru: 'Google takeover',
-		en: '',
-	},
+
 	'point-1d': {
-		ru: 'Декабрь <span> 2021</span>',
-		en: '',
+		ru: 'Декабрь <span> 2022</span>',
+		en: 'DECEMBER <span> 2022</span>',
 	},
 	'point-5d': {
-		ru: 'ФЕВРАЛЬ <span> 2021</span>',
-		en: '',
+		ru: 'ФЕВРАЛЬ <span> 2022</span>',
+		en: 'FEBRUARY <span> 2022</span>',
 	},
 	'point-6d': {
-		ru: 'MAЙ <span> 2022</span>',
-		en: '',
+		ru: 'MAЙ <span> 2023</span>',
+		en: 'MAY <span> 2023</span>',
 	},
 	'point-8d': {
-		ru: 'Август <span> 2022</span>',
-		en: '',
+		ru: 'Август <span> 2023</span>',
+		en: 'AUGUST  <span> 2023</span>',
 	},
 	'point-9d': {
-		ru: 'СЕНТЯБРЬ <span>2022</span>',
-		en: '',
+		ru: 'ЯНВАРЬ <span>2024</span>',
+		en: 'ЯНВАРЬ <span>2024</span>',
 	},
 	'point-14d': {
-		ru: 'Декабрь <span> 2022</span>',
-		en: '',
+		ru: 'МАЙ <span> 2024</span>',
+		en: 'MAY <span> 2024</span>',
 	},
 	'point-15d': {
-		ru: 'Январь <span> 2023</span>',
-		en: '',
+		ru: 'ИЮНЬ <span> 2024</span>',
+		en: 'JUNE <span> 2024</span>',
 	},
 	'point-21d': {
-		ru: 'Май <span> 2023</span>',
-		en: '',
-	},
-	'point-25d': {
-		ru: 'АВГУСТ <span> 2023</span>',
-		en: '',
-	},
-	'point-30d': {
-		ru: '2027',
-		en: '',
+		ru: 'СЕНТЯБРЬ <span> 2024</span>',
+		en: 'SEPTEMBER <span> 2024</span>',
 	},
 };

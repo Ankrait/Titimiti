@@ -4,7 +4,7 @@ const current_select = document.querySelector('.footer__lang--current');
 
 let language = getCookie('lang') || 'ru';
 current_select.innerHTML = document.querySelector(`[data-value = ${language}]`).innerHTML;
-// translation(language);
+translation(language);
 
 but_select.addEventListener('click', () => {
 	but_select.classList.toggle('active');
