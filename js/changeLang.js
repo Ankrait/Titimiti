@@ -78,4 +78,3 @@ function translation(lang) {
 //     str+= '"' + el + '": ' +  '"' + tr[el].split('\n').join().trim() + '",';
 // }
 // let json = JSON.stringify(tr);
-// console.log(json);

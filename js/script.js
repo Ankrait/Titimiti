@@ -382,7 +382,6 @@ const hoverMititocen = (item) => {
 	let statsImage;
 
 	if (/^_1\d$/.test(num)) {
-		console.log(1);
 		baseValue = getNumberFromElement(miningStatsValue);
 		statsValue = miningStatsValue;
 		statsImage = miningStatsImage;
@@ -392,11 +391,8 @@ const hoverMititocen = (item) => {
 		statsImage = defaultStatsImage;
 	}
 
-	// console.log(num, statsValue);
-
 	item.addEventListener('mouseenter', () => {
 		if (item.classList.contains(num)) {
-			console.log('HOVERD' + num);
 			statsImage.classList.add(num);
 			statsValue.innerHTML = Math.round((baseValue * percent) / 100).toLocaleString(
 				'ru-RU'
@@ -409,7 +405,6 @@ const hoverMititocen = (item) => {
 	});
 	item.addEventListener('mouseleave', () => {
 		if (item.classList.contains(num)) {
-			console.log('CANCEL' + num);
 			statsImage.classList.remove(num);
 			statsValue.innerHTML = baseValue.toLocaleString('ru-RU');
 
@@ -442,7 +437,6 @@ const moveStar = async (star) => {
 	const vh = window.innerHeight;
 
 	const corner = Math.atan(vh / vw) * (180 / 3.14);
-	console.log(corner);
 
 	star.style.rotate = `-${Math.round(corner * (0.5 + Math.random()))}deg`;
 	star.style.top = `-${Math.round(10 + Math.random() * 300)}px`;
