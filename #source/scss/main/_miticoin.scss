@@ -113,6 +113,9 @@
 	// .advantages__name
 	&__name {
 		text-align: center;
+		transition: all 0.8s ease;
+		opacity: 0;
+		transform: translateX(-50%);
 	}
 
 	// .advantages__list

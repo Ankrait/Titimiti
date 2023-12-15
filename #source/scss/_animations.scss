@@ -6,37 +6,36 @@
     }
 }
 
-.zoomloop__phone._active .anim-show {
-    & ._1 {
-        transform: translate(0, 0) rotate(150deg) scale(1);
-    }
-
-    & ._2 {
-        transform: translate(0, 0) rotate(45deg) scale(1);
-    }
-}
-
 .roadmap._active .anim-show {
     background-color: #fff;
 }
 
-.about__info._active {
-    transform: translate(0);
-    opacity: 1;
+.about__container._active {
+    & > p {
+        transform: translate(0);
+        opacity: 1;
+    }
 }
 
-.titiland__name._active {
-    transform: translate(0);
-    opacity: 1;
+.ecosystem__name,
+.titiland__name,
+.zoomloop__name,
+.miticoin__name,
+.advantages__name,
+.distribution__title {
+    &._active {
+        transform: translate(0);
+        opacity: 1;
+    }
 }
 
-.zoomloop__name._active {
-    transform: translate(0);
-    opacity: 1;
-}
-.miticoin__name._active {
-    transform: translate(0);
-    opacity: 1;
+.advert._active .advert {
+    &__image,
+    &__info,
+    &__head {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
 
 .email._active {

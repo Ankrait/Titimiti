@@ -1,4 +1,4 @@
-@media screen and (max-width: 1023.89px) {
+@media screen and (max-width: 1024px) {
    .menu {
       &__logo {
          margin: 0 4%;
@@ -14,10 +14,10 @@
    }
 }
 
-@media screen and (max-width: 767.89px) {
+@media screen and (max-width: 768px) {
    .header {
       background: none;
-      backdrop-filter: flur(0);
+      backdrop-filter: blur(0);
 
       &__container {
          position: relative;
@@ -28,18 +28,17 @@
       display: block;
       margin: 27px 0 0 0;
       z-index: 25;
-      padding: 0 25px;
    }
    .header__mob {
       position: relative;
       width: 100%;
       height: 68px;
+      transition: 0.4s ease;
    }
 
    .logo-phone {
       display: flex;
       z-index: 25;
-      padding: 0 25px;
       cursor: pointer;
       -webkit-touch-callout: none; /* iOS Safari */
       -webkit-user-select: none; /* Safari */
@@ -51,10 +50,16 @@
    }
 
    .menu {
+      padding: 100px 100px 0;
       position: absolute;
-      width: 100%;
-      top: 0;
-      right: 0;
+      width: calc(100% + 200px);
+      overflow: scroll;
+      max-height: calc(100vh + 100px);
+
+      left: -100px;
+      top: -100px;
+      right: 100px;
+
       background: #040718;
       transform: translateY(-200%);
       opacity: 0;
@@ -65,6 +70,7 @@
       }
 
       & ul {
+         position: relative;
          flex-direction: column;
          padding: 100px 0;
          z-index: 24;
@@ -82,16 +88,17 @@
    }
 
    .header.opened {
-      height: 100%;
+      height: 200%;
       background-color: rgba(0, 0, 0, 0.8);
       backdrop-filter: blur(15px);
       & .menu {
          transform: translate(0);
          opacity: 1;
       }
+      & .header__mob {
+         background: #040718;
+      }
    }
-
-
 
    .cookie {
       width: 80vw;
@@ -104,9 +111,7 @@
       transform: translate(-50%, 140%);
    }
 
-
    @media (max-width: 660px) {
-
       .cookie {
          flex-direction: column;
          text-align: center;
@@ -129,13 +134,11 @@
 
    .popup {
       &__content {
-         width: 70vw;
-         height: 70vw;
+         max-width: 90vw;
       }
       &__content {
          & h1 {
             font-size: 25vw;
-            margin-top: 16%;
          }
 
          & p {
@@ -145,7 +148,6 @@
          & .btn {
             padding: 3% 12%;
             font-size: 3vw;
-            margin-top: 8%;
          }
       }
       &__UFO {
@@ -181,8 +183,7 @@
       .popup {
          &__content {
             & h1 {
-               font-size: 25vw;
-               margin-top: 18%;
+               font-size: 22vw;
             }
          }
       }
@@ -207,17 +208,15 @@
       color: red;
       transform: scale(1.2);
    }
-
 }
 
 @media screen and (max-width: 530px) {
    .cookie__text {
       max-width: 220px;
    }
-
 }
 
-@media screen and (max-width: 424.89px) {
+@media screen and (max-width: 425px) {
    .preloader {
       & img,
       & svg,

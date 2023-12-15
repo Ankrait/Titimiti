@@ -1,0 +1,219 @@
+$padding: 100px;
+
+.soon {
+	background: linear-gradient(162deg, #020914 -4.19%, #06224e 116.31%);
+	position: fixed;
+	z-index: 999;
+	inset: -$padding;
+
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	pointer-events: none;
+
+	&.opened {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	&__container {
+		position: relative;
+		z-index: 2;
+
+		width: 100%;
+		height: 100%;
+
+		padding: $padding + 30px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		white-space: nowrap;
+
+		position: relative;
+	}
+
+	&__bg {
+		position: absolute;
+		inset: $padding;
+		z-index: 1;
+
+		img {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		gap: 60px;
+		padding: 30px 0;
+
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+
+			width: 100%;
+			height: 5px;
+			background: linear-gradient(270deg, #041c42 0%, #00d7ee 49.78%, #041c41 99.55%);
+		}
+	}
+
+	&__title {
+		font-family: "Exo 2";
+		font-size: 144px;
+		font-style: normal;
+		font-weight: 900;
+		line-height: 93.396%;
+		text-transform: uppercase;
+
+		background: linear-gradient(180deg, #43e1ef 0%, #1d355d 100%);
+
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	&__text {
+		color: #fff;
+		font-family: Montserrat;
+		font-size: 52px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 110%;
+		letter-spacing: 30.16px;
+		text-transform: uppercase;
+	}
+
+	&__image {
+		img {
+			width: 100%;
+			object-fit: contain;
+		}
+	}
+}
+
+.soon.mt .soon {
+	&__bg {
+		img {
+			left: 50%;
+			width: 100%;
+			transform: translate(-50%);
+		}
+	}
+
+	&__title {
+		font-family: "Neuropol X Free";
+		text-shadow: 0px 0px 40px rgba(255, 41, 246, 0.4);
+		font-size: 104px;
+
+		background: linear-gradient(278deg, #0571ff -48.26%, #e64dff 40.28%, #8a2fff 112.11%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	&__content {
+		&::after {
+			background: linear-gradient(270deg, #040718 0%, #d146ff 49.78%, #040718 99.55%);
+		}
+	}
+}
+
+.lp.soon .soon {
+	&__title {
+		white-space: wrap;
+	}
+
+	&__image {
+		position: relative;
+		width: 100%;
+		aspect-ratio: 1/1;
+		max-width: 400px;
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 160%;
+			height: 160%;
+			object-fit: contain;
+		}
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.soon {
+		&__bg {
+			img {
+				width: auto;
+			}
+		}
+
+		&__content {
+			gap: 8vw;
+		}
+
+		&__image {
+			max-width: 220px;
+		}
+
+		&__title {
+			font-size: 10vw;
+		}
+
+		&__text {
+			font-size: 5vw;
+			letter-spacing: 3vw;
+		}
+	}
+
+	.mt.soon .soon {
+		&__title {
+			font-size: 8.5vw;
+		}
+	}
+
+	.lp.soon .soon {
+		&__image {
+			max-width: 300px;
+		}
+	}
+}
+
+@media only screen and (max-width: 550px) {
+	.soon {
+		&__image {
+			max-width: 100px;
+		}
+
+		&__content {
+			padding: 15px 0;
+		}
+
+		&__text {
+			font-size: 6vw;
+		}
+	}
+
+	.mt.soon .soon {
+		&__image {
+			max-width: 150px;
+		}
+	}
+
+	.lp.soon .soon {
+		&__image {
+			max-width: 240px;
+		}
+	}
+}

@@ -3,6 +3,12 @@
 		margin: 0 0 6px 0;
 	}
 
+	&__title {
+		transition: all 0.8s ease;
+		opacity: 0;
+		transform: translateX(-50%);
+	}
+
 	&__stat {
 		margin: 40px 0 0 0;
 		display: flex;
@@ -24,6 +30,9 @@
 		justify-content: center;
 		gap: 16px;
 		flex: 0 0 40%;
+
+		transition: all .4s ease;
+
 
 		&:last-child {
 			z-index: 1;
@@ -97,6 +106,7 @@
 		&__txt,
 		&__title {
 			text-align: center;
+			
 		}
 
 		&__name:not(._mobile) {

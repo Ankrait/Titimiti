@@ -63,12 +63,12 @@ const translate = {
 		en: 'NFTM owners get access to MITI mining after activating a mining pool on their plots. Mining occurs through staking MITI in the mining pool.',
 	},
 	titiland_3_name: {
-		ru: 'ЗЕМЕЛЬНЫЕ УЧАСТКИ (NFTE)',
-		en: 'EARTH PLOTS (NFTE)',
+		ru: 'ЗЕМЕЛЬНЫЕ УЧАСТКИ (NFTL)',
+		en: 'EARTH PLOTS (NFTL)',
 	},
 	titiland_3_text: {
-		ru: 'Владельцы NFTE получают комиссию с продажи всех игровых предметов, а также путём голосования участвуют в управлении мета сетью.',
-		en: 'NFTE owners receive a commission from the sale of all in-game items and participate in the management of the meta network through voting.',
+		ru: 'Владельцы NFTL получают комиссию с продажи всех игровых предметов, а также путём голосования участвуют в управлении мета сетью.',
+		en: 'NFTL owners receive a commission from the sale of all in-game items and participate in the management of the meta network through voting.',
 	},
 	titiland_btn: {
 		ru: 'Приобрести',
@@ -84,13 +84,13 @@ const translate = {
 		en: 'Learn more',
 	},
 	zoomloop_text: {
-		ru: '<p> Люди, а не деньги, вот настоящая ценность. Поэтому для людей мы разбрасываем деньги прямо на улице. Но не для всех а только для самых умных, тех кто обзавёлся ключом от нашей метасети. </p> <p> Умным быть круто! Короче стань крутым и установи нашу приложуху Zoom Loupe на свой телефон. </p>',
+		ru: '<p> Люди, а не деньги, вот настоящая ценность. Поэтому для людей мы разбрасываем деньги прямо на улице. Но не для всех а только для самых умных, тех кто обзавёлся ключом от нашей метасети. </p> <p> Умным быть круто! Короче стань крутым и установи наше приложение Zoom Loupe на свой телефон. </p>',
 		en: "<p>What we value the most are people, not money. That's why we leave money in the streets — for people. But not for everyone: only for the smartest, those who have a key to our meta network.</p><p>It's cool to be smart! So be cool and install our Zoom Loupe app on your smartphone.</p>",
 	},
 
 	miticoin_text: {
-		ru: '<p> Призовой билет вселенной Zoom Loupe, денежная единица светлого будущего. </p> <p> Экономическая модель проекта предполагает, что цена MITI привязана к капитализации основных фондов метасети TITIMITI. И задача нашего сообщества, сделать так чтобы эта капитализация росла. </p>',
-		en: '<p>The prize ticket of the Zoom Loupe universe, the currency of a bright future.</p><p>The economic model of the project stipulates that the price of MITI is tied to the capitalization of the fixed assets of the TITIMITI meta network. And the goal of our community is to make this capitalization grow.</p>',
+		ru: '<p> Функциональная монета, созданная на блокчейн сети Polygon. Токен метасети TITI MITI и призовой билет метавселенной Zoom Loupe. </p> <p> Экономическая модель проекта предполагает, что цена MITI привязана к капитализации основных фондов метасети TITIMITI. И задача нашего сообщества, сделать так чтобы эта капитализация росла. </p>',
+		en: '<p>Functional coin created on the blockchain of the Polygon network.TITI MITIS token and Prize Ticket of the metaverse Zoom Loupe.</p><p>The economic model of the project stipulates that the price of MITI is tied to the capitalization of the fixed assets of the TITIMITI meta network. And the goal of our community is to make this capitalization grow.</p>',
 	},
 	miticoin_subtitle: {
 		ru: 'Как мне получить Miti&nbsp;Tocken?',
@@ -122,8 +122,8 @@ const translate = {
 		en: 'Secured by meta network capitalization',
 	},
 	advantages_3_name: {
-		ru: 'Возможность заработать',
-		en: 'Earning opportunity',
+		ru: 'Возможность добывать МИТИ',
+		en: 'The ability to mines MITI',
 	},
 	advantages_3_text: {
 		ru: 'При помощи стейкинга',

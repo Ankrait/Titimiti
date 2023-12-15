@@ -2,8 +2,23 @@
 	margin: 100px 0 0 0;
 
 	&__container {
-		 max-width: 995px;
-		 text-align: center;
+		max-width: 995px;
+		text-align: center;
+
+		& > p {
+			opacity: 0;
+			transition: all 0.8s ease;
+
+			@for $i from 1 through 4 {
+				&:nth-child(#{$i}) {
+					@if $i % 2 == 1 {
+						transform: translate(-50%);
+					} @else {
+						transform: translate(50%);
+					}
+				}
+			}
+		}
 	}
 }
 

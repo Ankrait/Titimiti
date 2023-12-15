@@ -32,16 +32,6 @@
 		);
 	}
 
-	.eart-bg {
-		display: none;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 1920px;
-		z-index: -10;
-	}
-
 	&__wel {
 		margin: 33vh 0 0 0;
 	}
@@ -138,8 +128,8 @@
 
 		&__btn {
 			width: 100%;
-			padding: 14px 0;
 			justify-content: center;
+			padding: 12px 0;
 		}
 
 		& video {

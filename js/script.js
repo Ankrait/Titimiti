@@ -3,9 +3,47 @@ const videos = document.querySelectorAll('video');
 videos.forEach((video) => {
 	video.setAttribute('pip', 'false'); // Яндекс
 	video.defaultMuted = true;
-	video.play();
+	video.addEventListener('onloadeddata ', () => {
+		video.play();
+	});
 });
 
+// =============== body overflow =============== //
+const $body = document.querySelector('body');
+let scrollPosition = 0;
+
+const bodyOverflow = {
+	enabled: true,
+	enable() {
+		$body.style.removeProperty('overflow');
+		$body.style.removeProperty('position');
+		$body.style.removeProperty('top');
+		$body.style.removeProperty('width');
+		window.scrollTo(0, scrollPosition);
+		this.enabled = true;
+	},
+	disable() {
+		scrollPosition = window.scrollY;
+		$body.style.overflow = 'hidden';
+		$body.style.position = 'fixed';
+		$body.style.top = `-${scrollPosition}px`;
+		$body.style.width = '100%';
+		this.enabled = false;
+	},
+	toggle() {
+		console.log(this.enabled);
+		if (this.enabled) {
+			this.disable();
+		} else {
+			this.enable();
+		}
+	},
+};
+
+// =============== body overflow =============== //
+///
+///
+///
 // =============== Свайпер =============== //
 swiper1 = new Swiper('.swiper.titiland_photo', {
 	pagination: {
@@ -73,7 +111,7 @@ er404_blocks.forEach((item) => {
 
 function openPopupFunc(e) {
 	popup404.classList.add('open');
-	document.body.classList.add('overflow--hide');
+	bodyOverflow.disable();
 	e.preventDefault();
 }
 // =============== Popup 404 show =============== //
@@ -87,7 +125,7 @@ const popup_email = document.querySelector('.email-accept');
 const hidePopup = (e) => {
 	popup404.classList.remove('open');
 	popup_email.classList.remove('open');
-	document.body.classList.remove('overflow--hide');
+	bodyOverflow.enable();
 	e.preventDefault();
 };
 
@@ -195,7 +233,7 @@ if (anim_items.length > 0) {
 
 	async function animOnScroll() {
 		anim_items.forEach((item) => {
-			let scrollY = window.pageYOffset || document.documentElement.scrollTop;
+			let scrollY = window.scrollY || document.documentElement.scrollTop;
 
 			let anim_item_height = item.offsetHeight;
 			let anim_item_offsetY = item.getBoundingClientRect().top + scrollY;
@@ -211,6 +249,8 @@ if (anim_items.length > 0) {
 				scrollY < anim_item_offsetY + anim_item_height
 			) {
 				item.classList.add('_active');
+			} else {
+				item.classList.remove('_active');
 			}
 		});
 	}
@@ -229,14 +269,15 @@ toggle.addEventListener('click', function (e) {
 	this.classList.toggle('opened');
 	menu.classList.toggle('opened');
 	header.classList.toggle('opened');
-	document.body.classList.toggle('overflow--hide');
+
+	bodyOverflow.toggle();
 });
 
 function removeMenuOpened() {
 	toggle.classList.remove('opened');
 	menu.classList.remove('opened');
 	header.classList.remove('opened');
-	document.body.classList.remove('overflow--hide');
+	bodyOverflow.enable();
 }
 ///////////////////// Бургер /////////////////////
 ///
@@ -458,3 +499,37 @@ const startStarFall = async () => {
 startStarFall();
 
 // =============== Звезды =============== //
+///
+///
+///
+// =============== Отмена скролла body =============== //
+const mobileHeader = document.querySelector('.header');
+
+mobileHeader.addEventListener('touchstart', (e) => {
+	if (mobileHeader.classList.contains('opened')) {
+		e.stopPropagation();
+	}
+});
+// =============== Отмена скролла body =============== //
+///
+///
+///
+// =============== Soon Open =============== //
+const openingButtons = document.querySelectorAll('[data-soon-open]');
+
+openingButtons.forEach((btn) => {
+	btn.addEventListener('click', () => {
+		const data = btn.dataset.soonOpen;
+		const soonBlock = document.querySelector(`[data-soon=${data}]`);
+
+		soonBlock.classList.add('opened');
+
+		const onClose = (e) => {
+			e.preventDefault();
+			soonBlock.classList.remove('opened');
+		};
+		soonBlock.addEventListener('click', onClose, { once: true });
+		window.addEventListener('keydown', onClose, { once: true });
+	});
+});
+// =============== Soon Open =============== //

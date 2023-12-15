@@ -11,6 +11,11 @@ $colors: (
 	_13: #4cbe58
 );
 
+#stats {
+	display: flex;
+	flex-direction: column;
+}
+
 .stats {
 	margin: -40px 0 0 0;
 	display: flex;
@@ -214,11 +219,14 @@ $colors: (
 		font-weight: 500;
 		line-height: 130%;
 
+		border: 1px solid transparent;
 		border-bottom: 1px solid #918bb4;
 		border-radius: 16px 16px 0px 0px;
 		background: transparent;
 
 		padding: 19px 26px;
+
+		transition: all 0.4s ease;
 
 		&:first-child {
 			text-align: left;
@@ -387,6 +395,7 @@ $colors: (
 		&__button {
 			margin: 20px auto 0;
 			max-width: 320px;
+			align-self: center;
 		}
 	}
 }
