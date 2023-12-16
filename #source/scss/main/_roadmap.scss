@@ -68,6 +68,25 @@
         top: 752px;
         left: -10px;
     }
+
+    &_moon {
+        color: #fff;
+
+        white-space: nowrap;
+        text-align: center;
+
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+
+        position: absolute;
+        bottom: calc(100% + 20px);
+        left: 50%;
+        transform: translateX(-43%);
+    }
 }
 
 .line-1 {
@@ -343,20 +362,6 @@
     }
 }
 
-.text-moon {
-    position: absolute;
-    top: -40px;
-    left: -57px;
-
-    display: inline;
-    font-weight: 800;
-    font-size: 23px;
-    line-height: 28px;
-
-    text-align: center;
-    text-transform: uppercase;
-}
-
 .rm__moon {
     position: absolute;
     top: 368px;
@@ -587,13 +592,6 @@
     .point-20 .p-text {
         width: 100px;
     }
-
-    .text-moon {
-        font-size: 14px;
-        line-height: 17px;
-        top: -34px;
-        left: -36px;
-    }
 }
 
 @media screen and (max-width: 665px) {
@@ -620,6 +618,7 @@
         left: calc(160px + 35%);
 
         & .p-text {
+            width: 100px;
             top: auto;
             bottom: calc(100% + 15px);
         }
@@ -647,16 +646,9 @@
             right: auto;
         }
     }
-
-    .text-moon {
-        left: -20px;
-    }
 }
 
 @media screen and (max-width: 520px) {
-    .text-moon {
-        left: -10px;
-    }
     .roadmap {
         height: 1350px;
     }
@@ -836,10 +828,6 @@
         }
     }
 
-    .rm_moon {
-        margin-top: -30px !important;
-        margin-left: -30px !important;
-    }
     .rm__arr {
         left: 0;
         top: 50%;

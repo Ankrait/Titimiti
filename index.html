@@ -37,9 +37,13 @@
 				<div class="header__container container_main">
 					<div class="header__menu menu">
 						<ul class="menu__list">
-							<li data-scroll="tocenomic" class="menu__item">tokenomics</li>
+							<a target="_blank" href="/tm.pdf">
+								<li data-scroll="tocenomic" class="menu__item">tokenomics</li>
+							</a>
 							<li data-scroll="roadmap" class="menu__item">Roadmap</li>
-							<li data-scroll="whitepaper" class="menu__item">WhitePaper</li>
+							<a target="_blank" href="/wp.pdf">
+								<li data-scroll="whitepaper" class="menu__item">WhitePaper</li>
+							</a>
 							<li class="menu__item menu__logo logo">
 								<img src="./img/Logo.svg" alt="Лого" />
 							</li>
@@ -320,7 +324,13 @@
 							</div>
 						</div>
 						<div class="zoomloop__video">
-							<svg
+							<iframe
+								src="https://www.youtube.com/embed/zejn4yP6eJc?si=jI5x4-AtjzlXgQg2"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								allowfullscreen></iframe>
+							<!-- <svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="105"
 								height="105"
@@ -341,7 +351,7 @@
 										<stop offset="1" stop-color="#529DD6" />
 									</linearGradient>
 								</defs>
-							</svg>
+							</svg> -->
 						</div>
 					</div>
 
@@ -571,7 +581,7 @@
 													<img src="./img/stats/global.svg" alt="" />
 												</div>
 												<div class="stats__stat">
-													<div class="stats__text">Владельцы участков</div>
+													<div class="stats__text">Owners of sites</div>
 													<div class="stats__percent">70%</div>
 												</div>
 											</div>
@@ -580,7 +590,7 @@
 													<img src="./img/stats/coin.svg" alt="" />
 												</div>
 												<div class="stats__stat">
-													<div class="stats__text">Владельцы MITI</div>
+													<div class="stats__text">Owners of MITI</div>
 													<div class="stats__percent">20%</div>
 												</div>
 											</div>
@@ -850,9 +860,10 @@
 											<p class="p-info">MITI STACKING & MINING</p>
 										</div>
 									</div>
-									<p data-lang="text-moon" class="text-moon">На луну!</p>
 								</div>
-								<div class="rm__arr"></div>
+								<div class="rm__arr">
+									<p data-lang="rm_moon" class="rm_moon">На луну!</p>
+								</div>
 							</div>
 							<div class="rm__mobile">
 								<img class="line-mobile" src="./img/rm/lines-mobile.png" alt="" />
@@ -1010,8 +1021,9 @@
 											<p class="p-info">MITI STACKING & MINING</p>
 										</div>
 									</div>
-									<div class="rm__arr"></div>
-									<p class="rm_moon">На луну!</p>
+									<div class="rm__arr">
+										<p data-lang="rm_moon" class="rm_moon">На луну!</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1053,33 +1065,13 @@
 						<img src="./img/Logo.svg" alt="" />
 						<h2>Titimiti</h2>
 					</div>
-					<div class="footer__lang">
-						<div class="footer__lang--current">
-							<div class="footer__flag">
-								<img src="./img/rus.png" alt="" />
-							</div>
-							<div class="footer__langname">Русский</div>
-						</div>
-						<span></span>
-						<div class="footer__block">
-							<div data-value="ru" class="footer__lang--item">
-								<div class="footer__flag">
-									<img src="./img/rus.png" alt="" />
-								</div>
-								<div class="footer__langname">Русский</div>
-							</div>
-							<div data-value="en" class="footer__lang--item">
-								<div class="footer__flag">
-									<img src="./img/usa.png" alt="" />
-								</div>
-								<div class="footer__langname">Английский</div>
-							</div>
-						</div>
-					</div>
 					<div class="footer__share">
-						<button class="footer__share--item er_404">
+						<a
+							target="_blank"
+							href="https://www.youtube.com/@TITI_MITI"
+							class="footer__share--item">
 							<img src="./img/share/_5.svg" alt="Ютуб" />
-						</button>
+						</a>
 					</div>
 					<div class="footer__soon">coming soon</div>
 					<div class="footer__share">
@@ -1097,10 +1089,10 @@
 						</button>
 					</div>
 					<a href="mailto:info@titimiti.com" class="footer__email"> info@titimiti.com </a>
-					<div class="footer__power">
+					<a href="https://polygon.technology" target="_blank" class="footer__power">
 						Powered by
 						<img src="./img/polygon.svg" alt="" />
-					</div>
+					</a>
 					<div class="footer__policy txt_main">
 						<a class="er_404" href="">Privacy policy</a> and
 						<a class="er_404" href="">Terms of use</a> Copyright © 2010-2022 DeSo. All

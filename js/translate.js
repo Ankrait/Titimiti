@@ -211,6 +211,10 @@ const translate = {
 		en: 'Okey',
 	},
 
+	rm_moon: {
+		ru: 'На луну!',
+		en: 'To the moon!'
+	},
 	'point-1': {
 		ru: 'Формирование идеи',
 		en: 'Making up an idea',
@@ -314,7 +318,7 @@ const translate = {
 	},
 	'point-9d': {
 		ru: 'ЯНВАРЬ <span>2024</span>',
-		en: 'ЯНВАРЬ <span>2024</span>',
+		en: 'JANUARY <span>2024</span>',
 	},
 	'point-14d': {
 		ru: 'МАЙ <span> 2024</span>',
@@ -324,7 +328,7 @@ const translate = {
 		ru: 'ИЮНЬ <span> 2024</span>',
 		en: 'JUNE <span> 2024</span>',
 	},
-	'point-21d': {
+	'point-19d': {
 		ru: 'СЕНТЯБРЬ <span> 2024</span>',
 		en: 'SEPTEMBER <span> 2024</span>',
 	},

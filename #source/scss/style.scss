@@ -33,6 +33,7 @@
    }
 
    &__item {
+      color: #fcfcfc;
       white-space: nowrap;
       cursor: pointer;
       font-weight: 500;
@@ -485,55 +486,6 @@ body.overflow--hide {
       }
    }
 
-   &__lang {
-      padding: 12px 24px;
-      border: 1px solid #d9d9d9;
-      border-radius: 100px;
-
-      position: relative;
-      width: 218px;
-      cursor: pointer;
-   }
-
-   &__lang--current {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-   }
-
-   &__lang span {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      transition: transform 0.4s ease;
-      right: 27px;
-      width: 6px;
-      height: 15px;
-
-      &::before,
-      &::after {
-         content: "";
-         position: absolute;
-         width: 1px;
-         height: 9px;
-         border-radius: 15px;
-         right: 0;
-         top: 0;
-         transform: rotate(-45deg) translateY(2%);
-         background: #fcfcfc;
-      }
-
-      &::after {
-         top: auto;
-         bottom: 0;
-         transform: rotate(45deg);
-      }
-   }
-
-   &__langname {
-      font-size: 18px;
-   }
-
    &__block {
       position: absolute;
       top: calc(100% + 5px);
@@ -544,27 +496,6 @@ body.overflow--hide {
       width: 100%;
       overflow: hidden;
       display: none;
-   }
-
-   &__lang--item {
-      padding: 14px 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-   }
-
-   &__lang--item:hover {
-      background-color: #26272c;
-   }
-
-   &__lang.active {
-      & span {
-         transform: translateY(-50%) rotate(90deg);
-      }
-
-      & .footer__block {
-         display: block;
-      }
    }
 
    &__soon {

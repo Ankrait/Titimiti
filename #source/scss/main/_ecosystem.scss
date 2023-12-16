@@ -130,6 +130,10 @@
 			grid-template-columns: 1fr;
 			justify-items: center;
 		}
+
+		&__item {
+			width: 100%;
+		}
 	}
 
 	.item-ecosystem {
