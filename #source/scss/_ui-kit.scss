@@ -1,6 +1,5 @@
 .container_main {
 	max-width: 1430px;
-	min-width: 768px;
 	padding: 0 15px;
 	margin: 0 auto;
 
@@ -11,12 +10,10 @@
 
 	@media only screen and (max-width: 768px) {
 		max-width: 900px;
-		min-width: 425px;
 	}
 
 	@media only screen and (max-width: 425px) {
 		max-width: 400px;
-		min-width: 250px;
 		padding: 0 15px;
 	}
 }

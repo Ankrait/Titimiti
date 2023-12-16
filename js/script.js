@@ -523,10 +523,12 @@ openingButtons.forEach((btn) => {
 		const soonBlock = document.querySelector(`[data-soon=${data}]`);
 
 		soonBlock.classList.add('opened');
+		bodyOverflow.disable();
 
 		const onClose = (e) => {
 			e.preventDefault();
 			soonBlock.classList.remove('opened');
+			bodyOverflow.enable();
 		};
 		soonBlock.addEventListener('click', onClose, { once: true });
 		window.addEventListener('keydown', onClose, { once: true });

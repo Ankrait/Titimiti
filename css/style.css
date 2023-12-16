@@ -203,7 +203,6 @@ img {
 
 .container_main {
   max-width: 1430px;
-  min-width: 768px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -216,13 +215,11 @@ img {
 @media only screen and (max-width: 768px) {
   .container_main {
     max-width: 900px;
-    min-width: 425px;
   }
 }
 @media only screen and (max-width: 425px) {
   .container_main {
     max-width: 400px;
-    min-width: 250px;
     padding: 0 15px;
   }
 }
@@ -457,6 +454,12 @@ img {
 @media screen and (max-width: 660px) {
   .welcome video {
     width: 250%;
+  }
+}
+@media only screen and (max-width: 525px) {
+  .welcome__title {
+    font-size: 80px;
+    line-height: 73px;
   }
 }
 @media only screen and (max-width: 425px) {
@@ -2016,6 +2019,7 @@ img {
   background: transparent;
 }
 .stats__value {
+  color: #fff;
   font-weight: 700;
   font-size: 18px;
   line-height: 120%;
@@ -3501,8 +3505,8 @@ img {
 .soon {
   background: linear-gradient(162deg, #020914 -4.19%, #06224e 116.31%);
   position: fixed;
+  inset: 0;
   z-index: 999;
-  inset: -100px;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -3513,11 +3517,12 @@ img {
   pointer-events: all;
 }
 .soon__container {
+  overflow-y: scroll;
   position: relative;
   z-index: 2;
   width: 100%;
   height: 100%;
-  padding: 130px;
+  padding: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3533,7 +3538,7 @@ img {
 }
 .soon__bg {
   position: absolute;
-  inset: 100px;
+  inset: 0;
   z-index: 1;
 }
 .soon__bg img {
@@ -3618,16 +3623,16 @@ img {
   background: linear-gradient(270deg, #040718 0%, #d146ff 49.78%, #040718 99.55%);
 }
 
-.lp.soon .soon__title {
-  white-space: wrap;
+.soon.lp .soon__title {
+  white-space: initial !important;
 }
-.lp.soon .soon__image {
+.soon.lp .soon__image {
   position: relative;
   width: 100%;
   aspect-ratio: 1/1;
   max-width: 400px;
 }
-.lp.soon .soon__image img {
+.soon.lp .soon__image img {
   position: absolute;
   top: 50%;
   left: 50%;

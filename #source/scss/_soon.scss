@@ -1,10 +1,8 @@
-$padding: 100px;
-
 .soon {
 	background: linear-gradient(162deg, #020914 -4.19%, #06224e 116.31%);
 	position: fixed;
+	inset: 0;
 	z-index: 999;
-	inset: -$padding;
 
 	opacity: 0;
 	transition: opacity 0.3s ease;
@@ -16,13 +14,14 @@ $padding: 100px;
 	}
 
 	&__container {
+		overflow-y: scroll;
 		position: relative;
 		z-index: 2;
 
 		width: 100%;
 		height: 100%;
 
-		padding: $padding + 30px;
+		padding: 30px;
 
 		display: flex;
 		align-items: center;
@@ -35,7 +34,7 @@ $padding: 100px;
 
 	&__bg {
 		position: absolute;
-		inset: $padding;
+		inset: 0;
 		z-index: 1;
 
 		img {
@@ -129,9 +128,9 @@ $padding: 100px;
 	}
 }
 
-.lp.soon .soon {
+.soon.lp .soon {
 	&__title {
-		white-space: wrap;
+		white-space: initial !important;
 	}
 
 	&__image {
