@@ -249,7 +249,10 @@ if (anim_items.length > 0) {
 				scrollY < anim_item_offsetY + anim_item_height
 			) {
 				item.classList.add('_active');
-			} else {
+			} else if (
+				scrollY < anim_item_offsetY - anim_item_point - 300 ||
+				scrollY > anim_item_offsetY + anim_item_height + 300
+			) {
 				item.classList.remove('_active');
 			}
 		});
