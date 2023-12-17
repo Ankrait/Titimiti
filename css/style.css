@@ -4387,7 +4387,10 @@ body.overflow--hide {
   .menu__logo {
     display: none;
   }
-  .menu ul {
+  .menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     position: relative;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4396,12 +4399,20 @@ body.overflow--hide {
     padding: 100px 0;
     z-index: 24;
     width: 100%;
+    gap: 24px;
+  }
+  .menu__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 24px;
   }
   .menu__item {
     font-weight: 500;
     font-size: 20px;
     line-height: 130%;
-    margin: 24px 0 0 0;
+    margin: 0 0 0 0;
     text-transform: uppercase;
   }
   .header.opened {

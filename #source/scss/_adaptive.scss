@@ -69,19 +69,27 @@
          display: none;
       }
 
-      & ul {
+      &__list {
+         display: flex;
          position: relative;
          flex-direction: column;
          padding: 100px 0;
          z-index: 24;
          width: 100%;
+         gap: 24px;
       }
+      &__block {
+         flex-direction: column;
+         gap: 24px;
+      }
+
+
 
       &__item {
          font-weight: 500;
          font-size: 20px;
          line-height: 130%;
-         margin: 24px 0 0 0;
+         margin: 0 0 0 0;
 
          text-transform: uppercase;
       }
